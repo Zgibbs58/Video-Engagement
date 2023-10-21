@@ -1,5 +1,6 @@
 import ReactPlayer from "react-player";
 import React, { useState } from "react";
+import XrayComponent from "./Xray";
 
 const VideoPlayer = () => {
   const [currentTime, setCurrentTime] = useState(0);
@@ -11,8 +12,9 @@ const VideoPlayer = () => {
   return (
     <div>
       <ReactPlayer
-        url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+        url="https://www.youtube.com/watch?v=CZg1D6C7-ik"
         controls
+        onProgress={handleProgress}
         width="640px"
         height="360px"
         playing
@@ -38,6 +40,8 @@ const VideoPlayer = () => {
           },
         }}
       />
+      <h2>Current Time: {currentTime.toFixed(0)}</h2>
+      <XrayComponent currentTime={currentTime} />
     </div>
   );
 };
