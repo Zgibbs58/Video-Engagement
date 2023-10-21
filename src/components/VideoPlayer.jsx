@@ -6,6 +6,7 @@ const VideoPlayer = () => {
   const [currentTime, setCurrentTime] = useState(0);
 
   const handleProgress = (progress) => {
+    // progress is an object automatically passed by the "react-player" library
     setCurrentTime(progress.playedSeconds);
   };
 
@@ -14,6 +15,7 @@ const VideoPlayer = () => {
       <ReactPlayer
         url="https://www.youtube.com/watch?v=CZg1D6C7-ik"
         controls
+        // the onProgress prop event is triggered every time the video plays form "react-player" library
         onProgress={handleProgress}
         width="640px"
         height="360px"
