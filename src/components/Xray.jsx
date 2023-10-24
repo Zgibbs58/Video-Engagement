@@ -1,10 +1,13 @@
 import React from "react";
-import xrayData from "../utils/xrayData";
+import PropTypes from "prop-types";
+import xrayData from "../../utils/videoData";
 
 const XrayComponent = ({ currentTime }) => {
   const displayDuration = 10;
   // Find the Xray data for the current timestamp
-  const currentXrayData = xrayData.find((entry) => entry.timestamp <= currentTime && currentTime <= entry.timestamp + displayDuration);
+  const currentXrayData = xrayData.find(
+    (entry) => entry.videoMoments.timestamp <= currentTime && currentTime <= entry.videoMoments.timestamp + displayDuration
+  );
 
   // Render Xray information if available
   return (
@@ -19,6 +22,10 @@ const XrayComponent = ({ currentTime }) => {
       )}
     </div>
   );
+};
+
+XrayComponent.propTypes = {
+  currentTime: PropTypes.number.isRequired,
 };
 
 export default XrayComponent;
