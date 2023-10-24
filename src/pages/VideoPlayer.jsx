@@ -1,6 +1,7 @@
 import ReactPlayer from "react-player";
 import React, { useState } from "react";
-import XrayComponent from "./Xray";
+import XrayComponent from "../components/Xray";
+import { useParams } from "react-router-dom";
 
 const VideoPlayer = () => {
   const [currentTime, setCurrentTime] = useState(0);
@@ -13,7 +14,7 @@ const VideoPlayer = () => {
   return (
     <div>
       <ReactPlayer
-        url="https://www.youtube.com/watch?v=CZg1D6C7-ik"
+        url={"https://www.youtube.com/watch?v=Tgi57GavzPQ"}
         controls
         // the onProgress prop event is triggered every time the video plays form "react-player" library
         onProgress={handleProgress}

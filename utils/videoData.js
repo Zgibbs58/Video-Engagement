@@ -24,19 +24,19 @@ const xrayData = [
       },
     ],
   },
-  {
-    videoUrl: "https://www.youtube.com/watch?v=Tgi57GavzPQ",
-    title: "MARKED Podcast | LWA Christy Thornton on Theology",
-    videoId: "2",
-    videoMoments: [
-      {
-        timestamp: 145, // seconds
-        content: "World Religions",
-        resourceReference: "https://www.lifeway.com/en/product/understanding-world-religions-P005280057",
-        resourceTitle: "Understanding World Religions",
-      },
-    ],
-  },
+  // {
+  //   videoUrl: "https://www.youtube.com/watch?v=Tgi57GavzPQ",
+  //   title: "MARKED Podcast | LWA Christy Thornton on Theology",
+  //   videoId: "2",
+  //   videoMoments: [
+  //     {
+  //       timestamp: 145, // seconds
+  //       content: "World Religions",
+  //       resourceReference: "https://www.lifeway.com/en/product/understanding-world-religions-P005280057",
+  //       resourceTitle: "Understanding World Religions",
+  //     },
+  //   ],
+  // },
 ];
 
 export default xrayData;
