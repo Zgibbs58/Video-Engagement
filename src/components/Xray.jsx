@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import xrayData from "../../utils/videoData";
 
-const XrayComponent = ({ currentTime }) => {
+const XrayComponent = ({ currentTime, videoId }) => {
   const displayDuration = 10;
   // Find the Xray data for the current timestamp
-  const currentXrayData = xrayData[0].videoMoments.find(
+  const currentXrayData = xrayData[videoId].videoMoments.find(
     (entry) => entry.timestamp <= currentTime && currentTime <= entry.timestamp + displayDuration
   );
 
@@ -25,6 +25,7 @@ const XrayComponent = ({ currentTime }) => {
 
 XrayComponent.propTypes = {
   currentTime: PropTypes.number.isRequired,
+  videoId: PropTypes.number.isRequired,
 };
 
 export default XrayComponent;

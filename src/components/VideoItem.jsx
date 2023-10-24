@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const VideoItem = ({ video }) => {
   return (
     <div className="py-2">
-      <Link className="text-blue-500 hover:underline" to={`/video`}>
+      <Link className="text-blue-500 hover:underline" to={`/video/${video.videoId}`}>
         {video.title}
       </Link>
     </div>

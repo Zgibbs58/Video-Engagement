@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element: <VideoMenu videos={xrayData} />,
       },
       {
-        path: "/video",
+        path: "/video/:videoId",
         element: <VideoPlayer />,
       },
       {
