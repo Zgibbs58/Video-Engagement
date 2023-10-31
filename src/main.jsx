@@ -4,7 +4,7 @@ import "./index.css";
 import xrayData from "../utils/videoData";
 
 import App from "./App.jsx";
-import VideoMenu from "./pages/VideoMenu.jsx";
+import Home from "./pages/Home.jsx";
 import VideoPlayer from "./pages/VideoPlayer.jsx";
 
 const router = createBrowserRouter([
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <VideoMenu videos={xrayData} />,
+        element: <Home />,
       },
       {
         path: "/video/:videoId",
