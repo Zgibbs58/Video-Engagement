@@ -1,6 +1,6 @@
 import Typed from "typed.js";
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   // Create reference to store the DOM element containing the animation
@@ -29,11 +29,11 @@ export default function Home() {
           <span ref={el} />
         </h1>
         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.5 }}>
-          <h2 className="my-2 text-xl font-semibold">Full Stack Developer</h2>
+          <h2 className="my-3 text-xl font-semibold">Full Stack Developer</h2>
         </motion.div>
         <div className="wrapper">
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 2 }}>
-            <p className="text mt-10">
+            <p className="text mt-7">
               Web developer from Murfreesboro, TN with a passion for solving problems with code and creating beautiful, functional websites.
             </p>
           </motion.div>
