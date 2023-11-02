@@ -1,12 +1,13 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import "../App.css";
 
-const Path = (props) => <motion.path fill="transparent" strokeWidth="3" stroke="rgb(107 114 128)" strokeLinecap="round" {...props} />;
+const Path = (props) => <motion.path fill="transparent" strokeWidth="3" stroke="white" strokeLinecap="round" {...props} />;
 
 import PropTypes from "prop-types";
 
 export const Toggle = ({ toggle, isOpen }) => (
-  <button className={isOpen ? `block sm:hidden absolute top-5 right-5 z-50 bg-white rounded-full p-2 text-center` : "block sm:hidden"} onClick={toggle}>
+  <button className="toggleButton" onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 23 23" className="block mx-auto">
       <Path
         variants={{
