@@ -2,6 +2,8 @@ import Typed from "typed.js";
 import React from "react";
 import { motion } from "framer-motion";
 import headshot from "../assets/zach-headshot.jpg";
+import MainButton from "../components/MainButton";
+import SecondaryButton from "../components/SecondaryButton";
 
 export default function Home() {
   // Create reference to store the DOM element containing the animation
@@ -11,10 +13,13 @@ export default function Home() {
     const typed = new Typed(el.current, {
       strings: ["Zach Gibbs"],
       typeSpeed: 70,
+      backSpeed: 70,
       smartBackspace: true,
       startDelay: 700,
-      // cursorChar: "|",
-      showCursor: false,
+      backDelay: 5000,
+      cursorChar: "|",
+      loop: true,
+      showCursor: true,
     });
 
     return () => {
@@ -25,8 +30,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid sm:grid-cols-2 my-5 content-center justify-items-center">
-        <figure className="flex justify-center w-11/12">
+      <section className="grid sm:grid-cols-2 my-20 mx-10 content-center justify-items-center">
+        <figure className="flex justify-center w-3/4 mb-5 sm:mb-0">
           <img className="rounded-full" src={headshot} alt="Zach's headshot" />
         </figure>
         <div className="grid content-center">
@@ -34,15 +39,22 @@ export default function Home() {
             <span ref={el} />
           </h1>
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.5 }}>
-            <h2 className="my-3 text-xl font-semibold">Full Stack Developer</h2>
+            <h2 className="mt-4 text-xl font-semibold">Full Stack Developer</h2>
           </motion.div>
-          <div className="wrapper">
-            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 2 }}>
-              <p className="text mt-7">
-                Web developer from Murfreesboro, TN with a passion for solving problems with code and creating beautiful, functional websites.
-              </p>
-            </motion.div>
-          </div>
+          <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 2 }}>
+            <p className="text mt-8">
+              Web developer from Murfreesboro, TN with a passion for solving problems with code and creating beautiful, functional websites.
+            </p>
+          </motion.div>
+          <motion.div
+            className="grid grid-cols-2"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ease: "easeOut", duration: 1, delay: 2.5 }}
+          >
+            <MainButton />
+            <SecondaryButton />
+          </motion.div>
         </div>
       </section>
     </>
