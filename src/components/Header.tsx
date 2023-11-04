@@ -1,6 +1,7 @@
 import React, {useRef} from "react";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
+import FullNavigation from "./FullNavigation";
 import {Toggle} from "./Toggle";
 import headshot from '../assets/zach-headshot.jpg';
 import { motion, useCycle } from "framer-motion"
@@ -45,7 +46,8 @@ export default function Header() {
   };
 
     return (
-        <nav className="flex items-center justify-between py-2 sm:px-8 sm:px-12">
+      <>
+        <nav className="mobileNav flex items-center justify-between py-2 sm:px-8 sm:px-12 sm:hidden">
           {/* <div className="hidden sm:flex">
               <Link to="/" onClick={closeMenu}>
                 <img className="w-20 md:w-20 rounded-full hover:shadow-lg hover:shadow-gray-400 ease-in-out duration-500" src={headshot} alt="Zach's headshot" />
@@ -66,5 +68,9 @@ export default function Header() {
             <Navigation />
           </div> */}
         </nav>
+        <nav className="hidden sm:block">
+          <FullNavigation />
+        </nav>
+      </>
     );
   }

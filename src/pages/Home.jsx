@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid md:grid-cols-2 my-5 content-center justify-items-center">
+      <section className="grid sm:grid-cols-2 my-5 content-center justify-items-center">
         <figure className="flex justify-center w-11/12">
           <img className="rounded-full" src={headshot} alt="Zach's headshot" />
         </figure>

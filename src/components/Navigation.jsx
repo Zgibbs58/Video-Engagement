@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import NavItem from "./NavItem";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home", path: "/", id: 0 },
+  { name: "About", path: "/about", id: 1 },
+  { name: "Portfolio", path: "/portfolio", id: 2 },
+  { name: "Contact", path: "/contact", id: 3 },
 ];
 
 const variants = {
@@ -21,12 +21,8 @@ const variants = {
 export default function NavLink({ onClick }) {
   return (
     <motion.ul variants={variants}>
-      {/* <Link to={linkPath} className="group md:text-2xl font-semibold transition duration-300" onClick={onClick}>
-      {linkName}
-      <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-gray-500"></span>
-    </Link> */}
       {navLinks.map((i) => (
-        <NavItem name={i.name} path={i.path} key={i.index} onClick={onClick} />
+        <NavItem name={i.name} path={i.path} key={i.id} onClick={onClick} />
       ))}
     </motion.ul>
   );
