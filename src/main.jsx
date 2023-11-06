@@ -16,6 +16,18 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/about",
+        element: <div>About</div>,
+      },
+      {
+        path: "/portfolio",
+        element: <div>Portfolio</div>,
+      },
+      {
+        path: "/contact",
+        element: <div>Contact</div>,
+      },
+      {
         path: "/video/:videoId",
         element: <VideoPlayer />,
       },

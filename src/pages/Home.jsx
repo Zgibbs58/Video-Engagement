@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import headshot from "../assets/zach-headshot.jpg";
 import MainButton from "../components/MainButton";
 import SecondaryButton from "../components/SecondaryButton";
+import SkillsCarousel from "../components/SkillsCarousel";
 
 export default function Home() {
   // Create reference to store the DOM element containing the animation
@@ -47,9 +48,14 @@ export default function Home() {
             </p>
           </motion.div>
           <motion.div
-            className="grid grid-cols-2"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            //   className="grid grid-cols-2"
+            //   initial={{ opacity: 0, y: 100 }}
+            //   animate={{ opacity: 1, y: 0 }}
+            //   transition={{ ease: "easeOut", duration: 1, delay: 2.5 }}
+            //
+            animate={{
+              scale: [0, 1.25, 1],
+            }}
             transition={{ ease: "easeOut", duration: 1, delay: 2.5 }}
           >
             <MainButton />
@@ -57,6 +63,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      <SkillsCarousel />
     </>
   );
 }

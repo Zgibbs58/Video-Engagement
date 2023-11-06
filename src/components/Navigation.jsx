@@ -18,7 +18,7 @@ const variants = {
   },
 };
 
-export default function NavLink({ onClick }) {
+export default function Navigation({ onClick }) {
   return (
     <motion.ul variants={variants}>
       {navLinks.map((i) => (
@@ -28,6 +28,6 @@ export default function NavLink({ onClick }) {
   );
 }
 
-NavLink.propTypes = {
+Navigation.propTypes = {
   onClick: PropTypes.func,
 };
