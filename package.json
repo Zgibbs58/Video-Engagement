@@ -2,7 +2,7 @@
   "name": "Zachary-Portfolio",
   "version": "1.0.0",
   "description": "Portfolio Website for Zachary",
-  "main": "index.js",
+  "homepage": "https://zgibbs58.github.io/Zachary-Portfolio/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
