@@ -26,7 +26,7 @@ export default function NavItem({ name, path, index, onClick }) {
       <div className="icon-placeholder" />
       <Link to={path} key={index} className="text-placeholder group md:text-2xl font-semibold transition duration-300" onClick={onClick}>
         {name}
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-gray-500"></span>
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500"></span>
       </Link>
     </motion.li>
   );
