@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
+
 export default function MainButton() {
   return (
-    <button className="mt-8 mr-3 text-right">
-      <a
-        href="#contact"
-        className="mt-8 px-4 py-2 text-lg font-semibold text-white bg-gray-500 rounded-full hover:bg-gray-100 hover:text-gray-500 border-2 border-gray-500 ease-in-out duration-300"
-      >
-        Contact Me
-      </a>
-    </button>
+    <Link
+      to="/contact"
+      className="relative w-28 h-28 text-white bg-emerald-500 rounded-full border-8 border-emerald-300 hover:rotate-3 hover:scale-90 ease-in-out duration-300 flex flex-col content-end justify-center"
+    >
+      <span className="font-bold text-xl mr-2">let&rsquo;s</span>
+      <span className="ml-3 font-bold text-xl">talk</span>
+    </Link>
   );
 }
