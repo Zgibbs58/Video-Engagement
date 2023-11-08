@@ -22,9 +22,8 @@ const variants = {
 
 export default function NavItem({ name, path, index, onClick }) {
   return (
-    <motion.li variants={variants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-      <div className="icon-placeholder" />
-      <Link to={path} key={index} className="text-placeholder group md:text-2xl font-semibold transition duration-300" onClick={onClick}>
+    <motion.li className="pt-8" variants={variants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+      <Link to={path} key={index} className="text-2xl font-bold" onClick={onClick}>
         {name}
         <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500"></span>
       </Link>

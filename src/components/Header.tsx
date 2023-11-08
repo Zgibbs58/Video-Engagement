@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 import FullNavigation from "./FullNavigation";
 import {Toggle} from "./Toggle";
 import headshot from '../assets/zach-headshot.jpg';
-import { motion, useCycle } from "framer-motion"
+import { motion, useCycle, AnimatePresence } from "framer-motion"
 import { useDimensions } from "../../utils/use-dimensions";
 import "../App.css";
 
@@ -13,41 +13,19 @@ import "../App.css";
 //   closed: { opacity: 0, x: "100%", transition: { duration: 0.5 } },
 // }
 
-const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      restDelta: 2
-    }
-  }),
-  closed: {
-    clipPath: "circle(30px at 40px 40px)",
-    transition: {
-      type: "spring",
-      delay: 0.5,
-      stiffness: 400,
-      damping: 40
-    }
-  }
-};
-
 export default function Header() {
 
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
-  const closeMenu = () => {
-    if (isOpen) {
-      toggleOpen();
-    }
+  const toggleNavbar = () => {
+    toggleOpen();
   };
 
     return (
       <>
-        <nav className="mobileNav flex items-center justify-between py-2 sm:px-8 sm:px-12 sm:hidden">
+        <nav className="py-1 sm:px-12 sm:hidden fixed top-0 text-left z-10 pl-5 pt-5">
           {/* <div className="hidden sm:flex">
               <Link to="/" onClick={closeMenu}>
                 <img className="w-20 md:w-20 rounded-full hover:shadow-lg hover:shadow-gray-400 ease-in-out duration-500" src={headshot} alt="Zach's headshot" />
@@ -59,10 +37,19 @@ export default function Header() {
             custom={height}
             ref={containerRef}
           >
-            <motion.div className="background"variants={sidebar}>
-              <Navigation onClick={closeMenu}/>
-            </motion.div>
-            <Toggle toggle={() => toggleOpen()} isOpen={isOpen} />
+            <Toggle toggle={() => toggleNavbar()} isOpen={isOpen} />
+            <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                key="navigation"
+                initial={{ x:-20, y: -100, opacity: 0 }}
+                animate={{ x: -20, y: -65, opacity: 1 }}
+                exit={{ x: -20, y: -100, opacity: 0, transition: { duration: 0.3 } }}
+              >
+                <Navigation onClick={() => toggleNavbar()} />
+              </motion.div>
+            )}
+          </AnimatePresence>
           </motion.nav>
           {/* <div className={`hidden text-gray-500 sm:flex sm:flex-row justify-center block mx-2`}>
             <Navigation />

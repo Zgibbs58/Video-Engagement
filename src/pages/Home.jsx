@@ -5,6 +5,7 @@ import headshot from "../assets/zach-headshot.jpg";
 import MainButton from "../components/MainButton";
 import SecondaryButton from "../components/SecondaryButton";
 import SkillsCarousel from "../components/SkillsCarousel";
+import AboutMe from "../components/AboutMe";
 
 export default function Home() {
   // Create reference to store the DOM element containing the animation
@@ -31,7 +32,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid sm:grid-cols-2 py-20 mx-5 sm:mx-10 content-center justify-items-center">
+      <section className="grid sm:grid-cols-2 py-10 mx-5 sm:mx-10 content-center justify-items-center">
         <figure className="flex justify-center w-3/4 mb-5 sm:mb-0">
           <img className="rounded-full" src={headshot} alt="Zach's headshot" />
         </figure>
@@ -49,21 +50,18 @@ export default function Home() {
           </motion.div>
           <motion.div
             className="mt-10 flex justify-center"
-            //   initial={{ opacity: 0, y: 100 }}
-            //   animate={{ opacity: 1, y: 0 }}
-            //   transition={{ ease: "easeOut", duration: 1, delay: 2.5 }}
-            //
             animate={{
               scale: [0, 1.25, 1],
             }}
             transition={{ ease: "easeOut", duration: 1, delay: 2.5 }}
           >
             <MainButton />
-            {/* <SecondaryButton /> */}
           </motion.div>
         </div>
       </section>
-      {/* <SkillsCarousel /> */}
+      <section>
+        <AboutMe />
+      </section>
     </>
   );
 }

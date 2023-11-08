@@ -7,12 +7,12 @@ const Path = (props) => <motion.path fill="transparent" strokeWidth="3" stroke="
 import PropTypes from "prop-types";
 
 export const Toggle = ({ toggle, isOpen }) => (
-  <button className="toggleButton" onClick={toggle}>
-    <svg width="23" height="23" viewBox="0 0 23 23" className="block mx-auto">
+  <button className="bg-emerald-400 p-3 rounded-full z-20 relative" onClick={toggle}>
+    <svg width="23" height="23" viewBox="0 0 20 19" className="block mx-auto">
       <Path
         variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 6 6 L 17 17", originX: 11.5, originY: 11.5 },
+          closed: { d: "M 2 2.5 L 20 2.5"},
+          open: { d: "M 2 2 L 18 18", originX: 11.5, originY: 11.5 },
         }}
         initial={false}
       />
@@ -28,7 +28,7 @@ export const Toggle = ({ toggle, isOpen }) => (
       <Path
         variants={{
           closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 6 17 L 17 6", originX: 11.5, originY: 11.5 },
+          open: { d: "M 2 18 L 18 2", originX: 11.5, originY: 11.5 },
         }}
         initial={false}
       />
