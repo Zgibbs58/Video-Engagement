@@ -43,8 +43,8 @@ export default function Header() {
               <motion.div
                 key="navigation"
                 initial={{ x: -20, y: -350, opacity: 1 }}
-                animate={{ x: -20, y: -70, opacity: 1, transition: { duration: 0.5 } }}
-                exit={{ x: -20, y: -350, opacity: 1, transition: { duration: 0.5 } }}
+                animate={{ x: -20, y: -70, opacity: 1, transition: { duration: 0.2 } }}
+                exit={{ x: -20, y: -350, opacity: 1, transition: { duration: 0.2 } }}
               >
                 <Navigation onClick={() => toggleNavbar()} />
               </motion.div>
