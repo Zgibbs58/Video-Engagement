@@ -10,15 +10,17 @@ export default function SimpleSlider() {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     pauseOnFocus: false,
     pauseOnHover: true,
   };
   return (
     <Slider {...settings}>
-      <div>
-        <h3>1</h3>
+      <div className="my-5">
+        <h3 className="text-2xl font-bold">AstronoME</h3>
+        <img src="/images/AstronoME-screenshot.PNG" alt="" />
+        <p>A full stack application that allows stargazers to create community.</p>
       </div>
       <div>
         <h3>2</h3>

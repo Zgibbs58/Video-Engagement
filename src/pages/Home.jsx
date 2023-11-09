@@ -1,7 +1,6 @@
 import Typed from "typed.js";
 import React from "react";
 import { motion } from "framer-motion";
-import headshot from "../assets/zach-headshot.jpg";
 import MainButton from "../components/MainButton";
 import SecondaryButton from "../components/SecondaryButton";
 import SkillsCarousel from "../components/SkillsCarousel";
@@ -34,7 +33,7 @@ export default function Home() {
     <>
       <section className="grid sm:grid-cols-2 py-10 mx-5 sm:mx-10 content-center justify-items-center">
         <figure className="flex justify-center w-3/4 mb-5 sm:mb-0">
-          <img className="rounded-full" src={headshot} alt="Zach's headshot" />
+          <img className="rounded-full" src="/images/zach-headshot.jpg" alt="Zach's headshot" />
         </figure>
         <div className="grid content-center">
           <h1 className="text-3xl font-bold">
