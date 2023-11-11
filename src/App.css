@@ -13,6 +13,7 @@
   #root {
     box-shadow: none;
     margin: 0 auto;
+    border-radius: 0px;
     /* padding: 1rem; */
   }
 }
