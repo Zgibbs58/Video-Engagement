@@ -9,7 +9,7 @@
   background-color: rgb(243 244 246);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1287px) {
   #root {
     box-shadow: none;
     margin: 0 auto;
@@ -20,7 +20,7 @@
 
 @media (prefers-color-scheme: dark) {
   #root {
-    color: rgb(229 231 235);
+    color: rgb(243 244 246);
     background-color: rgb(17 24 39);
   }
 }

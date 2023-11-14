@@ -31,8 +31,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid sm:grid-cols-2 py-10 mx-5 sm:mx-10 content-center justify-items-center">
-        <figure className="flex justify-center w-3/4 mb-5 sm:mb-0">
+      <section className="grid lg:grid-cols-2 mt-16 md:mt-10 mx-5 lg:mx-10 content-center justify-items-center">
+        <figure className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mb-5 lg:mb-0">
           <img className="rounded-full" src="/images/zach-headshot.jpg" alt="Zach's headshot" />
         </figure>
         <div className="grid content-center">
@@ -43,7 +43,7 @@ export default function Home() {
             <h2 className="mt-4 text-xl font-semibold">Full Stack Developer</h2>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 2 }}>
-            <p className="text mt-8">
+            <p className="text md:mx-36 lg:mx-0 mt-8">
               Web developer from Murfreesboro, TN with a passion for solving problems with code and creating beautiful, functional websites.
             </p>
           </motion.div>

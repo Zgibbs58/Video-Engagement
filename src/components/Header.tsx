@@ -25,12 +25,7 @@ export default function Header() {
 
     return (
       <>
-        <nav className="py-1 sm:px-12 sm:hidden fixed top-0 text-left z-10 pl-5 pt-5">
-          {/* <div className="hidden sm:flex">
-              <Link to="/" onClick={closeMenu}>
-                <img className="w-20 md:w-20 rounded-full hover:shadow-lg hover:shadow-gray-400 ease-in-out duration-500" src={headshot} alt="Zach's headshot" />
-              </Link>
-          </div> */}
+        <nav className="py-1 md:px-12 md:hidden fixed top-0 text-left z-10 pl-5 pt-5 w-full">
           <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}
@@ -51,11 +46,8 @@ export default function Header() {
             )}
           </AnimatePresence>
           </motion.nav>
-          {/* <div className={`hidden text-gray-500 sm:flex sm:flex-row justify-center block mx-2`}>
-            <Navigation />
-          </div> */}
         </nav>
-        <nav className="hidden sm:block">
+        <nav className="hidden md:block">
           <FullNavigation />
         </nav>
       </>

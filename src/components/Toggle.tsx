@@ -2,7 +2,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import "../App.css";
 
-const Path = (props) => <motion.path fill="transparent" strokeWidth="3" stroke="white" strokeLinecap="round" {...props} />;
+const Path = (props) => <motion.path fill="transparent" strokeWidth="3" stroke="rgb(243 244 246)" strokeLinecap="round" {...props} />;
 
 import PropTypes from "prop-types";
 

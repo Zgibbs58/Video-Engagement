@@ -11,7 +11,7 @@ const navLinks = [
 
 export default function FullNavigation() {
   return (
-    <nav className="flex justify-around my-10 mx-64">
+    <nav className="flex justify-around my-10 md:mx-24 lg:mx-64">
       {navLinks.map((i) => (
         <FullNavItem name={i.name} path={i.path} key={i.id} />
       ))}
