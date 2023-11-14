@@ -2,8 +2,6 @@ import Typed from "typed.js";
 import React from "react";
 import { motion } from "framer-motion";
 import MainButton from "../components/MainButton";
-import SecondaryButton from "../components/SecondaryButton";
-import SkillsCarousel from "../components/SkillsCarousel";
 import AboutMe from "../components/AboutMe";
 
 export default function Home() {
@@ -36,11 +34,11 @@ export default function Home() {
           <img className="rounded-full" src="/images/zach-headshot.jpg" alt="Zach's headshot" />
         </figure>
         <div className="grid content-center">
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-4xl font-bold">
             <span ref={el} />
           </h1>
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.5 }}>
-            <h2 className="mt-4 text-xl font-semibold">Full Stack Developer</h2>
+            <h2 className="mt-4 text-2xl font-semibold">Full Stack Developer</h2>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 2 }}>
             <p className="text md:mx-36 lg:mx-0 mt-8">
@@ -48,7 +46,7 @@ export default function Home() {
             </p>
           </motion.div>
           <motion.div
-            className="mt-10 flex justify-center"
+            className="mt-8 flex justify-center"
             animate={{
               scale: [0, 1.25, 1],
             }}

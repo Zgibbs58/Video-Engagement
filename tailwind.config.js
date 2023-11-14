@@ -9,6 +9,9 @@ export default {
       rotate: {
         3: "-3deg",
       },
+      textDecorationThickness: {
+        4: "6px",
+      },
     },
   },
   plugins: [],

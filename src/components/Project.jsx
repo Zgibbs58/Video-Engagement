@@ -20,9 +20,15 @@ export default function Project({ name, description, image, projectLink, isOdd }
   }, []);
 
   return isOdd === 1 || isSmallScreen ? (
-    <section className="grid lg:grid-cols-3 lg:justify-items-end items-center mx-10 lg:mx-32 my-20 lg:my-72">
+    <motion.section
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
+      className="grid lg:grid-cols-3 lg:justify-items-end items-center my-20 lg:my-52"
+    >
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -35,16 +41,16 @@ export default function Project({ name, description, image, projectLink, isOdd }
         </button>
       </motion.div>
       <motion.figure
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.5 }}
-        className="lg:grid-span-1 my-10 lg:my-0 mx-10 lg:mx-0 rounded-3xl grid justify-items-center"
+        viewport={{ once: true, amount: 0.2 }}
+        className="lg:grid-span-1 my-10 lg:my-0 rounded-3xl grid justify-items-center"
       >
-        <img className="rounded-3xl shadow-lg shadow-gray-700 border-4 border-gray-200 lg:w-56" src={image} alt="" />
+        <img className="rounded-3xl shadow-lg shadow-gray-700 border-4 border-gray-200 lg:w-56" src={image} alt={image} />
       </motion.figure>
       <motion.button
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -52,29 +58,38 @@ export default function Project({ name, description, image, projectLink, isOdd }
       >
         <MobileButton text="View Project" link={projectLink} />
       </motion.button>
-    </section>
+    </motion.section>
   ) : (
-    <motion.div
-      initial={{ opacity: 0, x: -50 }}
+    <motion.section
+      initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true, amount: 0.5 }}
-      className="grid lg:grid-cols-3 lg:justify-items-start items-center mx-10 lg:mx-32 my-20 lg:my-72"
+      className="grid lg:grid-cols-3 lg:justify-items-start items-center mx-10 my-20 lg:my-52"
     >
-      <figure className="lg:grid-span-1 my-10 lg:my-0 mx-10 lg:mx-0 rounded-3xl">
-        <img className="rounded-3xl shadow-lg shadow-gray-700 border-4 border-gray-200 lg:w-56" src={image} alt="" />
-      </figure>
-      <button className="mx-2 block lg:hidden text-center">
-        <MobileButton text="View Project" link={projectLink} />
-      </button>
-      <div className="lg:col-span-2 text-left">
+      <motion.figure
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="lg:grid-span-1 my-10 lg:my-0 rounded-3xl"
+      >
+        <img className="rounded-3xl shadow-lg shadow-gray-700 border-4 border-gray-200 lg:w-56" src={image} alt={image} />
+      </motion.figure>
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="lg:col-span-2 text-left"
+      >
         <h2 className="text-3xl lg:text-5xl font-bold mb-8">{name}</h2>
         <p>{description}</p>
         <button className="mt-10 hidden lg:block">
           <SecondaryButton text="View Project" link={projectLink} />
         </button>
-      </div>
-    </motion.div>
+      </motion.div>
+    </motion.section>
   );
 }
 
