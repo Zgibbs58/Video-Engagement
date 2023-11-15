@@ -25,7 +25,7 @@ export default function Header() {
 
     return (
       <>
-        <nav className="py-1 md:px-12 md:hidden fixed top-0 text-left z-10 pl-5 pt-5 w-full">
+        <nav className="py-1 md:px-12 md:hidden fixed top-0 text-left z-10 pl-5 pt-5">
           <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}

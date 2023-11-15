@@ -1,3 +1,22 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  /* height: 100vh; */
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
 #root {
   color: rgb(107 114 128);
   max-width: 1280px;
@@ -7,8 +26,6 @@
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   background-color: rgb(243 244 246);
-  /* font-family: "Montserrat", sans-serif; */
-  /* font-family: "League Spartan", sans-serif; */
   font-family: "Titillium Web", sans-serif;
 }
 
@@ -32,52 +49,6 @@
   }
 }
 
-body {
-  width: 100vw;
-  /* height: 100vh; */
-  overflow-x: hidden;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-}
-
-/* .mobileNav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  z-index: 100;
-} */
-/* 
-.background {
-  position: absolute;
-  top: 16px;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  background: #6b7280;
-  background: #fff;
-} */
-
-/* .toggleButton {
-  outline: none;
-  border: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  cursor: pointer;
-  position: absolute;
-  top: 25px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: red;
-} */
-
 @media screen and (min-width: 640px) {
   .text-placeholder {
     color: #6b7280;
@@ -85,17 +56,3 @@ body {
     flex-direction: row; */
   }
 }
-/* .refresh {
-  padding: 10px;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  width: 20px;
-  height: 20px;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-} */
