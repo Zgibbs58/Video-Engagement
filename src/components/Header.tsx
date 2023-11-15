@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
 import FullNavigation from "./FullNavigation";
 import {Toggle} from "./Toggle";
-import headshot from '../assets/zach-headshot.jpg';
 import { motion, useCycle, AnimatePresence } from "framer-motion"
 import { useDimensions } from "../../utils/use-dimensions";
 import "../App.css";
