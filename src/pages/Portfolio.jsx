@@ -36,7 +36,7 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-4 decoration-emerald-500 text-center mb-24"
+          className="text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-4 decoration-emerald-500 text-left mb-36"
         >
           Portfolio
         </motion.h3>

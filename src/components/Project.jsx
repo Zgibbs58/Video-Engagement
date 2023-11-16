@@ -24,8 +24,8 @@ export default function Project({ name, description, image, projectLink, isOdd }
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.3 }}
-      className="grid lg:grid-cols-3 lg:justify-items-end items-center mb-20 lg:mb-64"
+      viewport={{ once: true, amount: 0.1 }}
+      className="grid lg:grid-cols-3 lg:justify-items-end items-center mb-36 lg:mb-64"
     >
       <motion.div
         initial={{ opacity: 0, x: 50 }}

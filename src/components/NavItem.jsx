@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const variants = {
@@ -21,11 +21,17 @@ const variants = {
 };
 
 export default function NavItem({ name, path, index, onClick }) {
+  const location = useLocation();
+
   return (
     <motion.li className="pt-8" variants={variants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
       <Link to={path} key={index} className="text-xl font-bold" onClick={onClick}>
         {name}
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500"></span>
+        <span
+          className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500 ${
+            location.pathname === path && "max-w-full w-full"
+          }`}
+        ></span>
       </Link>
     </motion.li>
   );
