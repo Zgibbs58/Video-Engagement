@@ -1,10 +1,12 @@
 import MobileButton from "./MobileButton";
+import MainBtn from "./MainBtn";
 import SecondaryButton from "./SecondaryButton";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function Project({ name, description, image, projectLink, isOdd }) {
+export default function Project({ name, description, image, projectLink, isOdd, id }) {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1024);
 
   useEffect(() => {
@@ -36,7 +38,15 @@ export default function Project({ name, description, image, projectLink, isOdd }
       >
         <h2 className="text-3xl lg:text-5xl font-bold mb-8">{name}</h2>
         <p>{description}</p>
-        <button className="mt-10 hidden lg:block">
+        <button className="mx-2 block lg:hidden text-center  mt-5 ml-0">
+          <Link to={`/project/${id}`} className="border-2 border-gray-500 font-semibold px-2 py-1 rounded-md">
+            Learn More
+          </Link>
+        </button>
+        <button className="mt-10 hidden lg:inline mr-5">
+          <MainBtn text="Learn More" link={`/project/${id}`} />
+        </button>
+        <button className="mt-10 hidden lg:inline">
           <SecondaryButton text="View Project" link={projectLink} />
         </button>
       </motion.div>
@@ -85,7 +95,10 @@ export default function Project({ name, description, image, projectLink, isOdd }
       >
         <h2 className="text-3xl lg:text-5xl font-bold mb-8">{name}</h2>
         <p>{description}</p>
-        <button className="mt-10 hidden lg:block">
+        <button className="mt-10 hidden lg:inline mr-5">
+          <MainBtn text="Learn More" link={`/project/${id}`} />
+        </button>
+        <button className="mt-10 hidden lg:inline">
           <SecondaryButton text="View Project" link={projectLink} />
         </button>
       </motion.div>
@@ -94,6 +107,7 @@ export default function Project({ name, description, image, projectLink, isOdd }
 }
 
 Project.propTypes = {
+  id: PropTypes.number,
   name: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,

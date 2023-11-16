@@ -7,6 +7,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
+import IndividualProject from "./pages/IndividualProject.jsx";
 import VideoPlayer from "./pages/VideoPlayer.jsx";
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/project/:projectId",
+        element: <IndividualProject />,
       },
       {
         path: "/video/:videoId",

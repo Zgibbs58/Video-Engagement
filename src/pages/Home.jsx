@@ -1,7 +1,7 @@
 import Typed from "typed.js";
 import React from "react";
 import { motion } from "framer-motion";
-import MainButton from "../components/MainButton";
+import CtaBtn from "../components/CtaBtn";
 import AboutMe from "../components/AboutMe";
 
 export default function Home() {
@@ -52,7 +52,7 @@ export default function Home() {
             }}
             transition={{ ease: "easeOut", duration: 1, delay: 2.5 }}
           >
-            <MainButton />
+            <CtaBtn />
           </motion.div>
         </div>
       </section>
