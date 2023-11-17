@@ -30,10 +30,6 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 
-/* p {
-  font-family: "League Spartan", sans-serif;
-} */
-
 @media screen and (max-width: 1287px) {
   #root {
     box-shadow: none;
@@ -56,10 +52,8 @@ body {
   }
 }
 
-/* @media screen and (min-width: 640px) {
-  .text-placeholder {
-    color: #6b7280;
-    display: flex;
-    flex-direction: row;
-  }
-} */
+.projectGif {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
