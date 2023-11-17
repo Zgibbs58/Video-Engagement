@@ -12,6 +12,12 @@ export default {
       textDecorationThickness: {
         4: "6px",
       },
+      width: {
+        80: "1280px",
+      },
+      screens: {
+        xs: "355px",
+      },
     },
   },
   plugins: [],

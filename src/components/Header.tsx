@@ -24,7 +24,7 @@ export default function Header() {
 
     return (
       <>
-        <nav className="md:hidden fixed top-8 right-8 text-right z-10">
+        <nav className="md:hidden fixed top-6 right-6 text-right z-10">
           <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}
@@ -36,9 +36,9 @@ export default function Header() {
             {isOpen && (
               <motion.div
                 key="navigation"
-                initial={{ x: 32, y: -350, opacity: 1 }}
-                animate={{ x: 32, y: -80, opacity: 1, transition: { duration: 0.2 } }}
-                exit={{ x: 32, y: -350, opacity: 1, transition: { duration: 0.2 } }}
+                initial={{ x: 24, y: -350, opacity: 1 }}
+                animate={{ x: 24, y: -80, opacity: 1, transition: { duration: 0.2 } }}
+                exit={{ x: 24, y: -350, opacity: 1, transition: { duration: 0.2 } }}
               >
                 <Navigation onClick={() => toggleNavbar()} />
               </motion.div>
@@ -46,7 +46,7 @@ export default function Header() {
           </AnimatePresence>
           </motion.nav>
         </nav>
-        <nav className="hidden md:block">
+        <nav className="hidden md:block sticky top-0 z-10 py-5 bg-gray-100 opacity-90 shadow-[0_10px_5px_-3px_rgba(0,0,0,0.3)]">
           <FullNavigation />
         </nav>
       </>

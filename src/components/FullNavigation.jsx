@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import FullNavItem from "./FullNavItem";
 
 const navLinks = [
@@ -11,10 +9,10 @@ const navLinks = [
 
 export default function FullNavigation() {
   return (
-    <nav className="flex justify-around my-10 md:mx-24 lg:mx-64">
+    <div className="flex justify-center">
       {navLinks.map((i) => (
         <FullNavItem name={i.name} path={i.path} key={i.id} />
       ))}
-    </nav>
+    </div>
   );
 }

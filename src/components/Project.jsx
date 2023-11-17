@@ -64,7 +64,7 @@ export default function Project({ name, description, image, projectLink, isOdd, 
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="mx-2 block lg:hidden text-center"
+        className="block lg:hidden text-center"
       >
         <MobileButton text="View Project" link={projectLink} />
       </motion.button>
