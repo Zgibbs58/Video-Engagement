@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Project from "../components/Project";
 import { motion } from "framer-motion";
 import { projectData } from "../../utils/projectData";
@@ -5,16 +6,21 @@ import { projectData } from "../../utils/projectData";
 const isOdd = (num) => num % 2;
 
 export default function Portfolio() {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section className="overflow-x-hidden">
-        <div className="mx-10 my-24 lg:mx-32 ">
+        <div className="mx-10 mt-6 mb-24 lg:mx-32 ">
           <motion.h3
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-4 decoration-emerald-500 text-left mb-36"
+            className="text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-4 decoration-emerald-500 text-left mb-24"
           >
             Portfolio
           </motion.h3>

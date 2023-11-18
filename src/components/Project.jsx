@@ -47,7 +47,7 @@ export default function Project({ name, description, image, projectLink, isOdd, 
           <MainBtn text="Learn More" link={`/project/${id}`} />
         </button>
         <button className="mt-10 hidden lg:inline">
-          <SecondaryButton text="View Project" link={projectLink} />
+          <SecondaryButton text="View Site" link={projectLink} />
         </button>
       </motion.div>
       <motion.figure
@@ -66,7 +66,7 @@ export default function Project({ name, description, image, projectLink, isOdd, 
         viewport={{ once: true, amount: 0.3 }}
         className="block lg:hidden text-center"
       >
-        <MobileButton text="View Project" link={projectLink} />
+        <MobileButton text="View Site" link={projectLink} />
       </motion.button>
     </motion.section>
   ) : (
@@ -99,7 +99,7 @@ export default function Project({ name, description, image, projectLink, isOdd, 
           <MainBtn text="Learn More" link={`/project/${id}`} />
         </button>
         <button className="mt-10 hidden lg:inline">
-          <SecondaryButton text="View Project" link={projectLink} />
+          <SecondaryButton text="View Site" link={projectLink} />
         </button>
       </motion.div>
     </motion.section>

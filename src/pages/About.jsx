@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <>
-      <div className="mx-10 my-24 lg:mx-32">
+      <div className="mx-10 mt-6 mb-24 lg:mx-32">
         <motion.h3
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
