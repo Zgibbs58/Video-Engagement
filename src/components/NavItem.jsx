@@ -24,7 +24,7 @@ export default function NavItem({ name, path, index, onClick }) {
   const location = useLocation();
 
   return (
-    <motion.li className="pt-8" variants={variants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+    <motion.li className="pt-8" variants={variants}>
       <Link to={path} key={index} className="text-xl font-bold" onClick={onClick}>
         {name}
         <span

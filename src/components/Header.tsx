@@ -46,7 +46,7 @@ export default function Header() {
           </AnimatePresence>
           </motion.nav>
         </nav>
-        <nav className="hidden md:block sticky top-0 z-10 py-5 bg-gray-100 opacity-90 shadow-[0_10px_5px_-3px_rgba(0,0,0,0.3)]">
+        <nav className="hidden md:block sticky top-0 z-10 py-5 bg-gray-100 opacity-95 shadow-[0_10px_5px_-3px_rgba(0,0,0,0.3)]">
           <FullNavigation />
         </nav>
       </>

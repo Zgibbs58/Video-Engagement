@@ -4,7 +4,7 @@ import SecondaryButton from "./SecondaryButton";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import MobileButtonSecondary from "./MobileButtonSecondary";
 
 export default function Project({ name, description, image, projectLink, isOdd, id }) {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1024);
@@ -38,11 +38,11 @@ export default function Project({ name, description, image, projectLink, isOdd, 
       >
         <h2 className="text-3xl lg:text-5xl font-bold mb-8">{name}</h2>
         <p>{description}</p>
-        <button className="mx-2 block lg:hidden text-center  mt-5 ml-0">
+        {/* <button className="mx-2 block lg:hidden text-center  mt-5 ml-0">
           <Link to={`/project/${id}`} className="border-2 border-gray-500 font-semibold px-2 py-1 rounded-md">
             Learn More
           </Link>
-        </button>
+        </button> */}
         <button className="mt-10 hidden lg:inline mr-5">
           <MainBtn text="Learn More" link={`/project/${id}`} />
         </button>
@@ -67,6 +67,15 @@ export default function Project({ name, description, image, projectLink, isOdd, 
         className="block lg:hidden text-center"
       >
         <MobileButton text="View Site" link={projectLink} />
+      </motion.button>
+      <motion.button
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="block lg:hidden text-center mt-10"
+      >
+        <MobileButtonSecondary text="Learn More" link={`/project/${id}`} />
       </motion.button>
     </motion.section>
   ) : (

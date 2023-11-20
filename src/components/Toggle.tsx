@@ -7,7 +7,7 @@ const Path = (props) => <motion.path fill="transparent" strokeWidth="3" stroke="
 import PropTypes from "prop-types";
 
 export const Toggle = ({ toggle, isOpen }) => (
-  <button className="bg-emerald-400 p-3 rounded-full z-20 relative shadow-md" onClick={toggle}>
+  <button className="bg-emerald-500 p-3 rounded-full z-20 relative shadow-md" onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 20 19" className="block mx-auto">
       <Path
         variants={{

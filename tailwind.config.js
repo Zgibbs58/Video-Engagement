@@ -10,13 +10,17 @@ export default {
         3: "-3deg",
       },
       textDecorationThickness: {
-        4: "6px",
+        5: "5px",
+        6: "6px",
       },
       width: {
         80: "1280px",
       },
       screens: {
         xs: "355px",
+      },
+      padding: {
+        18: "4.45rem",
       },
     },
   },
