@@ -22,11 +22,11 @@ export const projectData = [
       "Keeping track of your car's maintenance can be a headache. So put on cruise control and let the Maintenance Manatee keep track of it for you! Create a profile for your vehicle(s) and add posts describing the work you've had done including the cost, date, and any other important details. Join the Maintenance Manatee and spend more time in the fast lane!",
     fullDescription: [
       "Maintenance Manatee is a user-friendly, full-stack web application designed to simplify the task of tracking vehicle maintenance. We worked on a team of four developers, utilizing the MVC paradigm to create a RESTful API with CRUD functionality. My primary contributions centered around the implementation of the Handlebars templating engine, the design and styling of the UI, and collaborating with teammates to ensure client side and server side code functioned in harmony.",
-      "Leveraging the Handlebars templating engine, I created dynamic HTML pages, utilizing conditional rendering to display the user's vehicle information in forms and pages. I also implemented a custom helper function to format dates in a user-friendly manner.",
-      "One of our stretch goals was the integration of image uploading within the post functionality. Excited for the oppurtunity to learn something new, I dedicated myself to researching and implementing Cloudinary. This involved utilizing a client-side widget for file selection and upload. Upon receiving the Cloudinary response containing the URL string, I stored it as a property in the MongoDB database's Blog Post model. Subsequently, when rendering posts, we showcased the stored Cloudinary images using the associated URLs.",
-      "In addition to these major tasks, I actively contributed to bug fixes, implemented smaller features, and enhanced UI/UX, collaborating closely with my teammates. Our team's iterative development process spanned 10 days, encompassing concept creation, planning, development, testing, and presentation. Through persistent teamwork, we overcame challenges and learned to navigate obstacles together, capitalizing on each other's strengths.",
+      "Leveraging the Handlebars templating engine, I created dynamic HTML pages, utilizing conditional rendering to display the user's vehicle information in forms and pages. Additionally, I implemented custom helper functions to format dates and sort maintenance post dates in ascending order.",
+      "I was responsible for most of the design and styling of the UI, utilizing Tailwind CSS to create a clean, intuitive interface. Which included a responsive design, ensuring the application is accessible on a variety of devices.",
+      "Throughout the development process we utilized Git branches to ensure our code was well organized and to minimize the risk of merge conflicts. We were faced with merge conflicts on a few occasions, but we were able to resolve them through effective communication and collaboration.",
     ],
-    image: "/images/MaintenanceManatee.gif",
+    image: "/images/MaintenanceManatee2.gif",
     projectLink: "https://maintenance-manatee-20230807-e071f072b462.herokuapp.com/",
     repoLink: "https://github.com/Zgibbs58/maintenance-manatee",
     technologies: ["Express", "Node", "MySQL2", "Sequelize", "Handlebars", "Tailwind CSS", "Heroku"],
@@ -36,7 +36,13 @@ export const projectData = [
     name: "Book Search Engine",
     description:
       "React Application built for stargazers. Provides information about current moon phase, weather, and incoming asteroids. and it contains a fully functional forum for stargazers to connect and share what they see. Uses MongoDB and Mongoose for the database, GraphQL, and Node.js and Express.js for the server",
+    fullDescription: [
+      "This application was originally built using a RESTful API, and I refactored it to use GraphQL. I created the GraphQL queries and mutations, as well as the Apollo Server. I also implemented the Apollo Provider to connect the client-side application to the server-side API.",
+      "I utilized the useQuery and useMutation hooks to orchestrate asynchronous data fetching from the GraphQL API. The useState hook was used to manage state variables based on the API responses. The JSX code featured conditional rendering, utilizing a ternary operator to dynamically display either cards of the fetched data or user-friendly messages.",
+    ],
     image: "/images/BookSearchEngine.gif",
     projectLink: "https://shrouded-beach-51381-8a380f4bede0.herokuapp.com/",
+    repoLink: "https://github.com/Zgibbs58/Book-Search-Engine-Refactor",
+    technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Bootstrap", "Heroku"],
   },
 ];
