@@ -29,11 +29,11 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid lg:grid-cols-2 mt-20 md:mt-10 mx-5 lg:mx-10 content-center justify-items-center overflow-x-hidden">
+      <section className="grid lg:grid-cols-2 mx-5 lg:mx-10 content-center justify-items-center overflow-x-hidden h-screen">
         <figure className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mb-5 lg:mb-0">
           <img className="rounded-full" src="/images/zach-headshot.jpg" alt="Zach's headshot" />
         </figure>
-        <div className="grid content-center">
+        <div className="grid content-end">
           <h1 className="text-4xl font-bold">
             <span ref={el} />
           </h1>
@@ -46,7 +46,7 @@ export default function Home() {
             </p>
           </motion.div>
           <motion.div
-            className="mt-8 flex justify-center"
+            className="my-8 flex justify-center"
             animate={{
               scale: [0, 1.25, 1],
             }}
