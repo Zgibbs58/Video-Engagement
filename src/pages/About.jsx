@@ -18,7 +18,13 @@ export default function About() {
         >
           About
         </motion.h3>
-        <section className="grid grid-cols-1 gap-y-5 items-start">
+        <motion.section
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="grid grid-cols-1 gap-y-5 items-start"
+        >
           <p className="col-span-2 text-left min-[1150px]:leading-7 min-[1150px]:text-lg md:text-md md:leading-6 xl:text-xl xl:leading-9">
             Hello! I&apos;m Zach Gibbs, a Full Stack Web Developer with a unique background in Inventory Control, where I honed my problem-solving
             skills over nine years. During this time, I discovered my passion for leveraging technology to resolve challenges within the company. My
@@ -49,7 +55,7 @@ export default function About() {
               <img className="h-full object-cover" src="/images/AboutMe3.jpg" alt="" />
             </div>
           </figure>
-        </section>
+        </motion.section>
       </div>
     </>
   );

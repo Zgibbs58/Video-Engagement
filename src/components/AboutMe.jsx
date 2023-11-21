@@ -1,4 +1,4 @@
-import SecondaryButton from "./SecondaryButton";
+import MobilebuttonSecondary from "./MobileButtonSecondary";
 
 export default function AboutMe() {
   return (
@@ -21,7 +21,7 @@ export default function AboutMe() {
             making me an ideal fit for dynamic web development roles. Let&apos;s connect and explore the possibilities!
           </p>
           <button className="mt-8 mb-3">
-            <SecondaryButton text={"Learn More"} />
+            <MobilebuttonSecondary text={"Learn More"} link={"/contact"} />
           </button>
         </div>
       </section>

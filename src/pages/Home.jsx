@@ -14,7 +14,7 @@ export default function Home() {
       typeSpeed: 70,
       backSpeed: 70,
       smartBackspace: true,
-      startDelay: 700,
+      startDelay: 300,
       backDelay: 5000,
       cursorChar: "|",
       loop: true,
@@ -37,10 +37,10 @@ export default function Home() {
           <h1 className="text-4xl font-bold">
             <span ref={el} />
           </h1>
-          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.5 }}>
+          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.25 }}>
             <h2 className="mt-4 text-2xl font-semibold">Full Stack Developer</h2>
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 2 }}>
+          <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.5 }}>
             <p className="text md:mx-36 lg:mx-0 mt-8">
               Web developer from Murfreesboro, TN with a passion for solving problems with code and creating beautiful, functional websites.
             </p>
@@ -50,7 +50,7 @@ export default function Home() {
             animate={{
               scale: [0, 1.25, 1],
             }}
-            transition={{ ease: "easeOut", duration: 1, delay: 2.5 }}
+            transition={{ ease: "easeOut", duration: 1, delay: 2 }}
           >
             <CtaBtn />
           </motion.div>
