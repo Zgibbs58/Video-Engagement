@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { validateEmail } from "/utils/helper";
 
@@ -9,6 +9,11 @@ export default function Contact() {
   const [message, setMessage] = useState("");
 
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleInputChange = (e, inputName) => {
     console.log(e);
@@ -77,13 +82,44 @@ export default function Contact() {
     setMessage("");
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // const { name, from, subject, message } = state;
+    const { name, from, subject } = {
+      name: `${firstName} ${lastName}`,
+      from: email,
+      subject: "Portfolio Contact Form",
+    };
+    try {
+      const response = await fetch("http://localhost:3001/api/sendmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, from, subject, message }),
+      });
+      if (response.status === 200) {
+        console.log("Email sent!. \nResponse:", response);
+        // setState((prevState) => ({ ...prevState, formSubmitted: true }));
+        alert(`Thanks for your submission, ${firstName}`);
+        // If everything goes according to plan, we want to clear out the input after a successful registration.
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        console.log("Email not sent. \nResponse:", response);
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
   return (
     <div className="mx-10 mt-6 mb-24 lg:mx-32">
-      <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24">
+      <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-20">
         Contact
       </h3>
-      <div className="flex justify-center pt-8">
-        <form className="w-full max-w-lg" onSubmit={handleFormSubmit}>
+      <div className="flex justify-center">
+        <form className="w-full max-w-lg" onSubmit={handleSubmit}>
           <p className="text-red-500 text-s italic pb-6">{errorMessage}</p>
           <div className="flex flex-wrap mx-3 pb-6">
             <div className="w-full md:w-1/2 px-3 pb-6 md:pb-0">

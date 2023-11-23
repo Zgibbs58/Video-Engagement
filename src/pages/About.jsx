@@ -7,22 +7,20 @@ export default function About() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="overflow-x-hidden">
       <div className="mx-10 mt-6 mb-24 lg:mx-32">
         <motion.h3
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.5 }}
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          className="text-3xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24"
         >
           About
         </motion.h3>
         <motion.section
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.5 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
           className="grid grid-cols-1 gap-y-5 items-start"
         >
           <p className="col-span-2 text-left min-[1150px]:leading-7 min-[1150px]:text-lg md:text-md md:leading-6 xl:text-xl xl:leading-9">
@@ -57,6 +55,6 @@ export default function About() {
           </figure>
         </motion.section>
       </div>
-    </>
+    </div>
   );
 }

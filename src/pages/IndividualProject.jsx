@@ -3,9 +3,7 @@ import { projectData } from "../../utils/projectData";
 import { useEffect } from "react";
 import SecondaryButton from "../components/SecondaryButton";
 import MainBtn from "../components/MainBtn";
-import MobileButton from "../components/MobileButton";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 export default function IndividualProject() {
   console.log(projectData);
