@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
+import { motion } from "framer-motion";
 
 import { validateEmail } from "/utils/helper";
 
@@ -75,27 +76,12 @@ export default function Contact() {
     }
   };
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
-
-    //   We check to see if an input is empty and set the errorMessage to say it's a required field.
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     if (!firstName || !lastName || !email || !message) {
       setErrorMessage("Please complete all required sections of the form.");
       return;
     }
-    alert(`Thanks for your submission, ${firstName}`);
-
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setMessage("");
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    // const { name, from, subject, message } = state;
     const { name, from, subject } = {
       name: `${firstName} ${lastName}`,
       from: email,
@@ -135,19 +121,33 @@ export default function Contact() {
         <p className="text-lg mb-4">I&apos;ll review your message and get back to you as soon as possible.</p>{" "}
       </Modal>
       <div className="mx-10 mt-6 mb-24 lg:mx-32">
-        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-20">
+        <motion.h3
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-6"
+        >
           Contact
-        </h3>
-        <div className="flex justify-center">
-          <form className="w-full max-w-lg" onSubmit={handleSubmit}>
-            <p className="text-red-500 text-s italic pb-6">{errorMessage}</p>
-            <div className="flex flex-wrap mx-3 pb-6">
-              <div className="w-full md:w-1/2 px-3 pb-6 md:pb-0">
+        </motion.h3>
+        <p className="invisible">
+          Lorem ipsum dolor, <span className="hidden xs:inline">sit amet consectetur adipisicing elit. Eos alias deserunt</span>
+          <span className="hidden sm:inline">recusandae assumenda tempora doloribus rem. Rem dolore, labore dicta fuga modi quae voluptates.</span>
+        </p>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          className="flex justify-start text-left"
+        >
+          <form className="w-full" onSubmit={handleSubmit}>
+            <p className="text-red-500 text-md font-semibold italic mb-4">{errorMessage}</p>
+            <div className="flex flex-wrap pb-6">
+              <div className="w-full md:w-1/2 md:pr-3 pb-6 md:pb-0">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-first-name">
                   First Name
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 pb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="firstName"
                   type="text"
                   placeholder="Jane"
@@ -158,7 +158,7 @@ export default function Contact() {
                 />
                 <p id="firstNameError" className="text-red-500 text-xs italic"></p>
               </div>
-              <div className="w-full md:w-1/2 px-3">
+              <div className="w-full md:w-1/2">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-last-name">
                   Last Name
                 </label>
@@ -175,8 +175,8 @@ export default function Contact() {
                 <p id="lastNameError" className="text-red-500 text-xs italic"></p>
               </div>
             </div>
-            <div className="flex flex-wrap mx-3 pb-6">
-              <div className="w-full px-3">
+            <div className="flex flex-wrap pb-6">
+              <div className="w-full">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-password">
                   E-mail
                 </label>
@@ -193,8 +193,8 @@ export default function Contact() {
                 <p id="emailError" className="text-red-500 text-xs italic"></p>
               </div>
             </div>
-            <div className="flex flex-wrap mx-3">
-              <div className="w-full px-3">
+            <div className="flex flex-wrap">
+              <div className="w-full">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-password">
                   Message
                 </label>
@@ -210,13 +210,13 @@ export default function Contact() {
               </div>
             </div>
             <button
-              className="my-6 px-6 xs:px-18 py-2 text-xl font-bold text-gray-500 bg-gray-100 rounded-full hover:bg-gray-500 hover:text-white border-2 border-gray-500 ease-in-out duration-300"
+              className="w-full my-6 py-2 text-xl font-bold text-gray-500 bg-gray-100 rounded-full hover:bg-gray-500 hover:text-white border-2 border-gray-500 ease-in-out duration-300"
               type="submit"
             >
               Send
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </>
   );

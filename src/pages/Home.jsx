@@ -1,14 +1,19 @@
 import Typed from "typed.js";
-import React from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
 import AboutMe from "../components/AboutMe";
 
 export default function Home() {
-  // Create reference to store the DOM element containing the animation
-  const el = React.useRef(null);
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
-  React.useEffect(() => {
+  // Create reference to store the DOM element containing the animation
+  const el = useRef(null);
+
+  useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ["Zach Gibbs"],
       typeSpeed: 70,
