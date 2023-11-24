@@ -18,14 +18,6 @@ const sendMail = async (name, to, from, subject, message) => {
   logToFile("Sending email..., in the sendMail.js file");
 
   try {
-    // let transporter = nodemailer.createTransport({
-    //   service: "gmail",
-    //   host: "localhost",
-    //   secure: false,
-    //   port: 25,
-    //   auth: { user: "zacharywgibbs@gmail.com", pass: "Ribs&Remi917" },
-    //   tls: { rejectUnauthorized: false },
-    //   debug: true,
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
