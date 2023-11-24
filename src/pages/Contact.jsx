@@ -120,7 +120,7 @@ export default function Contact() {
         <p className="text-2xl font-bold mb-4">Thanks for reaching out, {modalFirstName}!</p>
         <p className="text-lg mb-4">I&apos;ll review your message and get back to you as soon as possible.</p>{" "}
       </Modal>
-      <div className="mx-10 mt-6 mb-24 lg:mx-32">
+      <div className="mx-10 mt-6 mb-24 lg:mx-32 overflow-x-hidden">
         <motion.h3
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -143,7 +143,7 @@ export default function Contact() {
             <p className="text-red-500 text-md font-semibold italic mb-4">{errorMessage}</p>
             <div className="flex flex-wrap pb-6">
               <div className="w-full md:w-1/2 md:pr-3 pb-6 md:pb-0">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-first-name">
+                <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="grid-first-name">
                   First Name
                 </label>
                 <input
@@ -159,7 +159,7 @@ export default function Contact() {
                 <p id="firstNameError" className="text-red-500 text-xs italic"></p>
               </div>
               <div className="w-full md:w-1/2">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-last-name">
+                <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="grid-last-name">
                   Last Name
                 </label>
                 <input
@@ -177,7 +177,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-wrap pb-6">
               <div className="w-full">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-password">
+                <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="grid-password">
                   E-mail
                 </label>
                 <input
@@ -195,7 +195,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-wrap">
               <div className="w-full">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-password">
+                <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="grid-password">
                   Message
                 </label>
                 <textarea

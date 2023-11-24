@@ -1,5 +1,3 @@
-import * as React from "react";
-import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 

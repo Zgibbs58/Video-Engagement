@@ -47,7 +47,8 @@ export default function Home() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.5 }}>
             <p className="text md:mx-36 lg:mx-0 mt-8">
-              Web developer from Murfreesboro, TN with a passion for solving problems with code and creating beautiful, functional websites.
+              Web developer based in Murfreesboro, TN with a passion for solving problems through coding and crafting visually appealing, functional
+              websites.
             </p>
           </motion.div>
           <motion.div

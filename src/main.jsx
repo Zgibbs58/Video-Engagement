@@ -48,7 +48,9 @@ const router = createBrowserRouter([
 ]);
 console.log("Before subscribe");
 router.subscribe(({ pathname }) => {
-  console.log("Current Path:", pathname);
+  if (pathname) {
+    console.log("Current Path:", pathname);
+  }
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(<RouterProvider router={router} />);
