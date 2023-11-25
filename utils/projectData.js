@@ -45,4 +45,19 @@ export const projectData = [
     repoLink: "https://github.com/Zgibbs58/Book-Search-Engine-Refactor",
     technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Bootstrap", "Heroku"],
   },
+  {
+    id: 4,
+    name: "Mofield Brothers",
+    description:
+      "This is a small business website for a local construction company. The application features a gallery of projects, a group of cards listing their services, a contact form, and a section with information about the company.",
+    fullDescription: [
+      "This is a website designed to showcase the work of a local construction company. They were looking for a simple, clean website that would allow them to display their work and provide a way for potential customers to contact them. I worked closely with the client to ensure the website met their needs and expectations.",
+      "This was an earlier project of mine when I was first learning web development. I utilized HTML, CSS, and JavaScript to create the website. I used the Bootstrap framework in conjunction with custom CSS to create a responsive design, ensuring the website is accessible on a variety of devices.",
+      "I also implemented the contact form, utilizing the formsubmit API to send emails to the company's email address.",
+    ],
+    image: "/images/MofieldBrothers.gif",
+    projectLink: "https://mofieldbrothers.com/",
+    repoLink: "https://github.com/Zgibbs58/Mofield-Brothers-Construction",
+    technologies: ["HTML", "CSS", "JavaScript"],
+  },
 ];
