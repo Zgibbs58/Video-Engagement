@@ -48,7 +48,7 @@ body {
 @media (prefers-color-scheme: dark) {
   #root {
     color: rgb(243 244 246);
-    background-color: rgb(17 24 39);
+    background-color: #1e293b;
   }
 }
 
