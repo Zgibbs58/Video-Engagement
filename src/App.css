@@ -14,6 +14,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  background-color: #cbd5e1;
   /* align-items: center; */
 }
 

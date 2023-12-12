@@ -34,10 +34,15 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid lg:grid-cols-2 mx-5 lg:mx-10 content-center justify-items-center overflow-x-hidden mt-24 sm:mt-20">
-        <figure className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mb-5 lg:mb-0">
+      <section className="grid lg:grid-cols-2 mx-5 lg:mx-10 content-center justify-items-center overflow-x-hidden h-screen md:h-auto md:mt-36 md:mb-36 short:h-auto short:mt-14">
+        <motion.figure
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mb-5 lg:mb-0"
+        >
           <img className="rounded-full" src="/images/zach-headshot.jpg" alt="Zach's headshot" />
-        </figure>
+        </motion.figure>
         <div className="grid content-end">
           <h1 className="text-4xl font-bold">
             <span ref={el} />

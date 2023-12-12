@@ -47,12 +47,7 @@ export default function About() {
             you!
           </p>
           <figure className="lg:col-span-4">
-            <img className="object-cover" src="/images/aboutCollage.png" alt="" />
-            {/* <img className="col-span-4 lg:col-span-3 lg:h-full object-cover" src="/images/AboutMe2.jpg" alt="" />
-            <div className="col-span-2 lg:col-span-3 lg:h-full grid grid-rows-2 gap-2">
-              <img className="h-full object-cover" src="/images/AboutMe1.jpg" alt="" />
-              <img className="h-full object-cover" src="/images/AboutMe3.jpg" alt="" />
-            </div> */}
+            <img className="object-cover" src="/images/aboutCollage2.png" alt="" />
           </figure>
         </motion.section>
       </div>
