@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-500 pt-4 text-gray-100 flex flex-col items-center">
@@ -10,9 +12,9 @@ export default function Footer() {
           <a href="https://linkedin.com/in/zacharywgibbs" target="_blank" rel="noreferrer">
             <img src="/icons/linkedin.svg" alt="linkedin logo" className="w-8 h-8 hover:scale-90 ease-in-out duration-150" />
           </a>
-          <a href="" target="_blank" rel="noreferrer">
+          <Link to="/contact">
             <img src="/icons/email.svg" alt="email logo" className="w-8 h-8 hover:scale-90 ease-in-out duration-150" />
-          </a>
+          </Link>
         </div>
       </div>
       <p className="text-sm pb-2">Zach Gibbs &copy; 2023 All Rights Reserved.</p>
