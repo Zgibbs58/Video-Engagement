@@ -46,12 +46,13 @@ export default function About() {
             or anyone in need of a developer with a knack for problem-solving and a passion for innovative solutions. I look forward to hearing from
             you!
           </p>
-          <figure className="lg:col-span-4 grid grid-cols-6 gap-2">
-            <img className="col-span-4 lg:col-span-3 lg:h-full object-cover" src="/images/AboutMe2.jpg" alt="" />
+          <figure className="lg:col-span-4">
+            <img className="object-cover" src="/images/aboutCollage.png" alt="" />
+            {/* <img className="col-span-4 lg:col-span-3 lg:h-full object-cover" src="/images/AboutMe2.jpg" alt="" />
             <div className="col-span-2 lg:col-span-3 lg:h-full grid grid-rows-2 gap-2">
               <img className="h-full object-cover" src="/images/AboutMe1.jpg" alt="" />
               <img className="h-full object-cover" src="/images/AboutMe3.jpg" alt="" />
-            </div>
+            </div> */}
           </figure>
         </motion.section>
       </div>
