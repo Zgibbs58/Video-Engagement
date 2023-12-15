@@ -1,13 +1,31 @@
 import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
 import AboutMe from "../components/AboutMe";
 
 export default function Home() {
+  const [scrollOpacity, setScrollOpacity] = useState(1);
+
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate opacity based on scroll position
+      const opacity = 1 - (window.scrollY / window.innerHeight) * 2;
+      setScrollOpacity(opacity < 0 ? 0 : opacity);
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   // Create reference to store the DOM element containing the animation
@@ -34,11 +52,11 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid lg:grid-cols-2 mx-5 lg:mx-10 content-center justify-items-center overflow-x-hidden h-screen md:h-auto md:mt-36 md:mb-36 short:h-auto short:mt-14">
+      <section className="grid lg:grid-cols-2 mx-5 lg:mx-10 content-center justify-items-center overflow-x-hidden h-screen md:h-auto md:mt-36 md:mb-36 short:h-auto short:mt-10">
         <motion.figure
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ ease: "easeOut", duration: 0.5 }}
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
           className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mb-5 lg:mb-0"
         >
           <img className="rounded-full" src="/images/zach-headshot.jpg" alt="Zach's headshot" />
@@ -66,8 +84,20 @@ export default function Home() {
             <CtaBtn />
           </motion.div>
         </div>
+        {/* want to use scroll down but causes issues with h-screen */}
+        {/* <motion.div
+          animate={{
+            scale: [0, 1.25, 1],
+          }}
+          transition={{ ease: "easeOut", duration: 1, delay: 2.25 }}
+          style={{ opacity: scrollOpacity }}
+          className="lg:hidden"
+        >
+          <p>Scroll Down</p>
+          <p className="text-2xl">&#8595;</p>
+        </motion.div> */}
       </section>
-      <section>
+      <section className="overflow-x-hidden">
         <AboutMe />
       </section>
     </>
