@@ -88,7 +88,7 @@ export default function Contact() {
       subject: "Portfolio Contact Form",
     };
     try {
-      const response = await fetch("http://54.160.193.244/api/sendmail", {
+      const response = await fetch("https://54.160.193.244/api/sendmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, from, subject, message }),
