@@ -88,6 +88,9 @@ export default function Contact() {
       subject: "Portfolio Contact Form",
     };
     try {
+      //next line for testing locally
+      // const response = await fetch("http://localhost:3001/api/sendmail", {
+      //next line for production
       const response = await fetch("https://zacharywgibbs.com/api/sendmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
