@@ -82,9 +82,8 @@ export default function Contact() {
       setErrorMessage("Please complete all required sections of the form.");
       return;
     }
-    const { name, from, subject } = {
+    const { name, subject } = {
       name: `${firstName} ${lastName}`,
-      from: email,
       subject: "Portfolio Contact Form",
     };
     try {
@@ -94,7 +93,7 @@ export default function Contact() {
       const response = await fetch("https://zacharywgibbs.com/api/sendmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, from, subject, message }),
+        body: JSON.stringify({ name, email, subject, message }),
       });
       if (response.status === 200) {
         console.log("Email sent!. \nResponse:", response);

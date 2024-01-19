@@ -8,11 +8,11 @@ import PropTypes from "prop-types";
 
 export const Toggle = ({ toggle, isOpen }) => (
   <button className="bg-emerald-500 p-3 rounded-full z-20 relative shadow-md" onClick={toggle}>
-    <svg width="23" height="23" viewBox="0 0 20 19" className="block mx-auto">
+    <svg width="26" height="26" viewBox="0 1 22 18" className="block mx-auto">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5"},
-          open: { d: "M 2 2 L 18 18", originX: 11.5, originY: 11.5 },
+          open: { d: "M 4 2 L 18 18", originX: 11.5, originY: 11.5 },
         }}
         initial={false}
       />
@@ -28,7 +28,7 @@ export const Toggle = ({ toggle, isOpen }) => (
       <Path
         variants={{
           closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 2 18 L 18 2", originX: 11.5, originY: 11.5 },
+          open: { d: "M 4 18 L 18 2", originX: 11.5, originY: 11.5 },
         }}
         initial={false}
       />

@@ -14,7 +14,7 @@ const port = process.env.PORT || 3001;
 app.use(
   cors({
     origin: "https://www.zacharywgibbs.com", // Update this with your frontend's address
-    // origin: "http://localhost:5174", // Used for testing in development
+    // origin: "http://localhost:5173", // Used for testing in development
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
@@ -23,9 +23,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/api/sendmail", async (req, res) => {
-  const { name, from, subject, message } = req.body;
+  const { name, email, subject, message } = req.body;
   try {
-    await sendMail(name, process.env.EMAIL, from, subject, message);
+    await sendMail(name, process.env.EMAIL, email, subject, message);
     res.status(200).send({ message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error);
