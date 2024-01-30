@@ -13,7 +13,7 @@ export default function About() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ ease: "easeOut", duration: 0.5 }}
-          className="text-3xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24"
+          className="text-3xl sm:text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24"
         >
           About
         </motion.h3>

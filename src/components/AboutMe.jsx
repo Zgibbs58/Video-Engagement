@@ -9,7 +9,9 @@ export default function AboutMe() {
       transition={{ ease: "easeOut", duration: 0.5 }}
       className="mx-10 mt-24 mb-24 lg:mx-32"
     >
-      <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-left mb-8">About</h3>
+      <h3 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-left mb-8 underline underline-offset-8 decoration-5 decoration-emerald-500 ">
+        About
+      </h3>
       <section className="grid grid-cols-1 lg:grid-cols-6 gap-y-8 lg:gap-2 items-start">
         <figure className="lg:col-span-3">
           <img

@@ -1,32 +1,37 @@
 import Typed from "typed.js";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+// import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
 import AboutMe from "../components/AboutMe";
+import FeaturedProject from "../components/FeaturedProject";
+// import { Link } from "react-router-dom";
+
+import { projectData } from "../../utils/projectData";
 
 export default function Home() {
-  const [scrollOpacity, setScrollOpacity] = useState(1);
+  // const [scrollOpacity, setScrollOpacity] = useState(1);
 
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Calculate opacity based on scroll position
-      const opacity = 1 - (window.scrollY / window.innerHeight) * 2;
-      setScrollOpacity(opacity < 0 ? 0 : opacity);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     // Calculate opacity based on scroll position
+  //     const opacity = 1 - (window.scrollY / window.innerHeight) * 2;
+  //     setScrollOpacity(opacity < 0 ? 0 : opacity);
+  //   };
 
     // Attach the scroll event listener
-    window.addEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
@@ -52,7 +57,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid lg:grid-cols-2 mx-5 lg:mx-10 content-center justify-items-center overflow-x-hidden h-screen md:h-auto md:mt-36 md:mb-36 short:h-auto short:mt-10">
+      <section className="grid lg:grid-cols-2 mx-5 lg:mx-10 text-center content-center justify-items-center overflow-x-hidden h-screen md:h-auto md:mt-36 md:mb-36 short:h-auto short:mt-10">
         <motion.figure
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
@@ -96,6 +101,32 @@ export default function Home() {
           <p>Scroll Down</p>
           <p className="text-2xl">&#8595;</p>
         </motion.div> */}
+      </section>
+      <section className="mx-10 mt-48 mb-24 lg:mx-32">
+        <h3 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24">
+          Featured Project
+        </h3>
+        {/* <Link
+          className="text-left text-lg mt-8 px-3 xs:px-6 sm:px-8 py-2 text-xl font-bold text-gray-100 bg-gray-500 rounded-full hover:bg-gray-100 hover:text-gray-500 border-2 border-gray-500 ease-in-out duration-300"
+          to={"/portfolio"}
+        >
+          View Portfolio &#8594;
+        </Link> */}
+        <FeaturedProject
+          id={1}
+          name={projectData[0].name}
+          description={projectData[0].description}
+          fullDescription={projectData[0].fullDescription}
+          image={projectData[0].image}
+          projectLink={projectData[0].projectLink}
+          key={1}
+        />
+        {/* <Link
+          className="block text-left text-lg mt-8 px-3 xs:px-6 sm:px-8 py-2 text-xl font-bold text-gray-100 bg-gray-500 rounded-full hover:bg-gray-100 hover:text-gray-500 border-2 border-gray-500 ease-in-out duration-300"
+          to={"/portfolio"}
+        >
+          View Portfolio &#8594;
+        </Link> */}
       </section>
       <section className="overflow-x-hidden">
         <AboutMe />
