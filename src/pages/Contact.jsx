@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 import { validateEmail } from "/utils/helper";
 
@@ -118,6 +119,9 @@ export default function Contact() {
 
   return (
     <>
+      <Helmet>
+        <title>Zach Gibbs | Contact</title>
+      </Helmet>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <p className="text-2xl font-bold mb-4">Thanks for reaching out, {modalFirstName}!</p>
         <p className="text-lg mb-4">I&apos;ll review your message and get back to you as soon as possible.</p>{" "}
@@ -128,7 +132,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
-            className="text-3xl sm:text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-6"
+            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-6"
           >
             Contact
           </motion.h3>

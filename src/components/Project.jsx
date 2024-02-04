@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import MobileButtonSecondary from "./MobileButtonSecondary";
 
 export default function Project({ name, description, image, projectLink, isOdd, id }) {
+  // useState hook to determine if the screen is small
+  // if the screen is small, the projects will alternate text left with image right and vice versa
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1024);
 
   useEffect(() => {
@@ -36,7 +38,7 @@ export default function Project({ name, description, image, projectLink, isOdd, 
         // viewport={{ once: true, amount: 0.3 }}
         className="lg:col-span-2 text-left"
       >
-        <h2 className="text-3xl lg:text-5xl font-bold mb-8">{name}</h2>
+        <h2 className="text-2xl lg:text-5xl font-bold mb-8">{name}</h2>
         <p>{description}</p>
         {/* <button className="mx-2 block lg:hidden text-center  mt-5 ml-0">
           <Link to={`/project/${id}`} className="border-2 border-gray-500 font-semibold px-2 py-1 rounded-md">

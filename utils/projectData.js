@@ -1,6 +1,21 @@
 export const projectData = [
   {
     id: 1,
+    name: "zacharywgibbs.com",
+    description:
+      "My portfolio is a React app developed with Vite, showcasing a dynamic user experience through Tailwind CSS and Framer Motion for engaging animations. The inclusion of a contact form required setting up a Node server and utilizing Nodemailer for email functionality. Overcoming challenges with Gmail's OAuth, I transitioned to AWS SES for reliable email delivery. The portfolio is hosted on an AWS EC2 instance using an Ubuntu server.",
+    fullDescription: [
+      "This Portfolio is a React app created using Vite. Most of the styling was done using Tailwind, with all of the universal page styling handled in a separate CSS file. To enhance the user experience (UX), I incorporated Framer Motion to animate the initial load of components, and some components animate as they are scrolled into view. Another engaging feature I wanted to add was the ability to contact me using a form. I implemented front-end validation to ensure the required fields were entered correctly, including proper email formatting checked using regex. The form's functionality required setting up a Node server and using the Nodemailer package to send collected information via email.",
+      "The most significant challenge was dealing with Gmail's OAuth, where the refresh token would expire every seven days, causing the form to throw an authentication error and stop working. To diagnose and resolve this issue quickly, I logged errors in the server by creating a log file and writing to it using the fs API. Eventually, I moved to using AWS SES for email delivery, which worked flawlessly with Nodemailer and without any downtime.",
+      "This site is hosted on an AWS EC2 instance using an Ubuntu server. Setting up a server using SSH was a new experience, but with documentation and patience, I found the process to be a great learning experience. I created documentation on all the server setup, updating the server, using the Vim editor, and SSL configuration on the server to make these processes more streamlined for future projects.",
+    ],
+    image: "/images/Portfolio.gif",
+    projectLink: "https://zacharywgibbs.com/",
+    repoLink: "https://github.com/Zgibbs58/Zachary-Portfolio",
+    technologies: ["React", "Express", "Tailwind", "Framer Motion", "Nodemailer", "AWS EC2", "AWS SES", "React Router Dom", "Typed.js"],
+  },
+  {
+    id: 2,
     name: "AstronoME",
     description:
       "AstronoME is a web app designed to provide users with a comprehensive dashboard of information to enhance their stargazing experiences. While many features require a valid account, the landing page offers a glimpse of Incoming Asteroid data, a Daily image from NASA, and a welcoming message prompting users to sign up or log in. Upon registering, users can access weather and moon phase data specific to their location and become part of the AstronoME community through a dedicated forum for stargazers.",
@@ -16,7 +31,7 @@ export const projectData = [
     technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Cloudinary", "Tailwind CSS", "Heroku"],
   },
   {
-    id: 2,
+    id: 3,
     name: "Maintenance Manatee",
     description:
       "Keeping track of your car's maintenance can be a headache. So put on cruise control and let the Maintenance Manatee keep track of it for you! Create a profile for your vehicle(s) and add posts describing the work you've had done including the cost, date, and any other important details. Join the Maintenance Manatee and spend more time in the fast lane!",
@@ -32,7 +47,7 @@ export const projectData = [
     technologies: ["Express", "Node", "MySQL2", "Sequelize", "Handlebars", "Tailwind CSS", "Heroku"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Book Search Engine",
     description:
       "The Book Search Engine is a full-stack web application that allows users to search for books and save them to their profile. Users can create an account, login, search for books, save books, view their saved books, and delete them from their profile.",
@@ -46,7 +61,7 @@ export const projectData = [
     technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Bootstrap", "Heroku"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Mofield Brothers",
     description:
       "This is a small business website for a local construction company. The application features a gallery of projects, a group of cards listing their services, a contact form, and a section with information about the company.",

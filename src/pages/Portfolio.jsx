@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Project from "../components/Project";
 import { motion } from "framer-motion";
 import { projectData } from "../../utils/projectData";
+import { Helmet } from "react-helmet-async";
 
 const isOdd = (num) => num % 2;
 
@@ -13,6 +14,9 @@ export default function Portfolio() {
 
   return (
     <>
+      <Helmet>
+        <title>Zach Gibbs | Portfolio | Web Design</title>
+      </Helmet>
       <section className="overflow-x-hidden">
         <div className="mx-10 mt-6 mb-24 lg:mx-32 ">
           <motion.h3
@@ -20,7 +24,7 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="text-3xl sm:text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24"
+            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24"
           >
             Portfolio
           </motion.h3>
