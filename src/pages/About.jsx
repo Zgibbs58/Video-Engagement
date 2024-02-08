@@ -53,7 +53,7 @@ export default function About() {
               hearing from you!
             </p>
             <figure className="lg:col-span-4">
-              <img className="object-cover" src="/images/aboutCollage2-compressed.png" alt="collage-rock-climbing-hiking-Central-Park" />
+              <img className="object-cover" src="/images/aboutCollage2-smaller.png" alt="collage-rock-climbing-hiking-Central-Park" />
             </figure>
           </motion.section>
         </div>

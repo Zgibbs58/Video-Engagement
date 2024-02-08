@@ -71,7 +71,7 @@ export default function Home() {
           transition={{ ease: "easeOut", duration: 1 }}
           className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mb-5 lg:mb-0"
         >
-          <img className="rounded-full" src="/images/zach-headshot-compressed.jpg" alt="Zach's headshot" />
+          <img className="rounded-full" src="/images/zach-headshot-small.jpg" alt="Zach's headshot" />
         </motion.figure>
         <div className="grid content-end">
           <h1 className="text-4xl font-bold">

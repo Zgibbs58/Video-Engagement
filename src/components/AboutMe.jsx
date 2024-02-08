@@ -9,7 +9,7 @@ export default function AboutMe() {
         <figure className="lg:col-span-3">
           <img
             className="col-span-4 lg:col-span-3 object-contain"
-            src="/images/aboutCollage2-compressed.png"
+            src="/images/aboutCollage2-smaller.png"
             alt="collage-rock-climbing-hiking-Central-Park"
           />
         </figure>
