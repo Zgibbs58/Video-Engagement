@@ -18,7 +18,7 @@ export default function Portfolio() {
         <title>Zach Gibbs | Portfolio | Web Design</title>
       </Helmet>
       <section className="overflow-x-hidden">
-        <div className="mx-10 mt-6 mb-24 lg:mx-32 ">
+        <div className="mx-8 lg:mx-32 mt-6 mb-24">
           <motion.h3
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}

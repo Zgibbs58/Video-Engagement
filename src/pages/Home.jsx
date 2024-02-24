@@ -69,19 +69,19 @@ export default function Home() {
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 1 }}
-          className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mb-5 lg:mb-0"
+          className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-10/12 mb-5 lg:mb-0"
         >
           <img className="rounded-full" src="/images/zach-headshot-small.jpg" alt="Zach's headshot" />
         </motion.figure>
         <div className="grid content-end">
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-4xl lg:text-5xl font-bold">
             <span ref={el} />
           </h1>
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.25 }}>
-            <h2 className="mt-4 text-2xl font-semibold">Full Stack Developer</h2>
+            <h2 className="mt-4 text-2xl lg:text-3xl font-semibold">Full Stack Developer</h2>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.5 }}>
-            <p className="text md:mx-36 lg:mx-0 mt-8">
+            <p className="lg:text-lg md:mx-36 lg:mx-0 mt-8">
               Web developer based in Murfreesboro, TN with a passion for solving problems through coding and crafting visually appealing, functional
               websites.
             </p>
@@ -115,7 +115,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 my-24 mx-10 lg:mx-32"
+          className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 my-24 mx-8 lg:mx-32"
         >
           Featured Project
         </motion.h3>
@@ -124,7 +124,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="mx-10 lg:mx-32"
+          className="mx-8 lg:mx-32"
         >
           <FeaturedProject
             id={1}

@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { projectData } from "../../utils/projectData";
 import { useEffect } from "react";
 import SecondaryButton from "../components/SecondaryButton";
-import MainBtn from "../components/MainBtn";
 import { motion } from "framer-motion";
 
 export default function IndividualProject() {
@@ -19,7 +18,7 @@ export default function IndividualProject() {
   console.log(project);
 
   return (
-    <div className="mx-auto py-6 px-6 lg:px-8 overflow-x-hidden text-left">
+    <div className="mx-8 mt-6 mb-24 lg:mx-32 overflow-x-hidden text-left">
       {/* <div className="mt-4 mb-4">
         <Link className="border-2 border-gray-500 font-semibold px-2 py-1 rounded-md" to="/portfolio">
           Back to Portfolio
@@ -37,7 +36,7 @@ export default function IndividualProject() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
-        className="text-left text-xl font-semi-bold underline underline-gray-500 mt-20"
+        className="text-left text-2xl font-semi-bold underline underline-gray-500 mt-20"
       >
         Case Study
       </motion.p>
@@ -56,7 +55,7 @@ export default function IndividualProject() {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
-        className="text-left text-xl font-semi-bold mt-4 underline underline-gray-500"
+        className="text-left text-2xl font-semi-bold mt-10 underline underline-gray-500"
       >
         Technologies Used
       </motion.p>
@@ -64,7 +63,7 @@ export default function IndividualProject() {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
-        className="mt-4 flex flex-wrap sm:w-1/2"
+        className="mt-4 mb-10 flex flex-wrap sm:w-1/2"
       >
         {project.technologies.map((tech) => (
           <span className="bg-gray-300 rounded-md px-3 py-1 text-md font-semibold text-gray-700 mr-2 mt-2" key={[tech] + 1}>
@@ -73,22 +72,39 @@ export default function IndividualProject() {
         ))}
       </motion.div>
       {/* <img className="mt-8 rounded-lg shadow-lg" src={project.image} alt={project.name} /> */}
-      <motion.button
+      {/* <motion.button
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
         className="my-10 mr-1 xs:mr-3"
       >
         <MainBtn text="View Site" link={project.projectLink} />
-      </motion.button>
+      </motion.button> */}
       <motion.button
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
-        className="my-10 sm:ml-3"
+        className="my-10 mr-1 xs:mr-3"
       >
-        <SecondaryButton text="View Repo" link={project.repoLink} />
+        <a
+          className="mt-8 px-3 xs:px-6 sm:px-8 py-2 text-xl font-bold text-gray-100 bg-gray-500 rounded-full hover:bg-gray-100 hover:text-gray-500 border-2 border-gray-500 dark:border-none ease-in-out duration-300"
+          href={project.projectLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Site
+        </a>
       </motion.button>
+      {project.repoLink === "private" ? null : (
+        <motion.button
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          className="my-10 sm:ml-3"
+        >
+          <SecondaryButton text="View Repo" link={project.repoLink} />
+        </motion.button>
+      )}
     </div>
   );
 }

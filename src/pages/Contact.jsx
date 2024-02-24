@@ -127,7 +127,7 @@ export default function Contact() {
         <p className="text-lg mb-4">I&apos;ll review your message and get back to you as soon as possible.</p>{" "}
       </Modal>
       <div className="overflow-x-hidden">
-        <div className="mx-10 mt-6 mb-24 sm:mx-20 lg:mx-32">
+        <div className="mx-8 mt-6 mb-24 sm:mx-20 lg:mx-32">
           <motion.h3
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}

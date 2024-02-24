@@ -1,4 +1,3 @@
-import * as React from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -24,8 +23,8 @@ export default function NavItem({ name, path, index, onClick }) {
   const location = useLocation();
 
   return (
-    <motion.li className="pt-8" variants={variants}>
-      <Link to={path} key={index} className="text-xl font-bold" onClick={onClick}>
+    <motion.li className="" variants={variants}>
+      <Link to={path} key={index} className="text-2xl font-bold" onClick={onClick}>
         {name}
         <span
           className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500 ${

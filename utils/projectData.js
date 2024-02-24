@@ -1,7 +1,22 @@
 export const projectData = [
   {
     id: 1,
-    name: "zacharywgibbs.com",
+    name: "Trinity",
+    description:
+      "A website I designed and developed for a client to promote his business and the services he offers. The home page features a hero section showcasing some supplies he offers and a brief description of the owner. As the user scrolls, they will see services listed out inside of cards and a slider at the bottom with what makes Trinity stand out. The navigation bar has links to a catalog of items Trinity offers, a connect page with the business contact information, and an about section.",
+    fullDescription: [
+      "This website is a React web app that was developed using Vite. I utilized swiper and framer-motion packages to make the page interactive for the user. I started by designing the website on Figma, learning how to use the grid system to align items appropriately throughout the website, creating components to reuse throughout a design, and using auto layout to create proper spacing between a group of items. Having a well-planned out design to develop saved time when I got to the development stage.",
+      "I did some research on photography using a phone and utilized those techniques to photograph the images used on this site. The icons were purchased on the Iconfinder.com website to use commercially.",
+      "The client wanted to use their current hosting provider, which had some limitations. It did not support react router dom and since their server is not secured, I could not set up an SSL certificate and route traffic to https. I ended up using hash routing to handle routing and we are talking about switching to another provider later to enable https traffic. This project gave me the opportunity to practice my design skills and create something my client was very pleased with.",
+    ],
+    image: "/images/Trinity.gif",
+    projectLink: "http://www.trinitysalesgroupinc.com/",
+    repoLink: "private",
+    technologies: ["React", "Tailwind", "Framer Motion", "Swiper", "Vite", "Figma"],
+  },
+  {
+    id: 2,
+    name: "Portfolio",
     description:
       "My portfolio is a React app developed with Vite, showcasing a dynamic user experience through Tailwind CSS and Framer Motion for engaging animations. The inclusion of a contact form required setting up a Node server and utilizing Nodemailer for email functionality. Overcoming challenges with Gmail's OAuth, I transitioned to AWS SES for reliable email delivery. The portfolio is hosted on an AWS EC2 instance using an Ubuntu server.",
     fullDescription: [
@@ -15,7 +30,7 @@ export const projectData = [
     technologies: ["React", "Express", "Tailwind", "Framer Motion", "Nodemailer", "AWS EC2", "AWS SES", "React Router Dom", "Typed.js"],
   },
   {
-    id: 2,
+    id: 3,
     name: "AstronoME",
     description:
       "AstronoME is a web app designed to provide users with a comprehensive dashboard of information to enhance their stargazing experiences. While many features require a valid account, the landing page offers a glimpse of Incoming Asteroid data, a Daily image from NASA, and a welcoming message prompting users to sign up or log in. Upon registering, users can access weather and moon phase data specific to their location and become part of the AstronoME community through a dedicated forum for stargazers.",
@@ -31,7 +46,7 @@ export const projectData = [
     technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Cloudinary", "Tailwind CSS", "Heroku"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Maintenance Manatee",
     description:
       "Keeping track of your car's maintenance can be a headache. So put on cruise control and let the Maintenance Manatee keep track of it for you! Create a profile for your vehicle(s) and add posts describing the work you've had done including the cost, date, and any other important details. Join the Maintenance Manatee and spend more time in the fast lane!",
@@ -47,7 +62,7 @@ export const projectData = [
     technologies: ["Express", "Node", "MySQL2", "Sequelize", "Handlebars", "Tailwind CSS", "Heroku"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Book Search Engine",
     description:
       "The Book Search Engine is a full-stack web application that allows users to search for books and save them to their profile. Users can create an account, login, search for books, save books, view their saved books, and delete them from their profile.",
@@ -61,7 +76,7 @@ export const projectData = [
     technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Bootstrap", "Heroku"],
   },
   {
-    id: 5,
+    id: 6,
     name: "Mofield Brothers",
     description:
       "This is a small business website for a local construction company. The application features a gallery of projects, a group of cards listing their services, a contact form, and a section with information about the company.",
