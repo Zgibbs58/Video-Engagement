@@ -63,7 +63,7 @@ export default function IndividualProject() {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
-        className="mt-4 mb-10 flex flex-wrap sm:w-1/2"
+        className="mt-4 mb-10 flex flex-wrap"
       >
         {project.technologies.map((tech) => (
           <span className="bg-gray-300 rounded-md px-3 py-1 text-md font-semibold text-gray-700 mr-2 mt-2" key={[tech] + 1}>
