@@ -115,7 +115,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 my-24 mx-8 lg:mx-32"
+          className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-24 mb-12 mx-8 lg:mx-32"
         >
           Featured Project
         </motion.h3>

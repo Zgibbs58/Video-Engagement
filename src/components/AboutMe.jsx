@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 export default function AboutMe() {
   return (
     <motion.div className="mx-8 mt-12 mb-24 lg:mx-32">
-      <h3 className="text-4xl lg:text-6xl font-bold text-left mb-24 underline underline-offset-8 decoration-5 decoration-emerald-500 ">About</h3>
+      <h3 className="text-4xl lg:text-6xl font-bold text-left mb-12 underline underline-offset-8 decoration-5 decoration-emerald-500 ">About</h3>
       <section className="grid grid-cols-1 lg:grid-cols-6 gap-y-8 lg:gap-2 items-start">
         <figure className="lg:col-span-3">
           <img
             className="col-span-4 lg:col-span-3 object-contain"
-            src="/images/aboutCollage2-smaller.png"
+            src="/images/aboutCollage2-compressed.png"
             alt="collage-rock-climbing-hiking-Central-Park"
           />
         </figure>
