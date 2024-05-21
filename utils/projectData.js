@@ -68,7 +68,7 @@ export const projectData = [
       "I did some research on photography using a phone and utilized those techniques to photograph the images used on this site. The icons were purchased on the Iconfinder.com website to use commercially.",
       "The client wanted to use their current hosting provider, which had some limitations. It did not support react router dom and since their server is not secured, I could not set up an SSL certificate and route traffic to https. I ended up using hash routing to handle routing and we are talking about switching to another provider later to enable https traffic. This project gave me the opportunity to practice my design skills and create something my client was very pleased with.",
     ],
-    image: "/images/trinity.gif",
+    image: "/images/Trinity.gif",
     projectLink: "http://www.trinitysalesgroupinc.com/",
     repoLink: "private",
     technologies: ["React", "Tailwind", "Framer Motion", "Swiper", "Vite", "Figma"],
