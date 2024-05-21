@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
 import AboutMe from "../components/AboutMe";
 import FeaturedProject from "../components/FeaturedProject";
+import Testimonials from "../components/testimonials";
 import { Helmet } from "react-helmet-async";
 
 import { projectData } from "../../utils/projectData";
@@ -110,42 +111,85 @@ export default function Home() {
         </motion.div> */}
       </section>
       <section className="overflow-x-hidden">
-        <motion.h3
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-24 mb-12 mx-8 lg:mx-32"
-        >
-          Featured Project
-        </motion.h3>
-        <motion.section
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="mx-8 lg:mx-32"
-        >
-          <FeaturedProject
-            id={1}
-            name={projectData[0].name}
-            description={projectData[0].description}
-            fullDescription={projectData[0].fullDescription}
-            image={projectData[0].image}
-            projectLink={projectData[0].projectLink}
-            key={1}
-          />
-        </motion.section>
+        <div className="mx-8 lg:mx-32">
+          <motion.h3
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.4 }}
+            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-64 mb-12 md:mb-24"
+          >
+            Featured Project
+          </motion.h3>
+          <motion.section
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <FeaturedProject
+              id={1}
+              name={projectData[0].name}
+              description={projectData[0].description}
+              fullDescription={projectData[0].fullDescription}
+              image={projectData[0].image}
+              projectLink={projectData[0].projectLink}
+              key={1}
+            />
+          </motion.section>
+          <motion.h3
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-64 mb-12 md:mb-24"
+          >
+            Testimonials
+          </motion.h3>
+          <motion.section
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className=""
+          >
+            <Testimonials
+              testimonials={[
+                {
+                  name: "Kameron Shepherd",
+                  quote:
+                    "Zach is extremely knowledgeable and very dedicated to his work. We gave him some freedom to express his design ideas, and he absolutely knocked it out of the park. Throughout this entire process, Zach has been very responsive, thorough, and explained everything very well. I highly recommend working with Zach; he is truly the best of the best in his field.",
+                },
+                {
+                  name: "Evan Dixon",
+
+                  quote:
+                    "Zach was excellent to work with. He was prompt to fix issues with my site and went above and beyond, giving me even more value than I asked for. I would definitely recommend his services.",
+                  image: "path/to/another-image.jpg",
+                },
+              ]}
+            />
+          </motion.section>
+          <motion.h3
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.4 }}
+            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-64 mb-12 md:mb-24"
+          >
+            About
+          </motion.h3>
+          <motion.section
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="mb-24"
+          >
+            <AboutMe />
+          </motion.section>
+        </div>
       </section>
-      <motion.section
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.2 }}
-        className="overflow-x-hidden"
-      >
-        <AboutMe />
-      </motion.section>
     </>
   );
 }

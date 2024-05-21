@@ -150,7 +150,7 @@ export default function Contact() {
               <p className="text-red-500 text-md font-semibold italic mb-4">{errorMessage}</p>
               <div className="flex flex-wrap pb-6">
                 <div className="w-full md:w-1/2 md:pr-3 pb-6 md:pb-0">
-                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="grid-first-name">
+                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="firstName">
                     First Name
                   </label>
                   <input
@@ -166,7 +166,7 @@ export default function Contact() {
                   <p id="firstNameError" className="text-red-500 text-xs italic"></p>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="grid-last-name">
+                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="lastName">
                     Last Name
                   </label>
                   <input
@@ -184,7 +184,7 @@ export default function Contact() {
               </div>
               <div className="flex flex-wrap pb-6">
                 <div className="w-full">
-                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="grid-password">
+                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="email">
                     E-mail
                   </label>
                   <input
@@ -202,7 +202,7 @@ export default function Contact() {
               </div>
               <div className="flex flex-wrap">
                 <div className="w-full">
-                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="grid-password">
+                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="message">
                     Message
                   </label>
                   <textarea

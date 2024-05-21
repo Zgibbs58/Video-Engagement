@@ -33,13 +33,13 @@ export default function Footer() {
         </nav>
         <div className="flex flex-row items-center justify-center space-x-4 pb-2">
           <a href="https://github.com/Zgibbs58" target="_blank" rel="noreferrer">
-            <img src="/icons/github.svg" alt="github logo" className="w-8 h-8 sm:w-12 sm:h-12 hover:scale-90 ease-in-out duration-150" />
+            <img src="/icons/github.svg" alt="github logo" className="w-8 h-8 hover:scale-90 ease-in-out duration-150" />
           </a>
           <a href="https://linkedin.com/in/zacharywgibbs" target="_blank" rel="noreferrer">
-            <img src="/icons/linkedin.svg" alt="linkedin logo" className="w-8 h-8 sm:w-12 sm:h-12 hover:scale-90 ease-in-out duration-150" />
+            <img src="/icons/linkedin.svg" alt="linkedin logo" className="w-8 h-8 hover:scale-90 ease-in-out duration-150" />
           </a>
           <Link to="/contact">
-            <img src="/icons/email.svg" alt="email logo" className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-90 ease-in-out duration-150" />
+            <img src="/icons/email.svg" alt="email logo" className="w-8 h-8 hover:scale-90 ease-in-out duration-150" />
           </Link>
         </div>
       </div>
