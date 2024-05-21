@@ -24,7 +24,7 @@ export default function NavItem({ name, path, index, onClick }) {
 
   return (
     <motion.li className="" variants={variants}>
-      <Link to={path} key={index} className="text-2xl font-bold" onClick={onClick}>
+      <Link to={path} key={index} className="text-2xl" onClick={onClick}>
         {name}
         <span
           className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500 ${

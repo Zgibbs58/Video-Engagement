@@ -59,7 +59,15 @@ export default function Project({ name, description, image, projectLink, isOdd, 
         // viewport={{ once: true, amount: 0.3 }}
         className="lg:grid-span-1 my-10 lg:my-0 rounded-3xl grid justify-items-center"
       >
-        <img className="rounded-3xl shadow-lg shadow-gray-700 border-4 border-gray-200 lg:w-56" src={image} alt={image} />
+        <div className="phone-frame">
+          <div className="phone-frame-inner">
+            <img src={image} alt={name} />
+          </div>
+          <div className="volume-button-top"></div>
+          <div className="volume-button-middle"></div>
+          <div className="volume-button-bottom"></div>
+          <div className="power-button"></div>
+        </div>
       </motion.figure>
       <motion.button
         // initial={{ opacity: 0, x: 50 }}
@@ -95,7 +103,18 @@ export default function Project({ name, description, image, projectLink, isOdd, 
         // viewport={{ once: true, amount: 0.3 }}
         className="lg:grid-span-1 my-10 lg:my-0 rounded-3xl"
       >
-        <img className="rounded-3xl shadow-lg shadow-gray-700 border-4 border-gray-200 lg:w-56" src={image} alt={image} />
+        {/* <DeviceFrameset device="iPhone X" color="white" landscape={false} width={235} height={500}> */}
+        {/* <img className="rounded-3xl shadow-lg shadow-gray-700 border-4 border-gray-200 lg:w-56" src={image} alt={image} /> */}
+        <div className="phone-frame">
+          <div className="phone-frame-inner">
+            <img src={image} alt={name} />
+          </div>
+          <div className="volume-button-top"></div>
+          <div className="volume-button-middle"></div>
+          <div className="volume-button-bottom"></div>
+          <div className="power-button"></div>
+        </div>
+        {/* </DeviceFrameset> */}
       </motion.figure>
       <motion.div
         // initial={{ opacity: 0, x: -50 }}

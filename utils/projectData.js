@@ -1,6 +1,36 @@
 export const projectData = [
   {
     id: 1,
+    name: "Mofield Brothers Redesign",
+    description:
+      "The redesigned Mofield Brothers Construction website is a Next.js web app optimized for performance and user experience, featuring modern web technologies and secure form submissions.",
+    fullDescription: [
+      "Back in February 2023, I built the initial Mofield Brothers Construction website using HTML, CSS, JavaScript, and some jQuery. This was my first full website for a client, and we hosted it on HostGator, purchasing the domain there as well. The project was a significant learning experience, providing me with hands-on experience in web development and client collaboration.",
+      "Fast forward 15 months, I took on the challenge to completely revamp the website using modern technologies. The new site is a Next.js web app hosted on Vercel. The shift to Next.js has significantly improved load times, performance, and SEO benefits thanks to features like the Image component and Static Site Generation (SSG).",
+      "One of the standout features of the revamped site is the implementation of secure form submissions. I utilized Nodemailer, SendGrid, and reCAPTCHA to handle these submissions, ensuring that all client communications via the website are secure and reliable. This setup guarantees that form data is sent and received without any issues.",
+      "I also added light and dark themes based on the user's device settings, enhancing the personalized browsing experience.",
+      "This project has been an awesome learning experience, allowing me to harness new technologies and improve upon my initial work.",
+    ],
+    image: "/images/mofieldBrothersRedesign.gif",
+    projectLink: "https://www.mofieldbrothers.com/",
+    repoLink: "private",
+    technologies: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Daisy UI",
+      "Framer Motion",
+      "Next Themes",
+      "Nodemailer",
+      "SendGrid",
+      "reCAPTCHA",
+      "React Photo Album",
+      "Yet Another React Lightbox",
+      "Vercel",
+    ],
+  },
+  {
+    id: 2,
     name: "KandS HVAC",
     description:
       "KandS HVAC is a dynamic WordPress website crafted with Elementor. Each element is meticulously designed to reflect the client's brand, offering a unique user experience. The interactive homepage boasts captivating features such as a striking header, informative service cards, a dynamic reviews slider, and a user-friendly contact form. With easy navigation, visitors can seamlessly explore various sections, from business details to contacting the team, or browsing through a gallery of past projects.",
@@ -10,7 +40,7 @@ export const projectData = [
       "I began by creating an inspiration board to determine the desired appearance of the homepage. Utilizing their brand colors, I developed engaging elements to direct the user's attention to the call-to-action and other key aspects of the page. Opting to start from scratch, I reconstructed the entire homepage section by section until it met the desired specifications. Subsequently, I proceeded to design and build each page until the site fulfilled all of the client's requirements. Most of the content was derived from discussions with the client, supplemented by research on their brand through social media and Google. Additional technologies and resources I utilized for website development included Figma, Photoshop, Excel, IconFinder.com, YouTube, and Google Developers Console.",
       "Reflecting on the experience, I now recognize both the advantages and disadvantages of creating a website with WordPress and a website builder versus coding it from scratch. Websites coded from scratch tend to perform better, offer virtually unlimited customization options, and can be seamlessly integrated with various APIs. While using a website builder on WordPress enabled me to develop a website in approximately half the time it takes to design and code one from scratch, it significantly reduced the need for extensive coding and felt similar to a website design project. Although some coding was necessary for customization, having a grasp of CSS proved beneficial, as most of the styling was accomplished using CSS terms. Implementing features such as SMTP for sending form data via email, as well as integrating ReCAPTCHA and Google Places API calls, was straightforward on WordPress. Moving forward, I will consider this approach when working with future clients, although I still prefer coding websites myself.",
     ],
-    image: "/images/Trinity.gif",
+    image: "/images/kandsHvac.gif",
     projectLink: "https://www.kandshvac.com/",
     repoLink: "private",
     technologies: [
@@ -29,7 +59,7 @@ export const projectData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "Trinity",
     description:
       "A website I designed and developed for a client to promote his business and the services he offers. The home page features a hero section showcasing some supplies he offers and a brief description of the owner. As the user scrolls, they will see services listed out inside of cards and a slider at the bottom with what makes Trinity stand out. The navigation bar has links to a catalog of items Trinity offers, a connect page with the business contact information, and an about section.",
@@ -38,13 +68,13 @@ export const projectData = [
       "I did some research on photography using a phone and utilized those techniques to photograph the images used on this site. The icons were purchased on the Iconfinder.com website to use commercially.",
       "The client wanted to use their current hosting provider, which had some limitations. It did not support react router dom and since their server is not secured, I could not set up an SSL certificate and route traffic to https. I ended up using hash routing to handle routing and we are talking about switching to another provider later to enable https traffic. This project gave me the opportunity to practice my design skills and create something my client was very pleased with.",
     ],
-    image: "/images/Trinity.gif",
+    image: "/images/trinity.gif",
     projectLink: "http://www.trinitysalesgroupinc.com/",
     repoLink: "private",
     technologies: ["React", "Tailwind", "Framer Motion", "Swiper", "Vite", "Figma"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Portfolio",
     description:
       "My portfolio is a React app developed with Vite, showcasing a dynamic user experience through Tailwind CSS and Framer Motion for engaging animations. The inclusion of a contact form required setting up a Node server and utilizing Nodemailer for email functionality. Overcoming challenges with Gmail's OAuth, I transitioned to AWS SES for reliable email delivery. The portfolio is hosted on an AWS EC2 instance using an Ubuntu server.",
@@ -59,7 +89,7 @@ export const projectData = [
     technologies: ["React", "Express", "Tailwind", "Framer Motion", "Nodemailer", "AWS EC2", "AWS SES", "React Router Dom", "Typed.js"],
   },
   {
-    id: 4,
+    id: 5,
     name: "AstronoME",
     description:
       "AstronoME is a web app designed to provide users with a comprehensive dashboard of information to enhance their stargazing experiences. While many features require a valid account, the landing page offers a glimpse of Incoming Asteroid data, a Daily image from NASA, and a welcoming message prompting users to sign up or log in. Upon registering, users can access weather and moon phase data specific to their location and become part of the AstronoME community through a dedicated forum for stargazers.",
@@ -75,7 +105,7 @@ export const projectData = [
     technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Cloudinary", "Tailwind CSS", "Heroku"],
   },
   {
-    id: 5,
+    id: 6,
     name: "Maintenance Manatee",
     description:
       "Keeping track of your car's maintenance can be a headache. So put on cruise control and let the Maintenance Manatee keep track of it for you! Create a profile for your vehicle(s) and add posts describing the work you've had done including the cost, date, and any other important details. Join the Maintenance Manatee and spend more time in the fast lane!",
@@ -91,7 +121,7 @@ export const projectData = [
     technologies: ["Express", "Node", "MySQL2", "Sequelize", "Handlebars", "Tailwind CSS", "Heroku"],
   },
   {
-    id: 6,
+    id: 7,
     name: "Book Search Engine",
     description:
       "The Book Search Engine is a full-stack web application that allows users to search for books and save them to their profile. Users can create an account, login, search for books, save books, view their saved books, and delete them from their profile.",
@@ -105,7 +135,7 @@ export const projectData = [
     technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Bootstrap", "Heroku"],
   },
   {
-    id: 7,
+    id: 8,
     name: "Mofield Brothers",
     description:
       "This is a small business website for a local construction company. The application features a gallery of projects, a group of cards listing their services, a contact form, and a section with information about the company.",

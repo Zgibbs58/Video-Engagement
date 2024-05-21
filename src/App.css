@@ -20,7 +20,9 @@ body {
 
 #root {
   color: rgb(107 114 128);
-  max-width: 1280px;
+  /* max-width: 1280px; */
+  min-height: 100vh;
+  width: 100%;
   margin: 0 auto;
   /* padding: 0 2rem; */
   /* box-sizing: border-box; */
@@ -28,6 +30,142 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   background-color: rgb(243 244 246);
   font-family: "Titillium Web", sans-serif;
+}
+
+.projectGif {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* .marvel-device.note8 .more-sensors,
+.overflow,
+.speaker,
+.sensors {
+  display: none;
+} */
+/* 
+.marvel-device.iphone-x {
+  border-radius: 20px !important;
+} */
+.marvel-device.iphone-x .notch {
+  display: none;
+}
+.marvel-device.iphone-x .screen {
+  border-radius: 30px !important;
+  padding-top: 6px;
+}
+.marvel-device.iphone-x .inner-shadow,
+.inner {
+  display: none;
+}
+
+/* Ensure that your global CSS file or CSS module includes these styles */
+
+.phone-frame {
+  position: relative;
+  display: inline-block;
+  width: 300px; /* Adjust width as needed */
+  height: 615px; /* Adjust height as needed */
+  background: white; /* Outer thin border color */
+  padding: 6px; /* Adjust padding to create outer border effect */
+  border-radius: 40px; /* Adjust radius for outer border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.phone-frame-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: black; /* Inner border color */
+  padding: 12px; /* Adjust padding to create inner border effect */
+  border-radius: 32px; /* Adjust radius for inner border */
+}
+
+.phone-frame-inner::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  width: 60px;
+  height: 10px;
+  background: #000000;
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
+
+.phone-frame-inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.phone-frame::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  background: #333;
+  border-radius: 2px;
+  left: -3px;
+  top: 100px;
+}
+
+.phone-frame::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 50px;
+  background: #333;
+  border-radius: 2px;
+  left: -3px;
+  top: 160px;
+}
+
+.phone-frame .volume-button-top {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 100px;
+  width: 3px;
+  height: 30px;
+  background: #333;
+  border-radius: 2px;
+}
+
+.phone-frame .volume-button-middle {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 160px;
+  width: 3px;
+  height: 50px;
+  background: #333;
+  border-radius: 2px;
+}
+
+.phone-frame .volume-button-bottom {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 220px;
+  width: 3px;
+  height: 50px;
+  background: #333;
+  border-radius: 2px;
+}
+
+.phone-frame .power-button {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 35%;
+  width: 3px;
+  height: 70px;
+  background: #333;
+  border-radius: 2px;
+  transform: translateY(-50%);
 }
 
 @media screen and (max-width: 1287px) {
@@ -50,10 +188,11 @@ body {
     color: rgb(243 244 246);
     background-color: #1e293b;
   }
-}
 
-.projectGif {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  .volume-button-top,
+  .volume-button-middle,
+  .volume-button-bottom,
+  .power-button {
+    background: #ffffff;
+  }
 }

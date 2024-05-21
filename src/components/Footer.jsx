@@ -43,7 +43,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <p className="text-xs pb-2 text-center">Zach Gibbs &copy; 2024 All Rights Reserved.</p>
+      <p className="text-xs pb-2 text-center">Zach Gibbs &copy; {new Date().getFullYear()} All Rights Reserved.</p>
     </footer>
   );
 }

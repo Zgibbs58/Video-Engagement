@@ -24,7 +24,15 @@ export default function FeaturedProject({ name, description, image, projectLink,
         </button>
       </motion.div>
       <motion.figure className="lg:grid-span-1 my-10 lg:my-0 rounded-3xl grid justify-items-center">
-        <img className="rounded-3xl shadow-lg shadow-gray-700 border-4 border-gray-200 lg:w-56" src={image} alt={image} />
+        <div className="phone-frame">
+          <div className="phone-frame-inner">
+            <img src={image} alt={name} />
+          </div>
+          <div className="volume-button-top"></div>
+          <div className="volume-button-middle"></div>
+          <div className="volume-button-bottom"></div>
+          <div className="power-button"></div>
+        </div>
       </motion.figure>
       <motion.button className="block lg:hidden text-center">
         <MobileButton text="View Site" link={projectLink} />
