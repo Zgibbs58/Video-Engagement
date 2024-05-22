@@ -189,10 +189,15 @@ body {
     background-color: #1e293b;
   }
 
-  .volume-button-top,
-  .volume-button-middle,
-  .volume-button-bottom,
-  .power-button {
+  .phone-frame::before,
+  .phone-frame::after {
+    background: #ffffff;
+  }
+
+  .phone-frame .volume-button-top,
+  .phone-frame .volume-button-middle,
+  .phone-frame .volume-button-bottom,
+  .phone-frame .power-button {
     background: #ffffff;
   }
 }
