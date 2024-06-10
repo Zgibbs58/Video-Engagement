@@ -1,5 +1,5 @@
-import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+// import Typed from "typed.js";
+import { useEffect } from "react";
 // import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
@@ -35,68 +35,76 @@ export default function Home() {
   // }, []);
 
   // Create reference to store the DOM element containing the animation
-  const el = useRef(null);
+  // const el = useRef(null);
 
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Zach Gibbs"],
-      typeSpeed: 70,
-      backSpeed: 70,
-      smartBackspace: true,
-      startDelay: 300,
-      backDelay: 5000,
-      cursorChar: "|",
-      loop: true,
-      showCursor: true,
-    });
+  // useEffect(() => {
+  //   const typed = new Typed(el.current, {
+  //     strings: ["Websites That Work For You"],
+  //     typeSpeed: 70,
+  //     backSpeed: 70,
+  //     smartBackspace: true,
+  //     startDelay: 550,
+  //     backDelay: 5000,
+  //     cursorChar: "",
+  //     loop: false,
+  //     showCursor: true,
+  //   });
 
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     // Destroy Typed instance during cleanup to stop animation
+  //     typed.destroy();
+  //   };
+  // }, []);
 
   return (
     <>
       <Helmet>
-        <title>Zach Gibbs | Full Stack Developer</title>
+        <title>Zach Gibbs | Web Development</title>
         <meta
           name="description"
           content="Web developer based in Murfreesboro, TN with a passion for solving problems through coding and crafting visually appealing, functional websites."
         />
       </Helmet>
-      <section className="grid lg:grid-cols-2 mx-5 lg:mx-10 text-center content-center justify-items-center overflow-x-hidden h-screen md:h-auto md:mt-36 md:mb-36 short:h-auto short:mt-10">
-        <motion.figure
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-          className="flex justify-center w-3/4 sm:w-1/2 md:w-1/3 lg:w-10/12 mb-5 lg:mb-0"
-        >
-          <img className="rounded-full" src="/images/zach-headshot-small.jpg" alt="Zach's headshot" />
-        </motion.figure>
-        <div className="grid content-end">
-          <h1 className="text-4xl lg:text-5xl font-bold">
-            <span ref={el} />
-          </h1>
-          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.25 }}>
-            <h2 className="mt-4 text-2xl lg:text-3xl font-semibold">Full Stack Developer</h2>
+      <section className="flex flex-col xl:flex-row mx-8 lg:mx-32 text-center content-center justify-items-center overflow-x-hidden md:h-auto mt-16 md:mt-36 md:mb-36 gap-12 lg:gap-24 2xl:gap-48">
+        <div className="flex flex-col justify-center gap-6">
+          <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 0 }}>
+            <h1 className="mt-8 text-4xl lg:text-6xl font-semibold">Websites That Grow Your Business</h1>
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.5 }}>
-            <p className="lg:text-lg md:mx-36 lg:mx-0 mt-8">
-              Web developer based in Murfreesboro, TN with a passion for solving problems through coding and crafting visually appealing, functional
-              websites.
+          {/* <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.25 }}>
+            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold">Zach Gibbs</h2>
+          </motion.div> */}
+          <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}>
+            <p className="text-lg md:text-xl">
+              Helping businesses create websites that convert visitors into customers by clearly communicating your value, allowing you more time to
+              focus on what you do best.
             </p>
           </motion.div>
           <motion.div
-            className="my-8 flex justify-center"
+            className="flex justify-center"
             animate={{
               scale: [0, 1.25, 1],
             }}
-            transition={{ ease: "easeOut", duration: 1, delay: 2 }}
+            transition={{ ease: "easeOut", duration: 1, delay: 1 }}
           >
             <CtaBtn />
           </motion.div>
         </div>
+        <motion.figure
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+          className="hidden sm:flex justify-center mb-5 lg:mb-0 bg-emerald-500 rounded-full h-full xl:w-7/12"
+        >
+          <img className="" src="/images/portfolioHero.png" alt="People sharing a website" />
+        </motion.figure>
+        <motion.figure
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+          className="flex sm:hidden justify-center mb-5 lg:mb-0 bg-emerald-500 rounded-full"
+        >
+          <img className="" src="/images/portfolioHeroSmall.png" alt="People sharing a website" />
+        </motion.figure>
         {/* want to use scroll down but causes issues with h-screen */}
         {/* <motion.div
           animate={{
@@ -117,7 +125,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.4 }}
-            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-64 mb-12 md:mb-24"
+            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-40 mb-12 md:mb-24"
           >
             Featured Project
           </motion.h3>
@@ -142,7 +150,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-64 mb-12 md:mb-24"
+            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-40 mb-12 md:mb-24"
           >
             Testimonials
           </motion.h3>
@@ -157,15 +165,20 @@ export default function Home() {
               testimonials={[
                 {
                   name: "Kameron Shepherd",
+                  title: "KandS HVAC",
                   quote:
                     "Zach is extremely knowledgeable and very dedicated to his work. We gave him some freedom to express his design ideas, and he absolutely knocked it out of the park. Throughout this entire process, Zach has been very responsive, thorough, and explained everything very well. I highly recommend working with Zach; he is truly the best of the best in his field.",
                 },
                 {
+                  name: "Martin Mofield",
+                  title: "Mofield Brothers Construction",
+                  quote:
+                    "Zach built a website that saves us time and money by answering client questions about what we do and providing a convenient way for customers to contact us.",
+                },
+                {
                   name: "Evan Dixon",
-
                   quote:
                     "Zach was excellent to work with. He was prompt to fix issues with my site and went above and beyond, giving me even more value than I asked for. I would definitely recommend his services.",
-                  image: "path/to/another-image.jpg",
                 },
               ]}
             />
@@ -175,7 +188,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.4 }}
-            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-64 mb-12 md:mb-24"
+            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-40 mb-12 md:mb-24"
           >
             About
           </motion.h3>
