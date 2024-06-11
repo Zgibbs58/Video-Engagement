@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function Footer() {
   const location = useLocation();
   return (
-    <footer className="bg-gray-500 pt-2 text-gray-100 px-4 sm:px-8 pt-6">
+    <footer className="px-4 sm:px-8 pt-6">
       <div className="flex flex-row items-center justify-between">
         {/* <h3 className="text-2xl lg:text-4xl font-bold text-center mb-2">Let&#39;s Connect</h3> */}
         <nav>

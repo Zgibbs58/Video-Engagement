@@ -66,8 +66,38 @@ export default function Home() {
           <img className="" src="/images/portfolioHeroSmall.png" alt="People sharing a website" />
         </motion.figure>
       </section>
-      <section className="overflow-x-hidden">
+      <section className="overflow-x-hidden overflow-y-hidden">
         <div className="mx-8 lg:mx-32">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.4 }}
+            className="flex flex-col lg:flex-row justify-center items-center text-left gap-16 my-24"
+          >
+            <img className="lg:w-1/2" src="/images/madCustomer.png" alt="Frustrated Website Visitor" />
+            <div className="flex flex-col lg:w-1/2 items-start text-left gap-8">
+              <h2 className="text-3xl lg:text-5xl font-bold">Don&apos;t Lose Customers to a Bad Website</h2>
+              <ul className="flex flex-col gap-2">
+                <li>❌ Slow loading times frustrate visitors and drive them away.</li>
+                <li>❌ Confusing navigation leads potential customers to your competitor.</li>
+                <li>❌ Outdated design makes your business look unprofessional.</li>
+                <li>❌ Missing images and broken links reduce trust and credibility.</li>
+                <li>❌ Not mobile-friendly means losing potential customers on smartphones and tablets.</li>
+                <li>❌ Poor SEO means your site gets lost in search engine results.</li>
+              </ul>
+              <CtaBtn />
+            </div>
+          </motion.div>
+          <motion.section
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="my-24"
+          >
+            <AboutMe />
+          </motion.section>
           <motion.h3
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -130,24 +160,6 @@ export default function Home() {
                 },
               ]}
             />
-          </motion.section>
-          <motion.h3
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.4 }}
-            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mt-32 md:mt-40 mb-12 md:mb-24"
-          >
-            About
-          </motion.h3>
-          <motion.section
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.2 }}
-            className="mb-24"
-          >
-            <AboutMe />
           </motion.section>
         </div>
       </section>

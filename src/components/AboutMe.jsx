@@ -2,15 +2,8 @@ import MobilebuttonSecondary from "./MobileButtonSecondary";
 
 export default function AboutMe() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-6 gap-y-8 lg:gap-2 items-start">
-      <figure className="lg:col-span-3">
-        <img
-          className="col-span-4 lg:col-span-3 object-contain"
-          src="/images/aboutCollage2-compressed.png"
-          alt="collage-rock-climbing-hiking-Central-Park"
-        />
-      </figure>
-      <div className="col-span-3 text-left">
+    <section className="grid grid-cols-1 lg:grid-cols-6 gap-y-8 lg:gap-2 items-center">
+      <div className="col-span-4 text-left">
         <p className="min-[1150px]:leading-7 min-[1150px]:text-lg md:text-md md:leading-6 xl:text-xl xl:leading-9">
           Hello! I&apos;m Zach, a Full Stack Web Developer with over nine years of honed problem-solving skills from a background in Inventory
           Control. A recent graduate of the Vanderbilt University Full Stack Web Development Bootcamp, my commitment to continuous learning extends to
@@ -22,6 +15,13 @@ export default function AboutMe() {
           <MobilebuttonSecondary text={"Learn More"} link={"/about"} />
         </button>
       </div>
+      <figure className="lg:col-span-2">
+        <img
+          className="col-span-4 lg:col-span-3 object-contain rounded-full"
+          src="/images/zach-headshot-compressed.jpg"
+          alt="collage-rock-climbing-hiking-Central-Park"
+        />
+      </figure>
     </section>
   );
 }

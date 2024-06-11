@@ -8,7 +8,7 @@ const Logo = () => {
         width="3146.416645260724"
         height="717.4415617775495"
         viewBox="0 0 3146.416645260724 717.4415617775495"
-        className={`logoColor w-72 h-24`}
+        className={`logoColor w-72 h-16`}
       >
         <g transform="scale(7.320832263036219) translate(10, 10)">
           <g id="SvgjsG16844" transform="matrix(1,0,0,1,0,0)" fill="#11b27d">

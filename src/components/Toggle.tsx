@@ -7,7 +7,7 @@ const Path = (props) => <motion.path fill="transparent" strokeWidth="3" stroke="
 import PropTypes from "prop-types";
 
 export const Toggle = ({ toggle, isOpen }) => (
-  <button className="bg-emerald-500 p-3 rounded-full fixed top-5 right-6 z-20" onClick={toggle} aria-label="Toggle Menu">
+  <button className="bg-emerald-500 p-3 rounded-full fixed top-4 right-6 z-20" onClick={toggle} aria-label="Toggle Menu">
   {/* <button className="bg-emerald-500 p-3 rounded-full z-20 relative" onClick={toggle} aria-label="Toggle Menu"> */}
     <svg width="26" height="26" viewBox="0 1 22 18" className="block mx-auto">
       <Path
