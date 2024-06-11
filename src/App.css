@@ -32,6 +32,10 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 
+.logoColor {
+  fill: rgb(243 244 246);
+}
+
 .projectGif {
   object-fit: cover;
   width: 100%;
@@ -187,6 +191,10 @@ body {
   #root {
     color: rgb(243 244 246);
     background-color: #1e293b;
+  }
+
+  .logoColor {
+    fill: #1e293b;
   }
 
   .phone-frame::before,

@@ -11,50 +11,10 @@ import { Helmet } from "react-helmet-async";
 import { projectData } from "../../utils/projectData";
 
 export default function Home() {
-  // const [scrollOpacity, setScrollOpacity] = useState(1);
-
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
   }, []);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // Calculate opacity based on scroll position
-  //     const opacity = 1 - (window.scrollY / window.innerHeight) * 2;
-  //     setScrollOpacity(opacity < 0 ? 0 : opacity);
-  //   };
-
-  // Attach the scroll event listener
-  // window.addEventListener("scroll", handleScroll);
-
-  // Clean up the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // Create reference to store the DOM element containing the animation
-  // const el = useRef(null);
-
-  // useEffect(() => {
-  //   const typed = new Typed(el.current, {
-  //     strings: ["Websites That Work For You"],
-  //     typeSpeed: 70,
-  //     backSpeed: 70,
-  //     smartBackspace: true,
-  //     startDelay: 550,
-  //     backDelay: 5000,
-  //     cursorChar: "",
-  //     loop: false,
-  //     showCursor: true,
-  //   });
-
-  //   return () => {
-  //     // Destroy Typed instance during cleanup to stop animation
-  //     typed.destroy();
-  //   };
-  // }, []);
 
   return (
     <>
@@ -65,18 +25,18 @@ export default function Home() {
           content="Web developer based in Murfreesboro, TN with a passion for solving problems through coding and crafting visually appealing, functional websites."
         />
       </Helmet>
-      <section className="flex flex-col xl:flex-row mx-8 lg:mx-32 text-center content-center justify-items-center overflow-x-hidden md:h-auto mt-16 md:mt-36 md:mb-36 gap-12 lg:gap-24 2xl:gap-48">
-        <div className="flex flex-col justify-center gap-6">
+      <section className="flex flex-col xl:flex-row mx-8 lg:mx-32 text-center justify-center overflow-x-hidden xl:overflow-x-visible md:h-auto mt-16 md:mt-32 md:mb-36 gap-16 lg:gap-24 2xl:gap-48">
+        <div className="flex flex-col justify-center gap-10">
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 0 }}>
-            <h1 className="mt-8 text-4xl lg:text-6xl font-semibold">Websites That Grow Your Business</h1>
+            <h1 className="text-3xl lg:text-5xl font-bold">Websites That Grow Your Business</h1>
           </motion.div>
           {/* <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 1.25 }}>
             <h2 className="mt-4 text-4xl lg:text-5xl font-semibold">Zach Gibbs</h2>
           </motion.div> */}
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}>
             <p className="text-lg md:text-xl">
-              Helping businesses create websites that convert visitors into customers by clearly communicating your value, allowing you more time to
-              focus on what you do best.
+              Helping businesses create websites that attract customers by clearly communicating your value, allowing you more time to focus on what
+              you do best.
             </p>
           </motion.div>
           <motion.div
@@ -105,18 +65,6 @@ export default function Home() {
         >
           <img className="" src="/images/portfolioHeroSmall.png" alt="People sharing a website" />
         </motion.figure>
-        {/* want to use scroll down but causes issues with h-screen */}
-        {/* <motion.div
-          animate={{
-            scale: [0, 1.25, 1],
-          }}
-          transition={{ ease: "easeOut", duration: 1, delay: 2.25 }}
-          style={{ opacity: scrollOpacity }}
-          className="lg:hidden"
-        >
-          <p>Scroll Down</p>
-          <p className="text-2xl">&#8595;</p>
-        </motion.div> */}
       </section>
       <section className="overflow-x-hidden">
         <div className="mx-8 lg:mx-32">

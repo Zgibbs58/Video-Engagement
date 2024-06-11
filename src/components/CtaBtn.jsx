@@ -4,10 +4,11 @@ export default function MainButton() {
   return (
     <Link
       to="/contact"
-      className="relative w-28 h-28 text-white bg-emerald-500 rounded-full border-8 border-emerald-200 hover:rotate-3 hover:scale-90 ease-in-out duration-300 flex flex-col content-end justify-center"
+      className="text-white bg-emerald-500 rounded-xl border-2 border-emerald-200 hover:scale-90 ease-in-out duration-300 flex flex-col content-end justify-center items-center px-6 py-2"
     >
-      <span className="font-bold text-xl mr-2">Free</span>
-      <span className="ml-3 font-bold text-xl">Quote</span>
+      <p className="text-2xl">Free Quote</p>
+      {/* <span className="font-semibold text-2xl mr-6">Free</span>
+      <span className="ml-6 font-semibold text-2xl">Quote</span> */}
     </Link>
   );
 }

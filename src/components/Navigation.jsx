@@ -11,7 +11,7 @@ const navLinks = [
 
 export default function Navigation({ onClick }) {
   return (
-    <motion.ul className="bg-emerald-500 w-screen h-72 text-gray-100 flex flex-col gap-6 items-center rounded-lg shadow-xl pt-10">
+    <motion.ul className="bg-emerald-500 w-screen text-gray-100 flex flex-col gap-6 items-center rounded-lg shadow-xl pt-28 pb-8">
       {navLinks.map((i) => (
         <NavItem name={i.name} path={i.path} key={i.id} onClick={onClick} />
       ))}
