@@ -26,7 +26,7 @@ export default function Header() {
     return (
       <>
         {/* <nav className="md:hidden fixed top-6 right-6 text-right z-10"> */}
-        <div className={`lg:hidden flex justify-between items-center sticky top-0 py-2 px-6 z-10 bg-gray-100 dark:bg-slate-800 shadow-[0_10px_5px_-3px_rgba(0,0,0,0.3)] ${!isOpen ? "opacity-95" : "opacity-100"}`}>
+        <div className={`lg:hidden flex justify-between items-center sticky top-0 py-2 px-6 z-20 bg-gray-100 dark:bg-slate-800 shadow-[0_10px_5px_-3px_rgba(0,0,0,0.3)] ${!isOpen ? "opacity-95" : "opacity-100"}`}>
           <LogoMobile />
           <motion.nav
             initial={false}
@@ -50,7 +50,7 @@ export default function Header() {
           </AnimatePresence>
           </motion.nav>
         </div>
-        <nav className="hidden lg:block sticky top-0 z-10 py-2 bg-gray-100 dark:bg-slate-800 opacity-95 shadow-[0_10px_5px_-3px_rgba(0,0,0,0.3)]">
+        <nav className="hidden lg:block sticky top-0 z-20 py-2 bg-gray-100 dark:bg-slate-800 opacity-95 shadow-[0_10px_5px_-3px_rgba(0,0,0,0.3)]">
           <FullNavigation />
         </nav>
       </>

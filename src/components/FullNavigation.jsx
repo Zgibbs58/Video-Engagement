@@ -17,7 +17,7 @@ export default function FullNavigation() {
         {navLinks.map((i) => (
           <FullNavItem name={i.name} path={i.path} key={i.id} />
         ))}
-        <CtaBtn />
+        <CtaBtn text={"Free Quote"} />
       </div>
     </div>
   );
