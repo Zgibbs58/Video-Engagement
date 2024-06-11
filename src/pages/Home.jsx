@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Zach Gibbs | Web Development</title>
+        <title>Zach Gibbs Web Development</title>
         <meta
           name="description"
           content="Web developer based in Murfreesboro, TN with a passion for solving problems through coding and crafting visually appealing, functional websites."

@@ -6,7 +6,7 @@ import {Toggle} from "./Toggle";
 import { motion, useCycle, AnimatePresence } from "framer-motion"
 import { useDimensions } from "../../utils/use-dimensions";
 import "../App.css";
-import Logo from "./Logo";
+import LogoMobile from "./LogoMobile";
 
 // const variants = {
 //   open: { opacity: 1, x: 0, transition: { duration: 0.5 } },
@@ -27,7 +27,7 @@ export default function Header() {
       <>
         {/* <nav className="md:hidden fixed top-6 right-6 text-right z-10"> */}
         <div className={`lg:hidden flex justify-between items-center sticky top-0 px-6 z-10 bg-gray-100 dark:bg-slate-800 shadow-[0_10px_5px_-3px_rgba(0,0,0,0.3)] ${!isOpen ? "opacity-95" : "opacity-100"}`}>
-           <Logo width={48} height={24}/>
+           <LogoMobile />
           <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}

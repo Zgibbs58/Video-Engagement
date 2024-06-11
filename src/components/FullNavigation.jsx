@@ -12,7 +12,7 @@ const navLinks = [
 export default function FullNavigation() {
   return (
     <div className="flex justify-between items-center px-6 sm:px-12">
-      <Logo width={64} height={24} />
+      <Logo />
       <div className="flex justify-center items-center gap-8">
         {navLinks.map((i) => (
           <FullNavItem name={i.name} path={i.path} key={i.id} />
