@@ -3,7 +3,6 @@ import { useEffect } from "react";
 // import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
-import AboutMe from "../components/AboutMe";
 import FeaturedProject from "../components/FeaturedProject";
 import Testimonials from "../components/testimonials";
 import { Helmet } from "react-helmet-async";
@@ -73,11 +72,11 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.4 }}
-            className="flex flex-col lg:flex-row justify-center items-center text-left gap-16 my-24"
+            className="flex flex-col xl:flex-row xl:justify-center xl:items-center text-left gap-16 my-24"
           >
-            <img className="lg:w-1/2" src="/images/madCustomer.png" alt="Frustrated Website Visitor" />
-            <div className="flex flex-col lg:w-1/2 items-start text-left gap-8">
-              <h2 className="text-3xl lg:text-5xl font-bold">Don&apos;t Lose Customers to a Bad Website</h2>
+            <img className="xl:w-1/2 rounded-xl" src="/images/madCustomer.png" alt="Frustrated Website Visitor" />
+            <div className="flex flex-col xl:w-1/2 items-start text-left gap-8">
+              <h2 className="text-3xl xl:text-5xl font-bold">Don&apos;t Lose Customers to a Bad Website</h2>
               <ul className="flex flex-col gap-2">
                 <li>❌ Slow loading times frustrate visitors and drive them away.</li>
                 <li>❌ Confusing navigation leads potential customers to your competitor.</li>
@@ -89,15 +88,31 @@ export default function Home() {
               <CtaBtn />
             </div>
           </motion.div>
-          <motion.section
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.2 }}
-            className="my-24"
-          >
-            <AboutMe />
-          </motion.section>
+          <div className="flex flex-col justify-center items-center text-left gap-16 my-24 md:my-72">
+            <h2 className="text-3xl lg:text-5xl font-bold">Why Choose Zach Gibbs Web Development?</h2>
+            <div className="flex flex-col xl:flex-row items-center justify-between gap-16">
+              <div className="flex flex-col w-full xl:w-1/2 3xl:w-2/3 text-left gap-6 items-start">
+                <h3 className="text-2xl lg:text-3xl font-bold">Your Trusted Guide</h3>
+                <p className="text-lg">
+                  I know how confusing and time-consuming creating a website can be. My goal is to handle the complexities for you, so you can focus
+                  on your business.
+                </p>
+                <p className="text-lg">
+                  With years of experience, I’ve helped many businesses enhance their web presence with websites that look great and convert visitors
+                  into loyal customers.
+                </p>
+                <h3 className="text-2xl lg:text-3xl font-bold">Why Work With Me?</h3>
+                <ul className="ml-5 text-lg">
+                  <li>✅ Personalized Service: Tailored solutions for your unique business needs.</li>
+                  <li>✅ Client Success: A portfolio of satisfied clients who have seen real results.</li>
+                  <li>✅ Proven Expertise: Years of experience in web development.</li>
+                  <li>✅ Hassle-Free Process: Streamlined approach to save you time and stress.</li>
+                </ul>
+                <CtaBtn />
+              </div>
+              <img className="w-full xl:w-1/2 3xl:w-1/3 rounded-xl" src="/images/zach-headshot-compressed.jpg" alt="Zach Gibbs" />
+            </div>
+          </div>
           <motion.h3
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -137,7 +152,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.2 }}
-            className=""
+            className="mb-48"
           >
             <Testimonials
               testimonials={[
