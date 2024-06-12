@@ -19,14 +19,14 @@ const Modal = ({ isOpen, onClose, children }) => {
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           {/* Modal */}
-          <div className="relative bg-gray-100 text-gray-600 mx-5 p-14 rounded-lg shadow-lg">
+          <div className="relative bg-gray-100 dark:bg-gray-800 mx-5 p-14 rounded-lg shadow-lg">
             {/* Close button */}
-            <button className="absolute text-4xl top-0 right-4 text-gray-600 hover:text-emerald-500 ease-in-out duration-150" onClick={closeModal}>
+            <button className="absolute text-4xl top-0 right-4 hover:text-gray-600 text-emerald-500 ease-in-out duration-150" onClick={closeModal}>
               &times;
             </button>
 
             {/* Modal content */}
-            <div>{children}</div>
+            <div className="flex flex-col items-center gap-8 text-center">{children}</div>
           </div>
         </div>
       )}

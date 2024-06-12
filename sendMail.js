@@ -30,19 +30,21 @@ let transporter = nodemailer.createTransport({
   SES: { ses, aws },
 });
 
-const sendMail = async (name, myEmail, email, subject, message) => {
-  logToFile("Sending email..., in the sendMail.js file");
+const sendMail = async (name, myEmail, email, phone, subject, message, services, website) => {
+  logToFile(
+    `Sending email..., in the sendMail.js file with the following parameters: name: ${name}, myEmail: ${myEmail}, email: ${email}, subject: ${subject}, phone:${phone}, website:${website}, message: ${message}, services: ${services}`
+  );
   try {
     const mailOptions = {
       from: myEmail,
       to: myEmail,
       subject: subject,
       text: `${name} has sent a message: ${message} <br> Email: ${email}`,
-      html: `<p>Email: ${email}<br>${name} has sent a message:<br> ${message}</p>`,
+      html: `<p>Email: ${email}<br>Phone: ${phone}<br>${name} has sent a message:<br> ${message}<br>Services: ${services}<br>Website:${website}</p>`,
     };
     const info = await transporter.sendMail(mailOptions);
     console.log("email sent successfully", info.messageId);
-    logToFile("Email sent!");
+    logToFile(`Email sent successfully: ${info.messageId}`);
     return true;
   } catch (error) {
     logToFile(`Error sending email: ${error}`);

@@ -44,9 +44,9 @@ export default function Home() {
             </p>
             <CtaBtn text={"Discover Solutions"} />
           </div>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-3">
             <li>❌ Slow loading times frustrate visitors and drive them away.</li>
-            <li>❌ Confusing navigation leads potential customers to your competitor.</li>
+            <li>❌ Confusing navigation leads potential customers competitors.</li>
             <li>❌ Outdated design makes your business look unprofessional.</li>
             <li>❌ Missing images and broken links reduce trust and credibility.</li>
             <li>❌ Not mobile-friendly means losing potential customers on smartphones and tablets.</li>
@@ -123,7 +123,6 @@ export default function Home() {
             description={projectData[0].description}
             fullDescription={projectData[0].fullDescription}
             image={projectData[0].image}
-            projectLink={projectData[0].projectLink}
             key={1}
           />
         </motion.section>

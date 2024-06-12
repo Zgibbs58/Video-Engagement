@@ -2,14 +2,26 @@ import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import Logo from "../components/Logo";
 
 import { validateEmail } from "/utils/helper";
 
 export default function Contact() {
+  // if updating the services array, make sure to update the services array in the handleSubmit function as well
+  //if adding new inpputs, make sure to add them to the in sendMail function and in the server.js file
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [website, setWebsite] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [message, setMessage] = useState("");
+  const [services, setServices] = useState([
+    { name: "New Website", isChecked: false },
+    { name: "Redesign", isChecked: false },
+    { name: "Web Maintenance", isChecked: false },
+    { name: "Website Photography Session", isChecked: false },
+    { name: "Contact Form", isChecked: false },
+  ]);
 
   const [errorMessage, setErrorMessage] = useState("");
   const [modalFirstName, setModalFirstName] = useState("");
@@ -29,20 +41,39 @@ export default function Contact() {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleServiceCheck = (checkedService) => {
+    setServices((prevServices) =>
+      prevServices.map((service) => (service.name === checkedService.name ? { ...service, isChecked: !service.isChecked } : service))
+    );
+  };
+
   const handleInputChange = (e, inputName) => {
     const { target } = e;
-    const inputType = target.name;
+    // const inputType = target.name;
     const inputValue = target.value;
 
     // Based on the input type, we set the state of either email, firstName, lastName, and message.
-    if (inputType === "email") {
-      setEmail(inputValue);
-    } else if (inputType === "firstName") {
-      setFirstName(inputValue);
-    } else if (inputType === "lastName") {
-      setLastName(inputValue);
-    } else {
-      setMessage(inputValue);
+    switch (inputName) {
+      case "email":
+        setEmail(inputValue);
+        break;
+      case "firstName":
+        setFirstName(inputValue);
+        break;
+      case "lastName":
+        setLastName(inputValue);
+        break;
+      case "message":
+        setMessage(inputValue);
+        break;
+      case "phone":
+        setPhone(inputValue);
+        break;
+      case "website":
+        setWebsite(inputValue);
+        break;
+      default:
+        console.warn(`Unhandled input name: ${inputName}`);
     }
     // Checking on every change to the inputs and displaying an error message if empty or not valid
 
@@ -79,8 +110,13 @@ export default function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!firstName || !lastName || !email || !message) {
-      setErrorMessage("Please complete all required sections of the form.");
+
+    // checkbox filtering to see which services are checked
+    const checkedServices = services.filter((service) => service.isChecked).map((service) => service.name);
+    console.log(checkedServices);
+
+    if (!firstName || !lastName || !email || !message || !phone || checkedServices.length === 0) {
+      setErrorMessage("Please complete all required sections of the form. At least one service checkbox must be selected.");
       return;
     }
     const { name, subject } = {
@@ -89,12 +125,12 @@ export default function Contact() {
     };
     try {
       //next line for testing locally
-      // const response = await fetch("http://localhost:3001/api/sendmail", {
-      //next line for production
-      const response = await fetch("https://zacharywgibbs.com/api/sendmail", {
+      const response = await fetch("http://localhost:3001/api/sendmail", {
+        //next line for production
+        // const response = await fetch("https://zacharywgibbs.com/api/sendmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, subject, message }),
+        body: JSON.stringify({ name, email, subject, message, services: checkedServices, phone, website }),
       });
       if (response.status === 200) {
         console.log("Email sent!. \nResponse:", response);
@@ -106,6 +142,9 @@ export default function Contact() {
         setLastName("");
         setEmail("");
         setMessage("");
+        setPhone("");
+        setWebsite("");
+        setServices(services.map((service) => ({ ...service, isChecked: false })));
 
         openModal();
       } else {
@@ -123,8 +162,12 @@ export default function Contact() {
         <title>Zach Gibbs | Contact</title>
       </Helmet>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <p className="text-2xl font-bold mb-4">Thanks for reaching out, {modalFirstName}!</p>
-        <p className="text-lg mb-4">I&apos;ll review your message and get back to you as soon as possible.</p>{" "}
+        <i className="text-6xl px-3 py-1 rounded-full bg-base-300 absolute top-[-28px] left-1/2 transform -translate-x-1/2 text-emerald-500">
+          &#x2714;
+        </i>
+        <p className="text-2xl sm:text-3xl font-bold">Thanks, {modalFirstName}!</p>
+        <p className="sm:text-lg">I will review your project details and get back to you as soon as possible.</p>
+        <Logo />
       </Modal>
       <div className="overflow-x-hidden">
         <div className="mx-8 mt-6 mb-24 sm:mx-20 lg:mx-32">
@@ -147,14 +190,13 @@ export default function Contact() {
             className="flex justify-start text-left"
           >
             <form className="w-full" onSubmit={handleSubmit}>
-              <p className="text-red-500 text-md font-semibold italic mb-4">{errorMessage}</p>
-              <div className="flex flex-wrap pb-6">
-                <div className="w-full md:w-1/2 md:pr-3 pb-6 md:pb-0">
+              <div className="flex pb-6 gap-3">
+                <div className="w-full md:w-1/2">
                   <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="firstName">
                     First Name
                   </label>
                   <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    className="block w-full text-gray-500 border border-gray-500 rounded py-3 px-3 leading-tight focus:bg-gray-200"
                     id="firstName"
                     type="text"
                     placeholder="Jane"
@@ -170,7 +212,7 @@ export default function Contact() {
                     Last Name
                   </label>
                   <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 pb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    className="block w-full text-gray-500 border border-gray-500 rounded py-3 px-4 pb-3 leading-tight focus:bg-gray-200"
                     id="lastName"
                     type="text"
                     placeholder="Doe"
@@ -182,13 +224,13 @@ export default function Contact() {
                   <p id="lastNameError" className="text-red-500 text-xs italic"></p>
                 </div>
               </div>
-              <div className="flex flex-wrap pb-6">
-                <div className="w-full">
+              <div className="flex flex-wrap md:flex-nowrap pb-6 gap-3">
+                <div className="w-full md:w-1/2">
                   <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="email">
                     E-mail
                   </label>
                   <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 pb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    className="block w-full text-gray-500 border border-gray-500 rounded py-3 px-3 leading-tight focus:bg-gray-200"
                     id="email"
                     placeholder="user@gmail.com"
                     type="email"
@@ -199,6 +241,55 @@ export default function Contact() {
                   />
                   <p id="emailError" className="text-red-500 text-xs italic"></p>
                 </div>
+                <div className="w-full md:w-1/2">
+                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="phone">
+                    Phone
+                  </label>
+                  <input
+                    className="block w-full text-gray-500 border border-gray-500 rounded py-3 px-4 pb-3 leading-tight focus:bg-gray-200"
+                    id="phone"
+                    placeholder="555-555-5555"
+                    type="phone"
+                    value={phone}
+                    name="phone"
+                    onChange={(e) => handleInputChange(e, "phone")}
+                    onBlur={() => handleBlur("phone")}
+                  />
+                  <p id="phoneError" className="text-red-500 text-xs italic"></p>
+                </div>
+              </div>
+              <div className="flex flex-wrap md:flex-nowrap pb-6 gap-3">
+                <div className="w-full md:w-1/2 pb-6">
+                  <label className="block uppercase tracking-wide text-md font-bold pb-2">Services</label>
+                  <p className="pb-1">Check all the services you are interested in:</p>
+                  {services.map((service, index) => (
+                    <div key={index} className="flex gap-2">
+                      <input
+                        type="checkbox"
+                        id={service.name}
+                        name={service.name}
+                        checked={service.isChecked}
+                        onChange={() => handleServiceCheck(service)}
+                      />
+                      <label htmlFor={service.name}>{service.name}</label>
+                    </div>
+                  ))}
+                </div>
+                <div className="w-full md:w-1/2 pb-6">
+                  <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="website">
+                    Website Address
+                  </label>
+                  <input
+                    className="block w-full text-gray-500 border border-gray-500 rounded py-3 px-4 pb-3 leading-tight focus:bg-gray-200"
+                    id="website"
+                    placeholder="yourwebsite.com"
+                    type="text"
+                    value={website}
+                    name="website"
+                    onChange={(e) => handleInputChange(e, "website")}
+                  />
+                  <p id="phoneError" className="text-red-500 text-xs italic"></p>
+                </div>
               </div>
               <div className="flex flex-wrap">
                 <div className="w-full">
@@ -206,7 +297,7 @@ export default function Contact() {
                     Message
                   </label>
                   <textarea
-                    className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 pb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                    className=" no-resize appearance-none block w-full text-gray-700 border border-gray-500 rounded py-3 px-4 pb-3 leading-tight focus:bg-gray-200 h-48 resize-none"
                     id="message"
                     name="message"
                     value={message}
@@ -217,11 +308,12 @@ export default function Contact() {
                 </div>
               </div>
               <button
-                className="w-full my-6 py-2 text-xl font-bold text-gray-500 bg-gray-100 rounded-full hover:bg-emerald-500 hover:text-white border-2 border-gray-500 hover:border-emerald-500 ease-in-out duration-300"
+                className="w-full my-6 py-2 text-xl font-bold text-white hover:bg-gray-100 rounded-full bg-emerald-500 hover:text-gray-500 border-2 hover:border-emerald-500 ease-in-out duration-300"
                 type="submit"
               >
                 Send
               </button>
+              <p className="text-red-500 text-md font-semibold italic mb-4">{errorMessage}</p>
             </form>
           </motion.div>
         </div>
