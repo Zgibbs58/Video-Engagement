@@ -125,9 +125,9 @@ export default function Contact() {
     };
     try {
       //next line for testing locally
-      const response = await fetch("http://localhost:3001/api/sendmail", {
-        //next line for production
-        // const response = await fetch("https://zacharywgibbs.com/api/sendmail", {
+      // const response = await fetch("http://localhost:3001/api/sendmail", {
+      //next line for production
+      const response = await fetch("https://zacharywgibbs.com/api/sendmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, subject, message, services: checkedServices, phone, website }),

@@ -13,8 +13,8 @@ const port = process.env.PORT || 3001;
 
 app.use(
   cors({
-    // origin: "https://www.zacharywgibbs.com", // Update this with your frontend's address
-    origin: "http://localhost:5173", // Used for testing in development
+    origin: "https://www.zacharywgibbs.com", // Update this with your frontend's address
+    // origin: "http://localhost:5173", // Used for testing in development
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
