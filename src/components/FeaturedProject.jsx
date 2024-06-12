@@ -1,4 +1,4 @@
-import MobileButton from "./MobileButton";
+import MobileButtonSecondary from "./MobileButtonSecondary";
 import MainBtn from "./MainBtn";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
@@ -30,7 +30,7 @@ export default function FeaturedProject({ name, description, image }) {
         </div>
       </motion.figure>
       <div className="flex flex-col justify-center w-[288px] xl:hidden text-center">
-        <MobileButton text="Portfolio" link="/portfolio" />
+        <MobileButtonSecondary text="Portfolio" link="/portfolio" />
       </div>
     </motion.section>
   );
