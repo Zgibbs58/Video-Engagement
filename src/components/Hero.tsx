@@ -5,7 +5,7 @@ import CtaBtn from './CtaBtn'
 const Hero = () => {
   return (
     <section
-        className="relative flex items-center justify-start bg-cover bg-center py-48"
+        className="relative flex items-center justify-start bg-cover bg-center py-48 max-h-screen"
         style={{ backgroundImage: "url('/images/goodReviewsOptimized.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
