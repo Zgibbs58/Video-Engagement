@@ -4,7 +4,7 @@ import CtaBtn from './CtaBtn';
 const StepsSection = () => {
   return (
     <div className="relative flex flex-col justify-center items-center text-center gap-16 px-8 lg:px-32 my-12 py-20 lg:max-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-left-top" style={{ backgroundImage: "url('/images/stepsSection.jpg')" }}></div>
+      <div className="absolute inset-0 bg-cover bg-right-left" style={{ backgroundImage: "url('/images/stepsSection.jpg')" }}></div>
       <div className="absolute inset-0 bg-black opacity-20"></div>
       <h2 className="relative text-3xl lg:text-5xl font-bold text-white">How It Works</h2>
       <div className="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 text-[#6b7280]">
