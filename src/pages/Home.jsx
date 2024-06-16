@@ -39,22 +39,30 @@ export default function Home() {
         >
           <h3 className="text-3xl lg:text-5xl font-bold">Why Choose Zach Gibbs Web Development?</h3>
           <div className="flex flex-col xl:flex-row items-center justify-between gap-16">
-            <div className="flex flex-col w-full xl:w-1/2 text-left gap-6 items-start">
+            <div className="flex flex-col w-full xl:w-2/3 text-left gap-6 items-start">
               <p className="text-2xl lg:text-3xl font-bold">Saving You and Your Customers Time</p>
               <p className="text-lg">
                 I know creating a website can be complicated and time-consuming. My job is to handle all the details so you can focus on your
                 business. I&apos;ve helped many businesses improve their online presence with websites that look great and are easy for customers to
-                use. Click here to start getting more leads and sales.
+                use. Click here to start getting more leads and valuable customers.
               </p>
-              <ul className="ml-5 text-lg">
-                <li>✅ Personalized Service: Tailored solutions for your unique business needs.</li>
-                <li>✅ Hassle-Free Process: Streamlined approach to save you time and stress.</li>
-                <li>✅ Client Success: A portfolio of satisfied clients who have seen real results.</li>
-                <li>✅ Proven Expertise: Years of experience in web development.</li>
+              <ul className="ml-5 list-disc text-lg">
+                <li>
+                  <span className="font-semibold underline">Personalized Service</span>: Tailored solutions for your unique business needs.
+                </li>
+                <li>
+                  <span className="font-semibold underline">Hassle-Free Process</span>: Streamlined approach to save you time and stress.
+                </li>
+                <li>
+                  <span className="font-semibold underline">Client Success</span>: A portfolio of satisfied clients who have seen real results.
+                </li>
+                <li>
+                  <span className="font-semibold underline">Proven Expertise</span>: Years of experience in web development.
+                </li>
               </ul>
               <CtaBtn text={"Get Your Website"} />
             </div>
-            <img className="w-full xl:w-1/2 rounded-xl" src="/images/zach-headshot-compressed.jpg" alt="Zach Gibbs" />
+            <img className="w-full xl:w-1/3 rounded-xl" src="/images/zach-headshot-compressed.jpg" alt="Zach Gibbs" />
           </div>
         </motion.div>
         <StepsSection />

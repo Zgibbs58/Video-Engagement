@@ -1,6 +1,36 @@
 export const projectData = [
   {
     id: 1,
+    name: "Solid Rock Concrete Website",
+    description:
+      "The Solid Rock Concrete website is a Next.js web app designed for optimal performance and user experience, utilizing modern web technologies and showcasing the business's capabilities through professional photography and design.",
+    fullDescription: [
+      "In May 2024, I developed a comprehensive website for Solid Rock Concrete using the StoryBrand framework to effectively market their business. This project involved creating a visually appealing and professional online presence with a focus on clarity and ease of use for potential customers.",
+      "The website features a modern, easy-to-understand design that appeals to customers and highlights Solid Rock Concrete's expertise. To further enhance the site's visual appeal, I conducted a photo shoot for the business, organizing and optimizing all images for the web using Adobe tools. These efforts included creating collages and high-quality visuals that showcase the business's work effectively.",
+      "The website is built with JavaScript, TypeScript, HTML, and CSS, utilizing the Next.js framework for an optimized, fast, and reliable user experience. Hosting on Vercel ensures quick load times and dependable performance.",
+      "By implementing the StoryBrand framework, the website clearly communicates the value Solid Rock Concrete provides to its customers, helping to convert visitors into leads and clients.",
+    ],
+    image: "/images/solidRock.gif",
+    projectLink: "https://www.solidrockconcretetn.com/",
+    repoLink: "private",
+    technologies: [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Figma",
+      "Adobe Photoshop",
+      "Adobe Lightroom",
+      "Vercel",
+      "Nodemailer",
+      "SendGrid",
+      "reCAPTCHA",
+    ],
+  },
+  {
+    id: 2,
     name: "Mofield Brothers Redesign",
     description:
       "The redesigned Mofield Brothers Construction website is a Next.js web app optimized for performance and user experience, featuring modern web technologies and secure form submissions.",
@@ -30,7 +60,7 @@ export const projectData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "KandS HVAC",
     description:
       "KandS HVAC is a dynamic WordPress website crafted with Elementor. Each element is meticulously designed to reflect the client's brand, offering a unique user experience. The interactive homepage boasts captivating features such as a striking header, informative service cards, a dynamic reviews slider, and a user-friendly contact form. With easy navigation, visitors can seamlessly explore various sections, from business details to contacting the team, or browsing through a gallery of past projects.",
@@ -59,7 +89,7 @@ export const projectData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "Trinity",
     description:
       "A website I designed and developed for a client to promote his business and the services he offers. The home page features a hero section showcasing some supplies he offers and a brief description of the owner. As the user scrolls, they will see services listed out inside of cards and a slider at the bottom with what makes Trinity stand out. The navigation bar has links to a catalog of items Trinity offers, a connect page with the business contact information, and an about section.",
@@ -74,7 +104,7 @@ export const projectData = [
     technologies: ["React", "Tailwind", "Framer Motion", "Swiper", "Vite", "Figma"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Portfolio",
     description:
       "My portfolio is a React app developed with Vite, showcasing a dynamic user experience through Tailwind CSS and Framer Motion for engaging animations. The inclusion of a contact form required setting up a Node server and utilizing Nodemailer for email functionality. Overcoming challenges with Gmail's OAuth, I transitioned to AWS SES for reliable email delivery. The portfolio is hosted on an AWS EC2 instance using an Ubuntu server.",

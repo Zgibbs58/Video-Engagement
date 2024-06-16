@@ -15,8 +15,7 @@ const Hero = () => {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}>
             <p className="text-lg md:text-xl text-white mt-4">
-              Helping businesses create websites that attract customers by clearly communicating your value, allowing you more time to focus on what
-              you do best.
+              Most businesses lack the time to update or create websites. I build clear and optimized websites that make it easy for customers to hire you, saving you time and boosting your business.
             </p>
           </motion.div>
           <motion.div
