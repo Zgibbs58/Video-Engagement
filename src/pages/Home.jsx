@@ -1,6 +1,5 @@
 // import Typed from "typed.js";
 import { useEffect } from "react";
-// import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
 import FeaturedProject from "../components/FeaturedProject";
@@ -9,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import Hero from "../components/Hero";
 import StepsSection from "../components/StepsSection";
 import ProblemSection from "../components/ProblemSection";
+import ValueSection from "../components/ValueSection";
 
 import { projectData } from "../../utils/projectData";
 
@@ -30,6 +30,7 @@ export default function Home() {
       <Hero />
       <section className="overflow-x-hidden overflow-y-hidden">
         <ProblemSection />
+        <ValueSection />
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -43,8 +44,8 @@ export default function Home() {
               <p className="text-2xl lg:text-3xl font-bold">Saving You and Your Customers Time</p>
               <p className="text-lg">
                 I know creating a website can be complicated and time-consuming. My job is to handle all the details so you can focus on your
-                business. I&apos;ve helped many businesses improve their online presence with websites that look great and are easy for customers to
-                use. Click here to start getting more leads and valuable customers.
+                business. I&apos;ve helped businesses improve their online presence with websites that look great and are easy for customers to use.
+                Click the button below to start getting more leads and valuable customers.
               </p>
               <ul className="ml-5 list-disc text-lg">
                 <li>

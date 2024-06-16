@@ -25,7 +25,7 @@ const Hero = () => {
             }}
             transition={{ ease: "easeOut", duration: 1, delay: 1 }}
           >
-            <CtaBtn text={"Free Quote"}/>
+            <CtaBtn text={"Get Quote"}/>
           </motion.div>
         </div>
       </section>
