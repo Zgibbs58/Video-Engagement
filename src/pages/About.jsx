@@ -10,7 +10,7 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>Zach Gibbs | About | Web Design</title>
+        <title>Zach Gibbs Web Development | About</title>
       </Helmet>
       <div className="overflow-x-hidden">
         <div className="mx-10 mt-6 mb-24 lg:mx-32">

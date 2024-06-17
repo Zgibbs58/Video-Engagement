@@ -159,7 +159,7 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Zach Gibbs | Contact</title>
+        <title>Zach Gibbs Web Development | Contact</title>
       </Helmet>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <i className="text-6xl px-3 py-1 rounded-full bg-base-300 absolute top-[-28px] left-1/2 transform -translate-x-1/2 text-emerald-500">

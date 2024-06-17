@@ -11,7 +11,7 @@ const values = [
 
 const descriptions = [
   "I take the time to sit with you and learn about your business, ensuring that you get a website you will be proud of.",
-  "Missing professional shots? I provide high-quality photography services to enhance your website's visual appeal.",
+  "Missing compelling shots for your website? I provide high-quality photography services to enhance your website's visual appeal.",
   "Ensure your website continues to perform well and stays up-to-date with ongoing maintenance services.",
   "Utilize a popular marketing framework for effective website marketing that clearly communicates your value to customers.",
   "With my web development expertise, I create efficient websites that provide a seamless user experience.",

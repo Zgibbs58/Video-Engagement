@@ -28,7 +28,7 @@ export default function IndividualProject() {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
-        className="text-3xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 text-left mb-24 w-10/12"
+        className="text-3xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-24 w-10/12"
       >
         {project.name}
       </motion.h3>

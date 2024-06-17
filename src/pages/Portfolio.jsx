@@ -15,7 +15,7 @@ export default function Portfolio() {
   return (
     <>
       <Helmet>
-        <title>Zach Gibbs | Portfolio | Web Design</title>
+        <title>Zach Gibbs Web Development | Portfolio | Web Design</title>
       </Helmet>
       <section className="overflow-x-hidden">
         <div className="mx-8 lg:mx-32 mt-6 mb-24">
