@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const values = [
   "Personalized Websites",
-  "Professional Photography",
+  "Custom Photography",
   "Ongoing Maintenance",
   "Website Marketing Strategy",
   "Web Development Expertise",
@@ -13,7 +13,7 @@ const descriptions = [
   "I take the time to sit with you and learn about your business, ensuring that you get a website you will be proud of.",
   "Missing professional shots? I provide high-quality photography services to enhance your website's visual appeal.",
   "Ensure your website continues to perform well and stays up-to-date with ongoing maintenance services.",
-  "Utilize the StoryBrand Brandscript framework for effective website marketing that clearly communicates your value to customers.",
+  "Utilize a popular marketing framework for effective website marketing that clearly communicates your value to customers.",
   "With my web development expertise, I create efficient websites that provide a seamless user experience.",
 ];
 
@@ -32,7 +32,8 @@ const ValueSection = () => {
         <section className="overflow-x-hidden overflow-y-hidden">
             <div className="relative flex flex-col lg:flex-row justify-center lg:justify-start items-center py-12 px-8 lg:px-32 min-h-[800px] text-white">
                 <div className="absolute inset-0 bg-cover bg-[center_left_-40rem] md:bg-center" style={{ backgroundImage: "url('/images/valueSection.jpg')" }}></div>
-                <div className="absolute inset-0 bg-black opacity-50 lg:bg-gradient-to-r lg:from-slate-900 lg:to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
+                <div className="absolute bg-black inset-0 opacity-30"></div>
                 <div className="relative flex flex-col w-full xl:w-1/2">
                 <p className="text-3xl md:text-5xl font-bold mb-12">
                     Focus on Your Customer,<br></br>I’ll Handle the Web

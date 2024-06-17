@@ -31,7 +31,7 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <div className="flex flex-row items-center justify-center space-x-4 pb-2">
+        <div className="flex flex-row items-center justify-center space-x-1 sm:space-x-4 pb-2">
           <a href="https://linkedin.com/in/zacharywgibbs" target="_blank" rel="noreferrer">
             <svg
               enableBackground="new 0 0 512 512"

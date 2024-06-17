@@ -29,28 +29,17 @@ export default function About() {
             className="grid grid-cols-1 gap-y-5 items-start"
           >
             <p className="col-span-2 text-left min-[1150px]:leading-7 min-[1150px]:text-lg md:text-md md:leading-6 xl:text-xl xl:leading-9">
-              Hello! I&apos;m Zach Gibbs, a Full Stack Web Developer with a unique background in Inventory Control, where I honed my problem-solving
-              skills over nine years. During this time, I discovered my passion for leveraging technology to resolve challenges within the company. My
-              daily interactions with the Warehouse Management System and Oracle database equipped me with a deep understanding of how these
-              technologies intertwine. I became adept at identifying and troubleshooting anomalies in our inventory, fostering a keen interest in
-              utilizing technology to streamline processes.
-              <br />
-              <br />
-              Two years ago, I embarked on a journey into Web Development, exploring diverse online resources. My learning includes crafting emails,
-              building websites, developing CLIs, databases, and full-stack web applications. Recently, I graduated from the Vanderbilt University
-              Full Stack Web Development Bootcamp, and my commitment to growth extends to platforms like Udemy, LinkedIn Learning, and various edX
-              programs.
-              <br />
-              <br />
-              In my spare time, I&apos;ve implemented bug fixes and constructed websites for small businesses. I thrive on challenges, and have
-              recently participated in a 48-hour Hackathon, where my team and I won first place. Beyond coding, I&apos;m an adventurer at heart.
-              Whether I&apos;m cruising on my electric skateboard, climbing rocks, hiking, backpacking, kayaking, fishing, or playing frisbee golf,
-              the joy is amplified when shared with my wife, dogs, and friends.
-              <br />
-              <br />
-              Currently on the lookout for a full-time Web Developer position, I&apos;m eager to connect with fellow developers, adventure
-              enthusiasts, or anyone in need of a developer with a knack for problem-solving and a passion for innovative solutions. I look forward to
-              hearing from you!
+              Hello! I&apos;m Zach Gibbs, a dedicated Web Developer specializing in building websites that not only look great but also effectively
+              market your business. With a Bachelor&apos;s degree from TTU in Interdisciplinary Studies, focusing on Psychology and Literature, and a
+              solid foundation in Full Stack Web Development from Vanderbilt University, I bring a unique understanding of user behavior and content
+              writing to my web development projects.
+              <br></br>
+              <br></br>I continuously study the StoryBrand Framework to enhance my marketing strategies, ensuring that your website clearly
+              communicates your value and converts visitors into customers. I have hands-on experience developing websites for small businesses,
+              participating in hackathons, and advancing my skills through platforms like Udemy and LinkedIn Learning.
+              <br></br>
+              <br></br>
+              My goal is to provide high-quality, efficient web solutions tailored to your business needs.
             </p>
             <figure className="lg:col-span-4">
               <img className="object-cover" src="/images/aboutCollage2-compressed.png" alt="collage-rock-climbing-hiking-Central-Park" />
