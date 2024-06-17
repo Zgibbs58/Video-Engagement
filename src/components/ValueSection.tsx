@@ -42,7 +42,7 @@ const ValueSection = () => {
                     <div key={index} className="odd:border-y last:border-b first:border-t p-4 transition duration-300">
                     <div className="flex justify-between items-center cursor-pointer" onClick={() => handleToggle(index)}>
                         <p className="text-lg">
-                        <span className="text-2xl">{value}</span>
+                        <span className="text-xl sm:text-2xl font-semibold">{value}</span>
                         </p>
                         <span className="text-2xl">{clicked[index] ? "-" : "+"}</span>
                     </div>

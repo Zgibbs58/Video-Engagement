@@ -19,6 +19,7 @@ export default {
       screens: {
         xs: "355px",
         short: { raw: "(max-height: 799px)" },
+        small: "500px",
       },
       padding: {
         18: "4.45rem",

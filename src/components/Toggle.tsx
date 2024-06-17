@@ -1,43 +1,71 @@
-import * as React from "react";
-import { motion } from "framer-motion";
 import "../App.css";
+import { AnimationProps, motion } from 'framer-motion';
+import React, { SVGProps } from 'react';
 
-const Path = (props) => <motion.path fill="transparent" strokeWidth="3" stroke="rgb(243 244 246)" strokeLinecap="round" {...props} />;
+interface PathProps extends Omit<SVGProps<SVGPathElement>, 'ref'> {
+  isOpen?: boolean;
+}
 
-import PropTypes from "prop-types";
+interface PathProps extends Omit<SVGProps<SVGPathElement>, 'ref'> {
+  isOpen?: boolean;
+  variants?: any; // Add the 'variants' property to the 'PathProps' interface
+  initial?: boolean; // Add the 'initial' property to the 'PathProps' interface
+  transition?: any; // Add the 'transition' property to the 'PathProps' interface
+}
 
-export const Toggle = ({ toggle, isOpen }) => (
-  <button className="bg-emerald-500 p-3 rounded-full fixed top-4 right-6 z-20" onClick={toggle} aria-label="Toggle Menu">
-  {/* <button className="bg-emerald-500 p-3 rounded-full z-20 relative" onClick={toggle} aria-label="Toggle Menu"> */}
+const Path: React.FC<PathProps> = ({ isOpen, d, variants, initial, transition }) => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    strokeLinecap="round"
+    animate={isOpen ? 'open' : 'closed'}
+    d={d}
+    variants={variants}
+    initial={initial}
+    transition={transition}
+    className={`toggleBtn`}
+  />
+);
+
+interface ToggleProps {
+  toggle: () => void;
+  isOpen: boolean;
+}
+
+export const Toggle: React.FC<ToggleProps> = ({ toggle, isOpen }) => (
+  <button className="z-30 relative" onClick={toggle} aria-label="Toggle Menu">
     <svg width="26" height="26" viewBox="0 1 22 18" className="block mx-auto">
       <Path
+        d="M 2 2.5 L 20 2.5"
         variants={{
-          closed: { d: "M 2 2.5 L 20 2.5"},
-          open: { d: "M 4 2 L 18 18", originX: 11.5, originY: 11.5 },
-        }}
-        initial={false}
-      />
-      <Path
-        d="M 2 9.423 L 20 9.423"
-        variants={{
-          closed: { opacity: 1 },
-          open: { opacity: 0 },
+          closed: { d: "M 2 2.5 L 20 2.5", opacity: 1 },
+          open: { d: "M 3 16.5 L 17 2.5", opacity: 1 },
         }}
         initial={false}
         transition={{ duration: 0.1 }}
+        isOpen={isOpen}
       />
+      {/* Add isOpen prop to the other Path components */}
       <Path
+        d="M 11 9.423 L 20 9.423"
         variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 4 18 L 18 2", originX: 11.5, originY: 11.5 },
+          closed: { d: "M 11 9.423 L 20 9.423", opacity: 1 },
+          open: { d: "M 3 2.5 L 17 16.346", opacity: 0 },
         }}
         initial={false}
+        transition={{ duration: 0.1 }}
+        isOpen={isOpen}
+      />
+      <Path
+        d="M 2 16.346 L 20 16.346"
+        variants={{
+          closed: { d: "M 2 16.346 L 20 16.346", opacity: 1 },
+          open: { d: "M 3 2.5 L 17 16.346", opacity: 1 },
+        }}
+        initial={false}
+        transition={{ duration: 0.1 }}
+        isOpen={isOpen}
       />
     </svg>
   </button>
 );
-
-Toggle.propTypes = {
-  toggle: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool.isRequired,
-};

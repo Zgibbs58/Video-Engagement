@@ -42,6 +42,10 @@ body {
   fill: rgb(243 244 246);
 }
 
+.toggleBtn {
+  stroke: #6b7280;
+}
+
 .projectGif {
   object-fit: cover;
   width: 100%;
@@ -205,6 +209,10 @@ body {
 
   .svgIcon {
     fill: #ffffff;
+  }
+
+  .toggleBtn {
+    stroke: #fff;
   }
 
   .phone-frame::before,
