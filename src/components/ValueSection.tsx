@@ -32,8 +32,8 @@ const ValueSection = () => {
         <section className="overflow-x-hidden overflow-y-hidden">
             <div className="relative flex flex-col lg:flex-row justify-center lg:justify-start items-center py-12 px-8 lg:px-32 min-h-[800px] text-white">
                 <div className="absolute inset-0 bg-cover bg-[center_left_-40rem] md:bg-center" style={{ backgroundImage: "url('/images/valueSection.jpg')" }}></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
-                <div className="absolute bg-black inset-0 opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black from-0% lg:from-20%"></div>
+                <div className="absolute bg-black inset-0 opacity-40 lg:opacity-10"></div>
                 <div className="relative flex flex-col w-full xl:w-1/2">
                 <p className="text-3xl md:text-5xl font-bold mb-12">
                     Focus on Your Customer,<br></br>I’ll Handle the Web

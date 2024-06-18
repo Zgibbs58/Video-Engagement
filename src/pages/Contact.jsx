@@ -175,7 +175,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
-            className="text-4xl lg:text-6xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-6"
+            className="text-4xl lg:text-5xl font-bold text-left underline underline-offset-8 decoration-5 decoration-emerald-500 mb-6"
           >
             Contact
           </motion.h3>
@@ -307,12 +307,14 @@ export default function Contact() {
                   <p id="messageError" className="text-red-500 text-xs italic"></p>
                 </div>
               </div>
-              <button
-                className="w-full my-6 py-2 text-xl font-bold text-white rounded-full bg-emerald-500 hover:bg-emerald-600 ease-in-out duration-300"
-                type="submit"
-              >
-                Send
-              </button>
+              <div className="flex justify-center">
+                <button
+                  className="my-12 py-4 px-16 text-xl font-bold text-white rounded-xl bg-emerald-500 hover:bg-emerald-600 ease-in-out duration-300"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
               <p className="text-red-500 text-md font-semibold italic mb-4">{errorMessage}</p>
             </form>
           </motion.div>

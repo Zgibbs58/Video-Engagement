@@ -19,15 +19,15 @@ const StepsSection = () => {
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
           viewport={{ once: true, amount: 0.2 }} className="flex flex-col items-center bg-gray-100 shadow-lg p-6 rounded-lg border-2 border-emerald-500 dark:border-none">
           <div className="text-4xl font-bold text-emerald-500 mb-4">2</div>
           <h3 className="text-2xl font-semibold mb-2">Design Consultation</h3>
-          <p className="text-lg">Schedule a consultation to discuss your vision, product/service, and website requirements.</p>
+          <p className="text-lg">Once you approve the quote, we schedule a consultation to discuss your vision, product/service, and website requirements.</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true, amount: 0.2 }} className="flex flex-col items-center bg-gray-100 shadow-lg p-6 rounded-lg border-2 border-emerald-500 dark:border-none">
           <div className="text-4xl font-bold text-emerald-500 mb-4">3</div>
           <h3 className="text-2xl font-semibold mb-2">Website Development and Review</h3>
@@ -35,7 +35,7 @@ const StepsSection = () => {
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
           viewport={{ once: true, amount: 0.2 }} className="flex flex-col items-center bg-gray-100 shadow-lg p-6 rounded-lg border-2 border-emerald-500 dark:border-none">
           <div className="text-4xl font-bold text-emerald-500 mb-4">4</div>
           <h3 className="text-2xl font-semibold mb-2">Ongoing Support</h3>

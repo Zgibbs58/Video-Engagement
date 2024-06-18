@@ -27,13 +27,7 @@ export default function Project({ name, description, image, projectLink, isOdd, 
   }, []);
 
   return isOdd === 1 || isSmallScreen ? (
-    <motion.section
-      initial={{ opacity: 0, x: 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.1 }}
-      className="grid xl:grid-cols-3 xl:justify-items-end items-center mb-36 xl:mb-64"
-    >
+    <motion.section className="grid xl:grid-cols-3 xl:justify-items-end items-center mb-36 xl:mb-64">
       <motion.div
         // initial={{ opacity: 0, x: 50 }}
         // whileInView={{ opacity: 1, x: 0 }}
@@ -92,13 +86,7 @@ export default function Project({ name, description, image, projectLink, isOdd, 
       </motion.button>
     </motion.section>
   ) : (
-    <motion.section
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.3 }}
-      className="grid xl:grid-cols-3 xl:justify-items-start items-center my-20 xl:my-52"
-    >
+    <motion.section className="grid xl:grid-cols-3 xl:justify-items-start items-center my-20 xl:my-52">
       <motion.figure
         // initial={{ opacity: 0, x: -50 }}
         // whileInView={{ opacity: 1, x: 0 }}

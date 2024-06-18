@@ -31,7 +31,7 @@ const ProblemSection = () => {
           <motion.svg
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
             viewport={{ once: true, amount: 0.8 }}
             className="w-24"
             version="1.1"
@@ -59,7 +59,7 @@ const ProblemSection = () => {
           <motion.svg
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true, amount: 0.8 }}
             className="w-24"
             viewBox="0 0 20 20"
@@ -77,7 +77,7 @@ const ProblemSection = () => {
           <motion.svg
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
             viewport={{ once: true, amount: 0.8 }}
             className="w-24"
             version="1.1"

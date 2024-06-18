@@ -8,6 +8,7 @@ import Hero from "../components/Hero";
 import StepsSection from "../components/StepsSection";
 import ProblemSection from "../components/ProblemSection";
 import ValueSection from "../components/ValueSection";
+import Explanatory from "../components/Explanatory";
 
 import { projectData } from "../../utils/projectData";
 
@@ -35,13 +36,13 @@ export default function Home() {
           <div className="flex flex-col xl:flex-row items-center justify-between gap-16">
             <img className="w-full xl:w-1/3 rounded-xl" src="/images/zach-headshot-compressed.jpg" alt="Zach Gibbs" />
             <div className="flex flex-col w-full xl:w-2/3 text-left gap-6 items-start">
-              <p className="text-2xl lg:text-3xl font-bold">Boosting Business with Professional Websites</p>
+              <p className="text-2xl lg:text-3xl font-bold">Websites that Streamline Your Business</p>
               <p className="text-lg">
                 Creating a website can be complicated and time-consuming. My job is to handle all the details so you can focus on your business.
                 I&apos;ve helped businesses improve their online presence with websites that look great and are easy for customers to use. Click the
                 button below to start getting more leads and valuable customers.
               </p>
-              <ul className="ml-5 text-lg">
+              <ul className="flex flex-col text-lg gap-2">
                 <li>
                   <span className="font-semibold underline underline-offset-2">Personalized Service</span>: Tailored solutions for your unique
                   business needs.
@@ -83,30 +84,11 @@ export default function Home() {
           />
         </section>
         <StepsSection />
-        <div className="flex flex-col justify-center text-left gap-16 my-48 lg:my-64 px-8 lg:px-32 items-start">
-          <h3 className="text-3xl lg:text-5xl font-bold">Get a Website That Works for You</h3>
-          <p className="text-lg lg:text-xl">
-            At Zach Gibbs Web Development, I know you want to be a professional business that makes it easy for your customers to buy your products or
-            services. To achieve this, you need a website that works for you. The problem is that creating a great website takes a lot of time, which
-            can leave you feeling overwhelmed. I believe every business should have the opportunity to reach their customers and clearly show them how
-            they can help.
-          </p>
-          <p className="text-lg lg:text-xl">
-            I understand how confusing and time-consuming it can be to create a website that fully conveys your value. That&apos;s why I have honed my
-            skills in web design, web development, and marketing to build websites that effectively grow your business.
-          </p>
-          <h4 className="text-2xl lg:text-3xl font-bold">Here’s how I do it:</h4>
-          <ol className="ml-5 list-decimal text-lg lg:text-xl">
-            <li>Click the free quote button and fill out the form.</li>
-            <li>I will evaluate your needs and schedule a consultation.</li>
-            <li>We will discuss your business and your website requirements. Then, I&apos;ll start working on your website immediately.</li>
-          </ol>
-          <p className="text-lg lg:text-xl">So, get a free quote today and let’s create a website that works for you.</p>
-          <CtaBtn text={"Get Your Free Quote"} />
-        </div>
-
-        <section className="mb-48 lg:mb-64 px-8 lg:px-32">
-          <p className="text-3xl lg:text-5xl font-bold text-left">Recent Project</p>
+        <section className="my-48 lg:my-64 px-8 lg:px-32">
+          <Explanatory />
+        </section>
+        <section className="my-48 lg:my-64 px-8 lg:px-32">
+          <p className="text-3xl lg:text-5xl font-bold text-left mb-12 lg:mb-0">Recent Project</p>
           <FeaturedProject
             name={projectData[0].name}
             description={projectData[0].description}
