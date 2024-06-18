@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import CtaBtn from "../components/CtaBtn";
 import FeaturedProject from "../components/FeaturedProject";
-import Testimonials from "../components/testimonials";
+import Testimonials from "../components/Testimonials";
 import { Helmet } from "react-helmet-async";
 import Hero from "../components/Hero";
 import StepsSection from "../components/StepsSection";

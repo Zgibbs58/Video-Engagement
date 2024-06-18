@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import Testimonials from "../components/testimonials";
+import Testimonials from "../components/Testimonials";
 import Explanatory from "../components/Explanatory";
 
 export default function About() {
