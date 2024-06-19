@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 
 export default function FeaturedProject({ name, description, image }) {
   return (
-    <section className="grid xl:grid-cols-3 xl:justify-items-end justify-items-center items-center mb-36 xl:mb-64">
+    <section className="grid xl:grid-cols-3 xl:justify-items-end justify-items-center items-start mb-36 xl:mb-64">
       <div className="xl:col-span-2 text-left">
         <motion.h4
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="text-2xl xl:text-5xl font-bold mb-8"
+          className="text-2xl xl:text-4xl font-bold mb-8"
         >
           {name}
         </motion.h4>

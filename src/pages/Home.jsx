@@ -1,14 +1,16 @@
 // import Typed from "typed.js";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
 import FeaturedProject from "../components/FeaturedProject";
-import Testimonials from "../components/Testimonials";
+import TestimonialSection from "../components/TestimonialSection";
 import { Helmet } from "react-helmet-async";
 import Hero from "../components/Hero";
 import StepsSection from "../components/StepsSection";
 import ProblemSection from "../components/ProblemSection";
 import ValueSection from "../components/ValueSection";
 import Explanatory from "../components/Explanatory";
+import CtaSection from "../components/CtaSection";
 
 import { projectData } from "../../utils/projectData";
 
@@ -32,7 +34,15 @@ export default function Home() {
         <ProblemSection />
         <ValueSection />
         <div className="flex flex-col justify-center text-left gap-16 my-48 lg:my-64 px-8 lg:px-32">
-          <h3 className="text-3xl lg:text-5xl font-bold">Why Choose Zach Gibbs Web Development?</h3>
+          <motion.h3
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-3xl lg:text-5xl font-bold"
+          >
+            Why Choose Zach Gibbs Web Development?
+          </motion.h3>
           <div className="flex flex-col xl:flex-row items-center justify-between gap-16">
             <img className="w-full xl:w-1/3 rounded-xl" src="/images/zach-headshot-compressed.jpg" alt="Zach Gibbs" />
             <div className="flex flex-col w-full xl:w-2/3 text-left gap-6 items-start">
@@ -61,7 +71,7 @@ export default function Home() {
           </div>
         </div>
         <section className="my-48 lg:my-64 px-8 lg:px-32">
-          <Testimonials
+          <TestimonialSection
             testimonials={[
               {
                 name: "Kameron Shepherd",
@@ -83,12 +93,13 @@ export default function Home() {
             ]}
           />
         </section>
+        <CtaSection />
         <StepsSection />
         <section className="my-48 lg:my-64 px-8 lg:px-32">
           <Explanatory />
         </section>
         <section className="my-48 lg:my-64 px-8 lg:px-32">
-          <p className="text-3xl lg:text-5xl font-bold text-left mb-12 lg:mb-0">Recent Project</p>
+          <p className="text-3xl lg:text-5xl font-bold text-left mb-12">Recent Project</p>
           <FeaturedProject
             name={projectData[0].name}
             description={projectData[0].description}

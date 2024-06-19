@@ -1,11 +1,15 @@
 import React from 'react';
 import CtaBtn from "./CtaBtn";
+import { motion } from 'framer-motion';
 
 const Explanatory = () => {
     return (
         <section className="flex flex-col xl:flex-row gap-16">
           <div className="relative flex flex-col justify-center text-left gap-6 items-start xl:w-1/2">
-            <h3 className="text-3xl lg:text-5xl font-bold">Get a Website That Works for You</h3>
+            <motion.h3 initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }} className="text-3xl lg:text-5xl font-bold">Get a Website That Works for You</motion.h3>
             <p className="text-lg lg:text-xl">
               At Zach Gibbs Web Development, I understand that you want a professional website that makes it easy for your customers to buy your
               products or services. However, creating a great website takes time and can be overwhelming. Every business should have the opportunity

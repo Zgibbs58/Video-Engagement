@@ -29,7 +29,7 @@ interface TestimonialsProps {
   testimonials: Testimonial[];
 }
 
-const Testimonials = ({ testimonials }: TestimonialsProps) => (
+const TestimonialSection = ({ testimonials }: TestimonialsProps) => (
   <>
     <p className="text-3xl lg:text-5xl font-bold mb-12 md:mb-24 text-center">Success In Their Words</p>
     <div className="flex flex-wrap justify-center xl:flex-nowrap gap-y-16 gap-x-12 3xl:gap-x-20">
@@ -40,4 +40,4 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => (
   </>
 );
 
-export default Testimonials;
+export default TestimonialSection;

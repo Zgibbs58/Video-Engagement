@@ -1,11 +1,11 @@
 export const projectData = [
   {
     id: 1,
-    name: "Solid Rock Concrete Website",
+    name: "Solid Rock Concrete",
     description:
       "The Solid Rock Concrete website is a Next.js web app designed for optimal performance and user experience, utilizing modern web technologies and showcasing the business's capabilities through professional photography and design.",
     fullDescription: [
-      "In May 2024, I developed a comprehensive website for Solid Rock Concrete using the StoryBrand framework to effectively market their business. This project involved creating a visually appealing and professional online presence with a focus on clarity and ease of use for potential customers.",
+      "I developed a comprehensive website for Solid Rock Concrete using the StoryBrand framework to effectively market their business. This project involved creating a visually appealing and professional online presence with a focus on clarity and ease of use for potential customers.",
       "The website features a modern, easy-to-understand design that appeals to customers and highlights Solid Rock Concrete's expertise. To further enhance the site's visual appeal, I conducted a photo shoot for the business, organizing and optimizing all images for the web using Adobe tools. These efforts included creating collages and high-quality visuals that showcase the business's work effectively.",
       "The website is built with JavaScript, TypeScript, HTML, and CSS, utilizing the Next.js framework for an optimized, fast, and reliable user experience. Hosting on Vercel ensures quick load times and dependable performance.",
       "By implementing the StoryBrand framework, the website clearly communicates the value Solid Rock Concrete provides to its customers, helping to convert visitors into leads and clients.",

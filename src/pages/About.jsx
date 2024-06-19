@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import Testimonials from "../components/Testimonials";
 import Explanatory from "../components/Explanatory";
+import TestimonialSection from "../components/TestimonialSection";
 
 export default function About() {
   useEffect(() => {
@@ -33,8 +33,8 @@ export default function About() {
             <div className="flex flex-col gap-6 w-full xl:w-1/2 2xl:w-2/3">
               <h2 className="text-2xl lg:text-4xl font-bold">Your Web Development Partner</h2>
               <p>
-                Hello! I&apos;m Zach Gibbs, a dedicated Web Developer specializing in building websites look great and effectively market your
-                business. With a Bachelor&apos;s degree from TTU in Interdisciplinary Studies, focusing on Psychology and Literature, and a solid
+                Hello! I&apos;m Zach Gibbs, a dedicated Web Developer specializing in building websites that look great and effectively market your
+                business. I have a Bachelor&apos;s degree from TTU where I studied Psychology and Literature. With these studies and a solid
                 foundation in Full Stack Web Development from Vanderbilt University, I bring a unique understanding of user behavior and content
                 writing to my web development projects.
                 <br></br>
@@ -48,7 +48,7 @@ export default function About() {
               <img className="object-cover rounded-xl" src="/images/zach-headshot-compressed.jpg" alt="collage-rock-climbing-hiking-Central-Park" />
             </figure>
           </motion.section>
-          <Testimonials
+          <TestimonialSection
             testimonials={[
               {
                 name: "Kameron Shepherd",
