@@ -94,7 +94,7 @@ export default function LeadGenerator() {
         <p className="text-2xl sm:text-3xl font-bold">Thanks!</p>
         <p className="sm:text-lg">You can now download your free resource below.</p>
         <a
-          href="/assets/5-must-have-elements.pdf"
+          href="/assets/5-essentials-website.pdf"
           className="mt-4 py-2 px-4 bg-emerald-500 text-white font-bold rounded hover:bg-emerald-600"
           download
         >
@@ -106,8 +106,8 @@ export default function LeadGenerator() {
         <div className="xl:w-1/2">
           <h3 className="text-4xl lg:text-5xl font-bold text-left mb-6">Unlock Your Website&apos;s Potential</h3>
           <p>
-            Want to know the secrets to a thriving online presence? Enter your name and email below and get instant access to my free PDF: 5 Must-Have
-            Elements for a Successful Business Website.
+            Want to know the secrets to a thriving online presence? Enter your name and email below and get instant access to a free PDF: 5 Essentials
+            for a Successful Business Website.
           </p>
           <div className="flex justify-start text-left mt-4">
             <form className="w-full" onSubmit={handleSubmit}>
@@ -146,7 +146,7 @@ export default function LeadGenerator() {
               </div>
               <div className="flex justify-start">
                 <button
-                  className="my-12 py-4 px-16 text-xl font-bold text-white rounded-xl bg-emerald-500 hover:bg-emerald-600 ease-in-out duration-300"
+                  className="my-4 py-4 px-16 text-xl font-bold text-white rounded-xl bg-emerald-500 hover:bg-emerald-600 ease-in-out duration-300"
                   type="submit"
                 >
                   Submit
