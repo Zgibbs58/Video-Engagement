@@ -11,6 +11,7 @@ import ProblemSection from "../components/ProblemSection";
 import ValueSection from "../components/ValueSection";
 import Explanatory from "../components/Explanatory";
 import CtaSection from "../components/CtaSection";
+import LeadGenerator from "../components/LeadGenerator";
 
 import { projectData } from "../../utils/projectData";
 
@@ -108,6 +109,7 @@ export default function Home() {
             key={1}
           />
         </section>
+        <LeadGenerator />
       </section>
     </>
   );

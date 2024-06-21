@@ -9,7 +9,7 @@ const CtaSection = () => {
           <h4 className="text-3xl xl:text-5xl font-semibold">Boost Your Business with a Great Website</h4>
           <p className='text-xl'>Let’s create a website that enhances your brand and engages your customers.</p>
           <div className="flex gap-6">
-            <CtaBtn text='Get Started Today' />
+            <CtaBtn text='Get Started' />
           </div>
         </div>
       </section>
