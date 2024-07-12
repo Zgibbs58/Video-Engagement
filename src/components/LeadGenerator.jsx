@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Modal from "./Modal";
-import { Helmet } from "react-helmet-async";
 import { validateEmail } from "../../utils/helper";
 
 export default function LeadGenerator() {
@@ -84,9 +83,6 @@ export default function LeadGenerator() {
 
   return (
     <>
-      <Helmet>
-        <title>Zach Gibbs Web Development | Lead Generator</title>
-      </Helmet>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <i className="text-6xl px-3 py-1 rounded-full bg-base-300 absolute top-[-28px] left-1/2 transform -translate-x-1/2 text-emerald-500">
           &#x2714;

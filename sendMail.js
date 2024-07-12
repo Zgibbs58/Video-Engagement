@@ -36,7 +36,7 @@ const sendMail = async (name, myEmail, email, phone, subject, message, services,
   );
   try {
     const mailOptions = {
-      from: myEmail,
+      from: `no-reply@zacharywgibbs.com`,
       to: myEmail,
       subject: subject,
       text: `${name} has sent a message: ${message} <br> Email: ${email}`,
