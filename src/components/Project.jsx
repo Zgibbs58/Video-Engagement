@@ -27,63 +27,73 @@ export default function Project({ name, description, image, projectLink, isOdd, 
   }, []);
 
   return isOdd === 1 || isSmallScreen ? (
-    <motion.section
-      initial={{ opacity: 0, x: 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      className="grid xl:grid-cols-3 xl:justify-items-end items-center mb-36 xl:mb-64"
-    >
-      <motion.div className="xl:col-span-2 text-left">
-        <h2 className="text-2xl xl:text-5xl font-bold mb-8">{name}</h2>
-        <p>{description}</p>
-        {/* <button className="mx-2 block xl:hidden text-center  mt-5 ml-0">
-          <Link to={`/project/${id}`} className="border-2 border-gray-500 font-semibold px-2 py-1 rounded-md">
-            Learn More
-          </Link>
-        </button> */}
-        <button className="mt-10 hidden xl:inline mr-5">
-          <MainBtn text="Learn More" link={`/project/${id}`} />
-        </button>
-        <button className="mt-10 hidden xl:inline">
-          <SecondaryButton text="View Site" link={projectLink} />
-        </button>
-      </motion.div>
-      <motion.figure
-        // initial={{ opacity: 0, x: 50 }}
-        // whileInView={{ opacity: 1, x: 0 }}
-        // transition={{ duration: 0.5 }}
-        // viewport={{ once: true, amount: 0.3 }}
-        className="xl:grid-span-1 my-10 xl:my-0 rounded-3xl grid justify-items-center"
+    id === 1 ? (
+      <motion.section
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0 }}
+        className="grid xl:grid-cols-3 xl:justify-items-end items-center mb-36 xl:mb-64"
       >
-        <div className="phone-frame">
-          <div className="phone-frame-inner">
-            <img src={image} alt={name} />
-          </div>
-          <div className="volume-button-top"></div>
-          <div className="volume-button-middle"></div>
-          <div className="volume-button-bottom"></div>
-          <div className="power-button"></div>
+        <div className="xl:col-span-2 text-left">
+          <h2 className="text-2xl xl:text-5xl font-bold mb-8">{name}</h2>
+          <p>{description}</p>
+          <button className="mt-10 hidden xl:inline mr-5">
+            <MainBtn text="Learn More" link={`/project/${id}`} />
+          </button>
+          <button className="mt-10 hidden xl:inline">
+            <SecondaryButton text="View Site" link={projectLink} />
+          </button>
         </div>
-      </motion.figure>
-      <motion.button
-        // initial={{ opacity: 0, x: 50 }}
-        // whileInView={{ opacity: 1, x: 0 }}
-        // transition={{ duration: 0.5 }}
-        // viewport={{ once: true, amount: 0.3 }}
-        className="block xl:hidden text-center"
-      >
-        <MobileButton text="View Site" link={projectLink} />
-      </motion.button>
-      <motion.button
-        // initial={{ opacity: 0, x: 50 }}
-        // whileInView={{ opacity: 1, x: 0 }}
-        // transition={{ duration: 0.5 }}
-        // viewport={{ once: true, amount: 0.3 }}
-        className="block xl:hidden text-center mt-10"
-      >
-        <MobileButtonSecondary text="Learn More" link={`/project/${id}`} />
-      </motion.button>
-    </motion.section>
+        <figure className="xl:grid-span-1 my-10 xl:my-0 rounded-3xl grid justify-items-center">
+          <div className="phone-frame">
+            <div className="phone-frame-inner">
+              <img src={image} alt={name} />
+            </div>
+            <div className="volume-button-top"></div>
+            <div className="volume-button-middle"></div>
+            <div className="volume-button-bottom"></div>
+            <div className="power-button"></div>
+          </div>
+        </figure>
+        <button className="block xl:hidden text-center">
+          <MobileButton text="View Site" link={projectLink} />
+        </button>
+        <button className="block xl:hidden text-center mt-10">
+          <MobileButtonSecondary text="Learn More" link={`/project/${id}`} />
+        </button>
+      </motion.section>
+    ) : (
+      <section className="grid xl:grid-cols-3 xl:justify-items-end items-center mb-36 xl:mb-64">
+        <div className="xl:col-span-2 text-left">
+          <h2 className="text-2xl xl:text-5xl font-bold mb-8">{name}</h2>
+          <p>{description}</p>
+          <button className="mt-10 hidden xl:inline mr-5">
+            <MainBtn text="Learn More" link={`/project/${id}`} />
+          </button>
+          <button className="mt-10 hidden xl:inline">
+            <SecondaryButton text="View Site" link={projectLink} />
+          </button>
+        </div>
+        <figure className="xl:grid-span-1 my-10 xl:my-0 rounded-3xl grid justify-items-center">
+          <div className="phone-frame">
+            <div className="phone-frame-inner">
+              <img src={image} alt={name} />
+            </div>
+            <div className="volume-button-top"></div>
+            <div className="volume-button-middle"></div>
+            <div className="volume-button-bottom"></div>
+            <div className="power-button"></div>
+          </div>
+        </figure>
+        <button className="block xl:hidden text-center">
+          <MobileButton text="View Site" link={projectLink} />
+        </button>
+        <button className="block xl:hidden text-center mt-10">
+          <MobileButtonSecondary text="Learn More" link={`/project/${id}`} />
+        </button>
+      </section>
+    )
   ) : (
     <motion.section className="grid xl:grid-cols-3 xl:justify-items-start items-center my-20 xl:my-52">
       <motion.figure
