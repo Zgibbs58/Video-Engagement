@@ -29,7 +29,8 @@ export default function About() {
         canonicalUrl={"https://zacharywgibbs.com/about"}
         ogTitle="About | Zach Gibbs Web Development"
         ogDescription="Learn more about Zach Gibbs, an experienced web developer based in Murfreesboro, Tennessee. I provide high-quality, efficient websites tailored to your business needs."
-        ogImg={"https://zacharywgibbs.com/images/ogImg.png"}
+        ogImg={"https://zacharywgibbs.com/images/ogAboutImg.png"}
+        slug={"/about"}
       />
       <div className="overflow-x-hidden">
         <div className="mx-10 mt-6 mb-24 lg:mx-32">

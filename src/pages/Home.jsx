@@ -35,6 +35,7 @@ export default function Home() {
           "Professional web development services in Murfreesboro, Tennessee. Most businesses lack the time to update or create websites. I build clear and optimized websites that make it easy for customers to hire you, saving you time and boosting your business."
         }
         ogImg={"https://zacharywgibbs.com/images/ogImg.png"}
+        slug={""}
       />
       <Hero />
       <section className="overflow-x-hidden overflow-y-hidden">

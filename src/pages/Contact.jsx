@@ -173,7 +173,8 @@ export default function Contact() {
         canonicalUrl={"https://zacharywgibbs.com/contact"}
         ogTitle={"Contact Zach Gibbs | Web Development Inquiries | Murfreesboro, TN"}
         ogDescription={"Get in touch with Zach Gibbs for professional web development services in Murfreesboro, TN. Schedule a consultation today."}
-        ogImg={"https://zacharywgibbs.com/images/ogImg.png"}
+        ogImg={"https://zacharywgibbs.com/images/ogContactImg.png"}
+        slug={"/contact"}
       />
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <i className="text-6xl px-3 py-1 rounded-full bg-base-300 absolute top-[-28px] left-1/2 transform -translate-x-1/2 text-emerald-500">

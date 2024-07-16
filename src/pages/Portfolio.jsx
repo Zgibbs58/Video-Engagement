@@ -16,11 +16,13 @@ export default function Portfolio() {
     <>
       <MetaSeoTags
         title={"Web Development Portfolio | Zach Gibbs | Murfreesboro, TN"}
-        description={
-          "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Murfreesboro, TN."
-        }
+        description={"Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee."}
         keywords={["web development portfolio", "custom websites", "web design", "web developer", "Murfreesboro", "Tennessee"]}
         canonicalUrl={"https://zacharywgibbs.com/portfolio"}
+        ogTitle={"Web Development Portfolio | Zach Gibbs | Murfreesboro, TN"}
+        ogDescription={"Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee"}
+        ogImg={"https://zacharywgibbs.com/images/ogPortfolioImg.png"}
+        slug={"/portfolio"}
       />
       <section className="overflow-x-hidden">
         <div className="mx-8 lg:mx-32 mt-6 mb-24">
