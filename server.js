@@ -28,7 +28,7 @@ app.post("/api/sendmail", async (req, res) => {
     await sendMail(name, process.env.EMAIL, email, phone, subject, message, services, website);
     res.status(200).send({ message: "Email sent successfully" });
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Error submitting form. Try again later or contact me at 615-522-7255");
     res.status(500).send({ message: "Error sending email" });
   }
 });

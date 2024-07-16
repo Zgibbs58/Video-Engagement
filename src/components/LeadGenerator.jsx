@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Modal from "./Modal";
 import { validateEmail } from "../../utils/helper";
+import Logo from "./Logo";
 
 export default function LeadGenerator() {
   const [email, setEmail] = useState("");
@@ -87,23 +88,16 @@ export default function LeadGenerator() {
         <i className="text-6xl px-3 py-1 rounded-full bg-base-300 absolute top-[-28px] left-1/2 transform -translate-x-1/2 text-emerald-500">
           &#x2714;
         </i>
-        <p className="text-2xl sm:text-3xl font-bold">Thanks!</p>
-        <p className="sm:text-lg">You can now download your free resource below.</p>
-        <a
-          href="/assets/5-essentials-website.pdf"
-          className="mt-4 py-2 px-4 bg-emerald-500 text-white font-bold rounded hover:bg-emerald-600"
-          download
-        >
-          Download PDF
-        </a>
-        {/* <Logo /> */}
+        <p className="text-2xl sm:text-3xl font-bold">Thanks, {name}</p>
+        <p className="sm:text-lg">You will receive an email with your PDF soon.</p>
+        <Logo />
       </Modal>
       <div className="mx-8 mt-6 mb-24 sm:mx-20 lg:mx-32 flex flex-wrap xl:flex-nowrap gap-x-24">
         <div className="xl:w-1/2">
           <h3 className="text-4xl lg:text-5xl font-bold text-left mb-6">Unlock Your Website&apos;s Potential</h3>
           <p>
-            Want to know the secrets to a thriving online presence? Enter your name and email below and get instant access to a free PDF: 5 Essentials
-            for a Successful Business Website.
+            Want to know the secrets to a thriving online presence? Enter your name and email below and get access to a free PDF: 5 Essentials for a
+            Successful Business Website.
           </p>
           <div className="flex justify-start text-left mt-4">
             <form className="w-full" onSubmit={handleSubmit}>

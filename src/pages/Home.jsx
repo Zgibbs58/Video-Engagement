@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import CtaBtn from "../components/CtaBtn";
 import FeaturedProject from "../components/FeaturedProject";
 import TestimonialSection from "../components/TestimonialSection";
-import { Helmet } from "react-helmet-async";
 import Hero from "../components/Hero";
 import StepsSection from "../components/StepsSection";
 import ProblemSection from "../components/ProblemSection";
@@ -14,6 +13,7 @@ import CtaSection from "../components/CtaSection";
 import LeadGenerator from "../components/LeadGenerator";
 
 import { projectData } from "../../utils/projectData";
+import MetaSeoTags from "../components/MetaSeoTags";
 
 export default function Home() {
   useEffect(() => {
@@ -23,13 +23,19 @@ export default function Home() {
 
   return (
     <>
-      <Helmet>
-        <title>Zach Gibbs Web Development</title>
-        <meta
-          name="description"
-          content="Web developer based in Murfreesboro, TN that provides high-quality, efficient websites tailored to your business needs."
-        />
-      </Helmet>
+      <MetaSeoTags
+        title={"Zach Gibbs Web Development | Custom Websites | Murfreesboro, TN"}
+        description={
+          "Professional web development services in Murfreesboro, Tennessee. Most businesses lack the time to update or create websites. I build clear and optimized websites that make it easy for customers to hire you, saving you time and boosting your business."
+        }
+        keywords={["web development", "web design", "web developer", "custom websites", "Tennessee", "business websites"]}
+        canonicalUrl={"https://zacharywgibbs.com"}
+        ogTitle={"Zach Gibbs Web Development | Custom Websites | Murfreesboro, TN"}
+        ogDescription={
+          "Professional web development services in Murfreesboro, Tennessee. Most businesses lack the time to update or create websites. I build clear and optimized websites that make it easy for customers to hire you, saving you time and boosting your business."
+        }
+        ogImg={"https://zacharywgibbs.com/images/ogImg.png"}
+      />
       <Hero />
       <section className="overflow-x-hidden overflow-y-hidden">
         <ProblemSection />

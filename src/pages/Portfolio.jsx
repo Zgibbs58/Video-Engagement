@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Project from "../components/Project";
 import { motion } from "framer-motion";
 import { projectData } from "../../utils/projectData";
-import { Helmet } from "react-helmet-async";
+import MetaSeoTags from "../components/MetaSeoTags";
 
 const isOdd = (num) => num % 2;
 
@@ -14,9 +14,14 @@ export default function Portfolio() {
 
   return (
     <>
-      <Helmet>
-        <title>Zach Gibbs Web Development | Portfolio | Web Design</title>
-      </Helmet>
+      <MetaSeoTags
+        title={"Web Development Portfolio | Zach Gibbs | Murfreesboro, TN"}
+        description={
+          "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Murfreesboro, TN."
+        }
+        keywords={["web development portfolio", "custom websites", "web design", "web developer", "Murfreesboro", "Tennessee"]}
+        canonicalUrl={"https://zacharywgibbs.com/portfolio"}
+      />
       <section className="overflow-x-hidden">
         <div className="mx-8 lg:mx-32 mt-6 mb-24">
           <motion.h3

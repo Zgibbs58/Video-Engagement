@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 import Logo from "../components/Logo";
 
 import { validateEmail } from "/utils/helper";
+import MetaSeoTags from "../components/MetaSeoTags";
 
 export default function Contact() {
   // if updating the services array, make sure to update the services array in the handleSubmit function as well
@@ -158,9 +158,23 @@ export default function Contact() {
 
   return (
     <>
-      <Helmet>
-        <title>Zach Gibbs Web Development | Contact</title>
-      </Helmet>
+      <MetaSeoTags
+        title="Contact Zach Gibbs | Web Development Inquiries | Murfreesboro, TN"
+        description={"Get in touch with Zach Gibbs for professional web development services in Murfreesboro, TN. Schedule a consultation today."}
+        keywords={[
+          "contact Zach Gibbs",
+          "web development inquiries",
+          "schedule a consultation",
+          "get in touch",
+          "Murfreesboro web developer contact",
+          "contact for website services",
+          "business web design contact",
+        ]}
+        canonicalUrl={"https://zacharywgibbs.com/contact"}
+        ogTitle={"Contact Zach Gibbs | Web Development Inquiries | Murfreesboro, TN"}
+        ogDescription={"Get in touch with Zach Gibbs for professional web development services in Murfreesboro, TN. Schedule a consultation today."}
+        ogImg={"https://zacharywgibbs.com/images/ogImg.png"}
+      />
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <i className="text-6xl px-3 py-1 rounded-full bg-base-300 absolute top-[-28px] left-1/2 transform -translate-x-1/2 text-emerald-500">
           &#x2714;

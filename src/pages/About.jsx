@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import Explanatory from "../components/Explanatory";
 import TestimonialSection from "../components/TestimonialSection";
+import MetaSeoTags from "../components/MetaSeoTags";
 
 export default function About() {
   useEffect(() => {
@@ -11,9 +11,26 @@ export default function About() {
   }, []);
   return (
     <>
-      <Helmet>
-        <title>Zach Gibbs Web Development | About</title>
-      </Helmet>
+      <MetaSeoTags
+        title="About | Zach Gibbs Web Development"
+        description="Learn more about Zach Gibbs, an experienced web developer based in Murfreesboro, Tennessee. I provide high-quality, efficient websites tailored to your business needs."
+        keywords={[
+          "business web developer",
+          "custom websites",
+          "custom web solutions",
+          "experienced web developer",
+          "web development",
+          "web design",
+          "web designer",
+          "Murfreesboro",
+          "Tennessee",
+          "Nashville",
+        ]}
+        canonicalUrl={"https://zacharywgibbs.com/about"}
+        ogTitle="About | Zach Gibbs Web Development"
+        ogDescription="Learn more about Zach Gibbs, an experienced web developer based in Murfreesboro, Tennessee. I provide high-quality, efficient websites tailored to your business needs."
+        ogImg={"https://zacharywgibbs.com/images/ogImg.png"}
+      />
       <div className="overflow-x-hidden">
         <div className="mx-10 mt-6 mb-24 lg:mx-32">
           <motion.h3
